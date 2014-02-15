@@ -53,12 +53,12 @@
       <tspan x="315.591" y="124.542">LocalFS</tspan>
     </text>
   </g>
-  <g>
+  <g><!--arrow between collectors and FS-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="206.3" y1="102.6" x2="272.404" y2="91.7171"/>
     <polygon style="fill: #000000" points="279.805,90.4987 270.75,97.0568 272.404,91.7171 269.125,87.1896 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="279.805,90.4987 270.75,97.0568 272.404,91.7171 269.125,87.1896 "/>
   </g>
-  <g>
+  <g><!--arrow between FS and crashmover-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="349.19" y1="70.9432" x2="387.981" y2="55.1677"/>
     <polygon style="fill: #000000" points="394.929,52.3424 387.549,60.7412 387.981,55.1677 383.782,51.4779 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="394.929,52.3424 387.549,60.7412 387.981,55.1677 383.782,51.4779 "/>
@@ -97,7 +97,7 @@
       <tspan x="515.482" y="451.827">ElasticSearch</tspan>
     </text>
   </g>
-  <g>
+  <g><!--arrow between middleware and ES-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="452.724" y1="343.115" x2="366.111" y2="287.932"/>
     <polygon style="fill: #000000" points="359.786,283.902 370.906,285.058 366.111,287.932 365.533,293.492 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.786,283.902 370.906,285.058 366.111,287.932 365.533,293.492 "/>
@@ -159,26 +159,26 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="416" y="55.5">
     <tspan x="416" y="55.5">CrashMovers</tspan>
   </text>
-  <g>
+  <g><!--arrow between processors and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="771.083" y1="221.484" x2="799.026" y2="248.706"/>
     <polygon style="fill: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
     <polygon style="fill: #000000" points="804.398,253.94 793.746,250.543 799.026,248.706 800.724,243.38 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="804.398,253.94 793.746,250.543 799.026,248.706 800.724,243.38 "/>
   </g>
-  <g>
+  <g><!--arrow between processors and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="796.315" y1="256.5" x2="694.043" y2="267.062"/>
     <polygon style="fill: #000000" points="803.776,255.73 794.342,261.731 796.315,256.5 793.315,251.783 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.776,255.73 794.342,261.731 796.315,256.5 793.315,251.783 "/>
     <polygon style="fill: #000000" points="686.583,267.833 696.016,261.832 694.043,267.062 697.043,271.779 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="686.583,267.833 696.016,261.832 694.043,267.062 697.043,271.779 "/>
   </g>
-  <g>
+  <g><!--arrow between middleware and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="550.003" y1="276.995" x2="367.632" y2="282.411"/>
     <polygon style="fill: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
   </g>
-  <g>
+  <g><!--arrow between middleware and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.993" y1="189.51" x2="367.172" y2="279.732"/>
     <polygon style="fill: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
@@ -203,33 +203,35 @@
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="263" y="197">
     <tspan x="263" y="197">Crontabber</tspan>
   </text>
-  <g>
+  <g><!--arrow between crontabber and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="649" y1="173.05" x2="366.709" y2="194.27"/>
     <polygon style="fill: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
   </g>
-  <g>
+  <g><!--arrow between crontabber and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="366.306" y1="197.861" x2="540.694" y2="251.482"/>
     <polygon style="fill: #000000" points="359.137,195.657 370.165,193.817 366.306,197.861 367.226,203.375 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.137,195.657 370.165,193.817 366.306,197.861 367.226,203.375 "/>
     <polygon style="fill: #000000" points="547.863,253.686 536.835,255.526 540.694,251.482 539.774,245.968 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.863,253.686 536.835,255.526 540.694,251.482 539.774,245.968 "/>
   </g>
-  <g>
+  <g><!--arrow between crashing ff and collector-->
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145.767" y1="194.002" x2="146.229" y2="130.836"/>
+    <polygon style="fill: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
+  </g>
+  <g><!--webhead rear box-->
     <rect style="fill: #ffffff" x="280" y="385" width="120" height="37"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="280" y="385" width="120" height="37"/>
   </g>
-  <g>
+  <g><!--webhead middle box-->
     <rect style="fill: #ffffff" x="258" y="368" width="120" height="37"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="258" y="368" width="120" height="37"/>
   </g>
-  <g>
+  <g><!--webhead top box-->
     <rect style="fill: #ffffff" x="238" y="348" width="120" height="37"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="238" y="348" width="120" height="37"/>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="340" y="403.5">
-    <tspan x="340" y="403.5"></tspan>
-  </text>
   <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="264" y="370.5">
     <tspan x="264" y="370.5">WebHeads</tspan>
   </text>
@@ -241,12 +243,8 @@
                 <mpath xlink:href="#somepath"/>
            </animateMotion>
       </image>
+      <image x="111.3" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
       <image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
-  </g>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145.767" y1="194.002" x2="146.229" y2="130.836"/>
-    <polygon style="fill: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
-    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
   </g>
   <ellipse style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" cx="145.5" cy="230.5" rx="33.5" ry="32.5"/>
   <line style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" x1="169.188" y1="207.519" x2="121.812" y2="253.481"/>
