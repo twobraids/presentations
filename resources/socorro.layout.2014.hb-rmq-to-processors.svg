@@ -258,40 +258,90 @@
     </text>
   </g>
   <g><!-- arrow symbol storage to processors -->
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+    <path id="symbtoproc" style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+    <text  x="0" y="0" font-size="12" style="fill: #FF0000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal">
+          <animate begin="8s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+          <animateMotion begin= "8s" dur="0.5s" repeatCount="12" >
+            <mpath xlink:href="#symbtoproc"/>
+          </animateMotion>
+          <animate begin="14s" attributeType="CSS" attributeName="opacity" from="1" to="0" repeatCount="1" fill="freeze" dur="3s" additive="replace"/>
+        <tspan>*$@#+^?!</tspan>
+    </text>
     <polygon style="fill: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
   </g>
   <g><!-- images and animation -->
+      <!--RMQ FF-->
       <!--                  origin  to cm to rmq -->
-      <path id="rmqpath" d="M800 25   C 900,95 935,135 835,235" fill="none" />
+      <path id="rmqpath" d="M800 25   C 870,95 900,135 835,235" fill="none" />
         <image x="0" y="0" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.bw.png">
            <animateMotion dur="4s" repeatCount="1" fill="freeze">
                 <mpath xlink:href="#rmqpath"/>
            </animateMotion>
-          <animate begin="4s" attributeType="CSS" attributeName="opacity" from="1" to="0" repeatCount="1" dur="3s" fill="freeze"/>
+          <animate begin="4s" attributeType="CSS" attributeName="opacity" from="1" to="0" repeatCount="1" dur="8s" fill="freeze"/>
       </image>
+
       <!--                 origin                                           -->
+      <!--HBASE FF-->
       <image x="680" y="145" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
       </image>
 
-      <path id="hbpath2" d="M835 235 l -155 -90  " fill="none" />
-      <image x="835" y="235" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
-          <animate begin="8s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" dur="3s" fill="freeze"/>
-          <animateMotion begin="11s" dur="3s" repeatCount="1" fill="freeze">
-              <mpath xlink:href="#hbpath2"/>
+      <!--GHOST FF3-->
+      <path id="espath2" d="M840 235 l -370 120  " />
+      <!--<image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">-->
+      <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+          <animate begin="14s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+          <animateMotion begin="14.5s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#espath2"/>
           </animateMotion>
-
       </image>
 
-      <path id="hbpath" d="M680 145  l 155 90  " fill="none" />
+      <!--PALE FF3-->
+      <path id="espath" d="M840 235 l -345 120  " />
+      <!--<image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">-->
+      <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+          <animate begin="14s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+          <animateMotion begin="14s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#espath"/>
+          </animateMotion>
+      </image>
+
+      <!--GHOST FF-->
+      <path id="hbpath" d="M680 145  l 155 80  " fill="none" />
+      <path id="hbpath4" d="M835 235 l -260 20" fill="none" />
       <image x="0" y="0" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
-         <animate attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" end="5s" />
-         <animateMotion begin="5s" dur="3s" repeatCount="1" fill="freeze">
-              <mpath xlink:href="#hbpath"/>
+          <animate attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" end="5s"/>
+          <animateMotion begin="5s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#hbpath"/>
           </animateMotion>
           <animateTransform begin="8s" attributeName="transform" attributeType="XML" type="rotate" from="0 35 35" to="360 35 35" dur="2s" repeatCount="3"/>
-          <animate begin="8s" attributeType="CSS" attributeName="opacity" from="1" to="0" repeatCount="1" dur="3s" fill="freeze"/>
+          <animateMotion begin="14.5s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#hbpath4"/>
+          </animateMotion>
+      </image>
+
+      <!--PALE FF-->
+      <path id="hbpath2" d="M840 235 v 5 v -10 v 10 v -10 v 10 v -10  v 5 " />
+      <path id="hbpath3" d="M840 235 l -135 -90  " />
+      <!--<image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">-->
+      <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+          <animate begin="8s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="3s" additive="replace"/>
+          <animateMotion begin= "8s" dur="6s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#hbpath2"/>
+          </animateMotion>
+          <animateMotion begin="14s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#hbpath3"/>
+          </animateMotion>
+      </image>
+
+      <!--PALE FF2-->
+      <path id="pgpath" d="M840 235 l -240 20  " />
+      <!--<image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">-->
+      <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+          <animate begin="14s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+          <animateMotion begin="14s" dur="3s" repeatCount="1" fill="freeze">
+            <mpath xlink:href="#pgpath"/>
+          </animateMotion>
       </image>
 
       <image x="111.3" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
