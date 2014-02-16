@@ -170,7 +170,7 @@ Video not supported </video>  -->
 		<li>metadata about program that crashed</li>
 		<ul>
 			<li>ProductName & Version</li>
-			<li>Crashtime, TimesinceLastCrash, TimeSinceStartup</li>
+			<li>Crashtime, TimeSinceLastCrash, TimeSinceStartup</li>
 			<li>Addons, VideoDrivers, etc.
 		</ul>
 		<li>any comments the user is willing to share</li>
@@ -209,18 +209,6 @@ Video not supported </video>  -->
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
-	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
-	</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
-	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.hb-rmq-to-processors.svg" type="image/svg+xml" width="100%"></embed
-	</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
 	<h1>Collector</h1>
 	<ul>
 		<li>Apache modwsgi</li>
@@ -234,19 +222,24 @@ Video not supported </video>  -->
 	<h1>Collector</h1>
 	<ul>
 		<li>Has to run FAST</li>
-		<li>Downtime is unacceptable</li>
-		<li>Losing submissions is unacceptable</li>
+		<li>Accepts 3,000,000 to 5,000,000 crashes per day</li>
+		<li>Uses local filesystem for storage</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Collector</h1>
-	<p>collector video</p>
+	<video   height="800px"  src="/home/lars/work/pytn14/resources/collectors.mp4"  preload autoplay> </video>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Collector</h1>
-	<p>collector LEGO image</p>
+	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.collector.jpg">
+	<h2>conceptually 3 layers</h2>
+	<ul>
+		<li>HTTP input</li>
+		<li>Rule based filtration</li>
+		<li>Data storage to a filesytem</li>
+	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -256,8 +249,166 @@ Video not supported </video>  -->
 	</div></div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+	<h1>CrashMover</h1>
+	<h2>it's just a conveyer belt</h2>
+	<ul>
+		<li>moves crashes from one storage scheme to another</li>
+		<li>doesn't change or interprete</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>CrashMover</h1>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.crashmover.jpg">
+	<h2>another 3 layer form</h2>
+	<ul>
+		<li>read from a filesytem</li>
+		<li>refrain from changing the data</li>
+		<li>save the crash data to two different datastores</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
+	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.crash-to-collector-to-fs.svg" type="image/svg+xml" width="100%"></embed
+	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
 	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>CrashMover</h1>
+	<h2>HBase</h2>
+	<ul>
+		<li>permanent storage for raw crashes</li>
+		<li>allows for analysis using MapReduce</li>
+		<li>nearly 100TB of storage on 70 machines</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>CrashMover</h1>
+	<h2>RabbitMQ</h2>
+	<ul>
+		<li>a queuing system for new crashes</li>
+		<li>tells the processors what to do next</li>
+		<li>saves only the id of a crash</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Processor</h1>
+	<h2>the Work Horse of Socorro</h2>
+	<ul>
+		<li>runs stackwalker, part of Breakpad</li>
+		<li>converts raw crash into processed crash</li>
+		<li>categorizes crashes</li>
+		<li>creates signatures</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Processor</h1>
+	<h2>Breakpad Stackwalker</h2>
+	<ul>
+		<li>takes binary crash data</li>
+		<li>using extensive symbol database</li>
+		<li>remarries bare addresses & offsets</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Processor</h1>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.processor.jpg">
+	<h2>3 layers</h2>
+	<ul>
+		<li>reads RabbitMQ and HBase</li>
+		<li>transform raw binary to processed</li>
+		<li>saves to 3 stores</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
+	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
+	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
+	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.hb-rmq-to-processors.svg" type="image/svg+xml" width="100%"></embed
+	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Processor</h1>
+	<ul>
+		<li>multithreaded model</li>
+		<li>10 12 core machines</li>
+		<li>fans processed data out to many locations</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<video  height="800px" src="/home/lars/work/pytn14/resources/processors.mp4"  preload autoplay> </video>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Crontabber</h1>
+	<h2>batch job scheduler</h2>
+	<ul>
+		<li>runs aggregate data analysis code</li>
+		<li>manages 25 different periodic programs</li>
+		<li>includes a dependency rule system</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Crontabber</h1>
+	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.crontabber.jpg">
+	<h2>not 3 layers</h2>
+	<ul>
+		<li>still uses the same storage modules</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Middleware</h1>
+	<h2>low level data access</h2>
+	<ul>
+		<li>RESTful API</li>
+		<li>mostly read-only data from all datastores</li>
+		<li>used by Django for the Socorro UI</li>
+	</ul>
+
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Middleware</h1>
+	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.middleware.jpg">
+	<h2>3 layers</h2>
+	<ul>
+		<li>HTTP read</li>
+		<li>minor transformations</li>
+		<li>many storage schemes</li>
+	</ul>
+	<div  style="font-size:25%"><p>Data flows the opposite way<br />But the LEGO would have fallen over<br />
+	had I made it the other way around</p><div>
+
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Django Front End</h1>
+	<h2>might as well just look at the real web site</h2>
+	<p><a href="http://crash-stats.mozilla.com">Mozilla Crash Stats</a></p>
+	<p><a href="about:config">about:config</a></p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
