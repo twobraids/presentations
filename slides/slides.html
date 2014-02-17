@@ -7,7 +7,7 @@
 Video not supported </video>  -->
 <!--<video width="100%" src="./mozilla.mission.webm" controls preload autoplay> </video>-->
 <video   style="min-width: 100%; min-height: 100%;" src="/home/lars/work/pytn14/resources/faceplant.fox.2.mp4"  preload autoplay> </video>
-</div>
+</div> 
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Socorro</h1>
@@ -74,25 +74,25 @@ Video not supported </video>  -->
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>What is a crash reporting system</h2>
 	<p>and why would any one need one?</p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>It's all about quality control...</h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>It's all about quality control...</h2>
 	<h2>...after your software has</h2>
 	<h2>already embarassed you</h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>Quality Feedback Agent</h2>
 	<p>a system of collecting information <br>
 	about final quality of a
@@ -100,14 +100,14 @@ Video not supported </video>  -->
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>Quality Feedback Agent</h2>
 	<p>used not only for <br>measuring and improving software quality,<br>
 	but for doing the same for QA procedures.</p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>Helps Find:</h2>
 	<ul>
 		<li>ordinary bugs uncaught in QA</li>
@@ -118,8 +118,18 @@ Video not supported </video>  -->
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>Socorro</h1>
+	<h1>Crash Reporter</h1>
 	<h2>It shows your customers <br>that you're paying attention</h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Socorro</h1>
+	<h2>What is it?</h2>
+	<ul>
+		<li>Mozilla Home Brewed Crash Reporter</li>
+		<li>Open Source</li>
+		<li>Software as Performance Art</li>
+	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -143,12 +153,11 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Breakpad</h1>
-	<h2>C library collects information:</h2>
+	<h2>C library Built into Mozilla Products:</h2>
 	<ul>
-		<li>corupt stack</li>
-		<li>corupt heap memory</li>
-		<li>illegal instructions</li>
-		<li>illegal memory dereferencing</li>
+	<li>Gathers forensic information from a dying instance of Firefox.</li>
+	<li>Interacts with the User</li>
+	<li>Then, if given concent, sends crash information to Socorro</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -156,7 +165,7 @@ Video not supported </video>  -->
 	<h1>Breakpad</h1>
 	<h2>does an amazing thing</h2>
 	<ul>
-		<li>manages to run in a dying process</li>
+		<li>manages to run as Firefox crashes</li>
 		<li>cannot allocate memory</li>
 		<li>cannot use the stack</li>
 		<li>must manage to send an HTTP POST</li>
@@ -165,7 +174,7 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Breakpad</h1>
-	<h2>HTTP Post to Socorro containing:</h2>
+	<h2>HTTP Post to Socorro contains:</h2>
 	<ul>
 		<li>metadata about program that crashed</li>
 		<ul>
@@ -180,9 +189,9 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Breakpad</h1>
-	<h2>HTTP Post to Socorro containing:</h2>
+	<h2>HTTP Post also contains:</h2>
 	<ul>
-		<li>a binary blob</li>
+		<li>up to 4 binary blobs</li>
 		<ul>
 			<li>software stack</li>
 			<li>metadata about hardware</li>
@@ -194,6 +203,11 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<p>...demo...</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Collector</h1>
+	<h2>the point of contact between<br />Breakpad and Socorro</h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -234,7 +248,7 @@ Video not supported </video>  -->
 <div>
 	<h1>Collector</h1>
 	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.collector.jpg">
-	<h2>conceptually 3 layers</h2>
+	<h2>generalizing, collector is 3 layers</h2>
 	<ul>
 		<li>HTTP input</li>
 		<li>Rule based filtration</li>
@@ -258,17 +272,6 @@ Video not supported </video>  -->
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-	<h1>CrashMover</h1>
-	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.crashmover.jpg">
-	<h2>another 3 layer form</h2>
-	<ul>
-		<li>read from a filesytem</li>
-		<li>refrain from changing the data</li>
-		<li>save the crash data to two different datastores</li>
-	</ul>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.crash-to-collector-to-fs.svg" type="image/svg+xml" width="100%"></embed
 	</div>
@@ -278,6 +281,25 @@ Video not supported </video>  -->
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
 	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>CrashMover</h1>
+	<ul>
+		<li>move crashes from temporary File System storage into permanent HBase storage</li>
+		<li>push crash ids into RabbitMQ to tell processors what crashes to process</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>CrashMover</h1>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.crashmover.jpg">
+	<h2>another 3 layer form</h2>
+	<ul>
+		<li>read from a filesytem</li>
+		<li>refrain from changing the data</li>
+		<li>save the crash data to two different datastores</li>
+	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -302,7 +324,23 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Processor</h1>
-	<h2>the Work Horse of Socorro</h2>
+	<h2>the Socorro Workhorse</h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
+	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
+	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
+	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.hb-rmq-to-processors.svg" type="image/svg+xml" width="100%"></embed
+	</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Processor</h1>
 	<ul>
 		<li>runs stackwalker, part of Breakpad</li>
 		<li>converts raw crash into processed crash</li>
@@ -330,18 +368,6 @@ Video not supported </video>  -->
 		<li>transform raw binary to processed</li>
 		<li>saves to 3 stores</li>
 	</ul>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
-	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.fs-to-crashmover-to-hb-rmq.svg" type="image/svg+xml" width="100%"></embed
-	</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
-	<embed  style="margin-left: auto; margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro.layout.2014.hb-rmq-to-processors.svg" type="image/svg+xml" width="100%"></embed
-	</div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -410,5 +436,154 @@ Video not supported </video>  -->
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>Configman</h1>
+	<h2>why LEGO illustrations?</h2>
+	<ul>
+		<li>Socorro is constructed of pluggable components</li>
+		<li>Components selected by configuration at run time</li>
+		<li>Instantiated and run on the fly</li>
+	</ul>
+
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>why LEGO illustrations?</h2>
+	<ul>
+		<li>Socorro is constructed of pluggable components</li>
+		<li>Components selected by configuration at run time</li>
+		<li>Instantiated and run on the fly</li>
+	</ul>
+	<p><br />We can literally change the archecture of Socorro by using configuration
+	to rearrange components rapidly as our needs change.</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>why LEGO illustrations?</h2>
+	<ul>
+		<li>Socorro is constructed of pluggable components</li>
+		<li>Components selected by configuration at run time</li>
+		<li>Instantiated and run on the fly</li>
+	</ul>
+	<p style="font-size:150%;" ><br /><em>This is software as performance art!</em></p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>universal configuration</h2>
+	<ul>
+		<li>command line</li>
+		<li>config files</li>
+		<ul>
+		   <li>ini, json, yaml, conf, ...</li>
+		</ul>
+		<li>environment</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.collector.2.jpg">
+	<h2>Generic Applications</h2>
+	<p>through config, choose:<br />&nbsp;</p>
+	<ul>
+		<li>input sources</li>
+		<li>transformation methods</li>
+		<li>output destinaitons</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>Generic Applications</h2>
+	<p>the collector writes to the filesystem, while the processor reads from the filesytem and
+	writes to Postgres and the filesystem</p>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.collector.2.jpg">
+	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.processor.alternate.jpg">
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- --><div>
+<div>
+	<h1>Configman</h1>
+	<h2>Generic Applications</h2>
+	<p>no need for a crashmover.</p>
+	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.collector.2.jpg">
+	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/socorro.processor.alternate.jpg">
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<img style="float:left;" src="/home/lars/work/pytn14/resources/socorro.app.no.attachments.jpg">
+	<h2>Generic Applications</h2>
+	<p>the Socorro Apps themselves have pluggable internal structures</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<img style="float:left;" src="/home/lars/work/pytn14/resources/socorro.behind.the.scenes.jpg">
+	<h2>Generic Applications</h2>
+	<p>the Socorro Apps themselves have pluggable internal structures</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>Generic Applications</h2>
+	<img style="float:right;" src="/home/lars/work/pytn14/resources/lego.parts.jpg">
+	<p>don't like mutlithreading?</p>
+	<p>choose a single threaded or greenlet task manager model</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>Generic Applications</h2>
+	<p>Allows Socorro to turn on proverbial dime</p>
+	<img style="float:right;" src="/home/lars/work/pytn14/resources/lego.parts.jpg">
+	<p>RabbitMQ was provisioned and plugged in less than a week with
+	very little coding.</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<h2>is whole other presentation...</h2>
+	<img style="float:right;" src="/home/lars/work/pytn14/resources/lego.parts.jpg">
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Configman</h1>
+	<img style="float:right;" src="/home/lars/work/pytn14/resources/lego.parts.jpg">
+	<h2>Generic Applications</h2>
+	<p>All with the drawback of complexity move from the code into configuration.</p>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Socorro</h1>
+	<h2>Presentation created using:</h2>
+	<ul>
+		<li>Firefox; HTML 5, SVG animaiton</li>
+		<li>Dia for diagrams</li>
+		<li>LEGO Photography and processing by Paul Barden</li>
+		<li>Video processed with iMovie</p>
+		<li>presentation framework, Slides, by Brian Cavalier</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Socorro</h1>
+	<h2>Mozilla's Crash Reporter</h2>
+	<ul>
+		<li>Questions?</li>
+		<li>Answers?</li>
+		<li>Comments?</li>
+	</ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+	<h1>Socorro</h1>
+	<h2>Mozilla's Crash Reporter</h2>
+	<p><br />presention content by K Lars Lohn<p>
+	<p><br />(C)2014 by Mozilla Corporation<p>
+
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
