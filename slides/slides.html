@@ -46,7 +46,7 @@ Video not supported </video>  -->
         <img style="position: fixed; right: 200px; top: 100px; height: 600px" src="/home/lars/work/pytn14/resources/larsalope.jpg">
 	<h1>Lars</h1>
 	<p><br>the Web Engineering <br>Herd Patriarch</p>
-	<p><br>lives in a yurt on a farm</p>
+	<p><br>lives in a yurt on an organic farm</p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="height: 800px; -moz-transition: opacity 1ms ease;">
@@ -88,7 +88,7 @@ Video not supported </video>  -->
 	<h1>Crash Reporter</h1>
 	<h2>It's all about quality control...</h2>
 	<h2>...after your software has</h2>
-	<h2>already embarassed you</h2>
+	<h2>already embarrassed you</h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -157,7 +157,7 @@ Video not supported </video>  -->
 	<ul>
 	<li>Gathers forensic information from a dying instance of Firefox.</li>
 	<li>Interacts with the User</li>
-	<li>Then, if given concent, sends crash information to Socorro</li>
+	<li>Then, if given consent, sends crash information to Socorro</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -225,7 +225,7 @@ Video not supported </video>  -->
 <div>
 	<h1>Collector</h1>
 	<ul>
-		<li>Apache modwsgi</li>
+		<li>Apache mod-wsgi</li>
 		<li>accepts POSTs from Breakpad</li>
 		<li>filters them</li>
 		<li>stores them for later retrieval</li>
@@ -237,7 +237,7 @@ Video not supported </video>  -->
 	<ul>
 		<li>Has to run FAST</li>
 		<li>Accepts 3,000,000 to 5,000,000 crashes per day</li>
-		<li>Uses local filesystem for storage</li>
+		<li>Uses local file system for storage</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -252,7 +252,7 @@ Video not supported </video>  -->
 	<ul>
 		<li>HTTP input</li>
 		<li>Rule based filtration</li>
-		<li>Data storage to a filesytem</li>
+		<li>Data storage to a file system</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -289,7 +289,7 @@ Video not supported </video>  -->
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 		<embed  style="margin-left: auto;margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro-file-system.2014.svg" type="image/svg+xml" width="100%"></embed>
 	</div>
-	<div style="marign-left:auto; margin-right:auto;"><p>Radix Storage Scheme</p></div>
+	<div style="margin-left:auto; margin-right:auto;"><p>Radix Storage Scheme</p></div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -297,7 +297,7 @@ Video not supported </video>  -->
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 		<embed  style="margin-left: auto;margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro-file-system.2014.svg" type="image/svg+xml" width="100%"></embed>
 	</div>
-	<div style="marign-left:auto; margin-right:auto;"><p>O(log(n)) access to any crash</p></div>
+	<div style="margin-left:auto; margin-right:auto;"><p>O(log(n)) access to any crash</p></div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -305,12 +305,12 @@ Video not supported </video>  -->
 	<div style="background:gray;border:10px solid white;margin-left: auto;margin-right: auto;">
 		<embed  style="margin-left: auto;margin-right: auto;" src="/home/lars/work/pytn14/resources/socorro-file-system.2014.svg" type="image/svg+xml" width="100%"></embed>
 	</div>
-	<div style="marign-left:auto; margin-right:auto;"><p>Based on Hierarchical Database design from 1960s</p></div>
+	<div style="margin-left:auto; margin-right:auto;"><p>Based on Hierarchical Database design from 1960s</p></div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 	<h1>CrashMover</h1>
-	<h2>it's just a conveyer belt</h2>
+	<h2>it's just a conveyor belt</h2>
 	<ul>
 		<li>moves crashes from one storage scheme to another</li>
 		<li>doesn't change or interpret</li>
@@ -336,7 +336,7 @@ Video not supported </video>  -->
 	<img style="float:left; width:50%" src="/home/lars/work/pytn14/resources/socorro.crashmover.png">
 	<h2>another 3 layer form</h2>
 	<ul>
-		<li>read from a filesytem</li>
+		<li>read from a file system</li>
 		<li>refrain from changing the data</li>
 		<li>save the crash data to two different datastores</li>
 	</ul>
@@ -409,7 +409,7 @@ Video not supported </video>  -->
 	<ul>
 		<li>multithreaded model</li>
 		<li>10 12 core machines</li>
-		<li>fans processed data out to many locations</li>
+		<li>processed data fans out to many locations</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -431,7 +431,7 @@ Video not supported </video>  -->
 	<h1>Crontabber</h1>
 	<h2>batch job scheduler</h2>
 	<div style="float:left; font-size:35%; width=50%; text-align:right;">
-	<ul style="3direction: rtl;">
+	<ul style="direction: rtl;">
 		<li>socorro.cron.jobs.laglog.LagLog|5m</li>
 		<li>socorro.cron.jobs.weekly_reports_partitions.WeeklyReportsPartitionsCronApp|7d</li>
 		<li>socorro.cron.jobs.matviews.ProductVersionsCronApp|1d|10:00</li>
@@ -536,7 +536,7 @@ Video not supported </video>  -->
 		<li>Components selected by configuration at run time</li>
 		<li>Instantiated and run on the fly</li>
 	</ul>
-	<p><br />We can literally change the archecture of Socorro by using configuration
+	<p><br />We can literally change the architecture of Socorro by using configuration
 	to rearrange components rapidly as our needs change.</p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -579,8 +579,8 @@ Video not supported </video>  -->
 <div>
 	<h1>Configman</h1>
 	<h2>Generic Applications</h2>
-	<p>the collector writes to the filesystem, while the processor reads from the filesytem and
-	writes to Postgres and the filesystem</p>
+	<p>the collector writes to the file system, while the processor reads from the file system and
+	writes to Postgres and the file system</p>
 	<div style="float:left; width:50%">
 		<img style="float:right; width:75%" src="/home/lars/work/pytn14/resources/socorro.collector.2.png">
 	</div>
@@ -638,7 +638,7 @@ Video not supported </video>  -->
 	<h1>Configman</h1>
 	<h2>Generic Applications</h2>
 	<div style="float:left; width:50%">
-		<p>All with the drawback of complexity move from the code into configuration.</p>
+		<p>All with the drawback of complexity moving from the code into configuration.</p>
 	</div>
 	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/lego.parts.png">
 </div>
@@ -677,7 +677,7 @@ Video not supported </video>  -->
 <div>
 	<h1>Socorro</h1>
 	<h2>Mozilla's Crash Reporter</h2>
-	<p><br />presention content by K Lars Lohn<p>
+	<p><br />presentation content by K Lars Lohn<p>
 	<p><br />(C)2014 by Mozilla Corporation<p>
 
 </div>
