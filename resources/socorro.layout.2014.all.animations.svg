@@ -402,25 +402,6 @@
         </animateMotion>
     </image>
 
-    <!--PG destined processed crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
-      <!-- TIMEPOINT 00 -->
-        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
-          <mpath xlink:href="#backstage_hold"/>
-        </animateMotion>
-      <!-- TIMEPOINT 30 -->
-        <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
-        <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="3"/>
-        <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
-          <mpath xlink:href="#vertical_processor_bouncy"/>
-        </animateMotion>
-      <!-- TIMEPOINT 39 -->
-        <animateMotion begin="39s" dur="3s" repeatCount="1" fill="freeze">
-          <mpath xlink:href="#processor_to_pg2"/>
-        </animateMotion>
-    </image>
-
-
     <!-- Raw Crash destined for PG -->
     <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
       <!-- TIMEPOINT 00 -->

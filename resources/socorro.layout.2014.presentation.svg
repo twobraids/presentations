@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
 <svg width="50cm" height="24cm" viewBox="8 1 983 463" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g>
+  <g><!-- background -->
     <rect style="fill: #bfbfbf" x="10" y="3" width="980" height="460"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="10" y="3" width="980" height="460"/>
   </g>
-  <g>
+  <g><!-- PG -->
     <rect style="fill: #ffffff" x="551" y="241.909" width="132.364" height="66.1818"/>
     <ellipse style="fill: #ffffff" cx="617.182" cy="308.091" rx="66.1818" ry="18.9091"/>
     <ellipse style="fill: #ffffff" cx="617.182" cy="241.909" rx="66.1818" ry="18.9091"/>
@@ -21,7 +21,7 @@
       <tspan x="617.182" y="343.727">Postgres</tspan>
     </text>
   </g>
-  <g>
+  <g><!-- HBase -->
     <rect style="fill: #ffffff" x="650" y="134.909" width="132.364" height="66.1818"/>
     <ellipse style="fill: #ffffff" cx="716.182" cy="201.091" rx="66.1818" ry="18.9091"/>
     <ellipse style="fill: #ffffff" cx="716.182" cy="134.909" rx="66.1818" ry="18.9091"/>
@@ -37,7 +37,7 @@
       <tspan x="716.182" y="236.727">HBase</tspan>
     </text>
   </g>
-  <g>
+  <g><!--local FS -->
     <rect style="fill: #ffffff" x="283" y="68.3117" width="65.1818" height="32.5909"/>
     <ellipse style="fill: #ffffff" cx="315.591" cy="100.903" rx="32.5909" ry="9.31169"/>
     <ellipse style="fill: #ffffff" cx="315.591" cy="68.3117" rx="32.5909" ry="9.31169"/>
@@ -53,35 +53,34 @@
       <tspan x="315.591" y="124.542">LocalFS</tspan>
     </text>
   </g>
-  <g>
+  <g><!--arrow between collectors and FS-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="206.3" y1="102.6" x2="272.404" y2="91.7171"/>
     <polygon style="fill: #000000" points="279.805,90.4987 270.75,97.0568 272.404,91.7171 269.125,87.1896 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="279.805,90.4987 270.75,97.0568 272.404,91.7171 269.125,87.1896 "/>
   </g>
-  <g>
+  <g><!--arrow between FS and crashmover-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="349.19" y1="70.9432" x2="387.981" y2="55.1677"/>
     <polygon style="fill: #000000" points="394.929,52.3424 387.549,60.7412 387.981,55.1677 383.782,51.4779 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="394.929,52.3424 387.549,60.7412 387.981,55.1677 383.782,51.4779 "/>
   </g>
-  <g>
+  <g><!-- processors -->
     <rect style="fill: #ffffff" x="846" y="277" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="846" y="277" width="120" height="37"/>
-  </g>
-  <g>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="846" y="277" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
     <rect style="fill: #ffffff" x="826" y="257" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="826" y="257" width="120" height="37"/>
-  </g>
-  <g>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="826" y="257" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
     <rect style="fill: #ffffff" x="806" y="237" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="806" y="237" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="806" y="237" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="830" y="258.5">
+      <tspan x="830" y="258.5">Processors</tspan>
+    </text>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="906" y="295.5">
-    <tspan x="906" y="295.5"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="830" y="258.5">
-    <tspan x="830" y="258.5">Processors</tspan>
-  </text>
-  <g>
+  <g><!-- ES -->
     <rect style="fill: #ffffff" x="449.3" y="350.009" width="132.364" height="66.1818"/>
     <ellipse style="fill: #ffffff" cx="515.482" cy="416.191" rx="66.1818" ry="18.9091"/>
     <ellipse style="fill: #ffffff" cx="515.482" cy="350.009" rx="66.1818" ry="18.9091"/>
@@ -97,12 +96,12 @@
       <tspan x="515.482" y="451.827">ElasticSearch</tspan>
     </text>
   </g>
-  <g>
+  <g><!--arrow between middleware and ES-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="452.724" y1="343.115" x2="366.111" y2="287.932"/>
     <polygon style="fill: #000000" points="359.786,283.902 370.906,285.058 366.111,287.932 365.533,293.492 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.786,283.902 370.906,285.058 366.111,287.932 365.533,293.492 "/>
   </g>
-  <g>
+  <g><!-- RMQ -->
     <rect style="fill: #ffffff" x="765.3" y="38.0091" width="132.364" height="66.1818"/>
     <ellipse style="fill: #ffffff" cx="831.482" cy="104.191" rx="66.1818" ry="18.9091"/>
     <ellipse style="fill: #ffffff" cx="831.482" cy="38.0091" rx="66.1818" ry="18.9091"/>
@@ -118,166 +117,155 @@
       <tspan x="831.482" y="139.827">RabbitMQ</tspan>
     </text>
   </g>
-  <g>
+  <g><!-- arrow crashmovers to HBase -->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="559" y1="88.5" x2="640.319" y2="129.63"/>
     <polygon style="fill: #000000" points="647.012,133.015 635.832,132.963 640.319,129.63 640.345,124.04 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="647.012,133.015 635.832,132.963 640.319,129.63 640.345,124.04 "/>
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="86.3" y="84.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="86.3" y="84.1" width="120" height="37"/>
+  <g><!-- collectors -->
+    <rect style="fill: #ffffff" x="86.3" y="84.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="86.3" y="84.1" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/> -->
+    </rect>
+    <rect style="fill: #ffffff" x="64.3" y="67.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.3" y="67.1" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/> -->
+    </rect>
+    <rect style="fill: #ffffff" x="44.3" y="47.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="44.3" y="47.1" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/> -->
+    </rect>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="70.3" y="69.6">
+      <tspan x="70.3" y="69.6">Collectors</tspan>
+    </text>
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="64.3" y="67.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.3" y="67.1" width="120" height="37"/>
+  <g><!-- crashmovers -->
+    <rect style="fill: #ffffff" x="439" y="70" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="439" y="70" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/> -->
+    </rect>
+    <rect style="fill: #ffffff" x="421" y="55" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="421" y="55" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/> -->
+    </rect>
+    <rect style="fill: #ffffff" x="397" y="33" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="397" y="33" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/> -->
+    </rect>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="416" y="55.5">
+      <tspan x="416" y="55.5">CrashMovers</tspan>
+    </text>
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="44.3" y="47.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="44.3" y="47.1" width="120" height="37"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="146.3" y="102.6">
-    <tspan x="146.3" y="102.6"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="70.3" y="69.6">
-    <tspan x="70.3" y="69.6">Collectors</tspan>
-  </text>
-  <g>
-    <rect style="fill: #ffffff" x="439" y="70" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="439" y="70" width="120" height="37"/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="421" y="55" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="421" y="55" width="120" height="37"/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="397" y="33" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="397" y="33" width="120" height="37"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="499" y="88.5">
-    <tspan x="499" y="88.5"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="416" y="55.5">
-    <tspan x="416" y="55.5">CrashMovers</tspan>
-  </text>
-  <g>
+  <g><!--arrow between processors and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="771.083" y1="221.484" x2="799.026" y2="248.706"/>
     <polygon style="fill: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
     <polygon style="fill: #000000" points="804.398,253.94 793.746,250.543 799.026,248.706 800.724,243.38 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="804.398,253.94 793.746,250.543 799.026,248.706 800.724,243.38 "/>
   </g>
-  <g>
+  <g><!--arrow between processors and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="796.315" y1="256.5" x2="694.043" y2="267.062"/>
     <polygon style="fill: #000000" points="803.776,255.73 794.342,261.731 796.315,256.5 793.315,251.783 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="803.776,255.73 794.342,261.731 796.315,256.5 793.315,251.783 "/>
     <polygon style="fill: #000000" points="686.583,267.833 696.016,261.832 694.043,267.062 697.043,271.779 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="686.583,267.833 696.016,261.832 694.043,267.062 697.043,271.779 "/>
   </g>
-  <g>
+  <g><!--arrow between middleware and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="550.003" y1="276.995" x2="367.632" y2="282.411"/>
     <polygon style="fill: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
   </g>
-  <g>
+  <g><!--arrow between middleware and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.993" y1="189.51" x2="367.172" y2="279.732"/>
     <polygon style="fill: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
   </g>
-  <g>
+  <g><!-- middleware -->
     <rect style="fill: #ffffff" x="237.9" y="264.2" width="120" height="37"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="237.9" y="264.2" width="120" height="37"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="265" y="284">
+      <tspan x="265" y="284">Middleware</tspan>
+    </text>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="386.9" y="366.7">
-    <tspan x="386.9" y="366.7"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="265" y="284">
-    <tspan x="265" y="284">Middleware</tspan>
-  </text>
-  <g>
+  <g><!-- crontabber -->
     <rect style="fill: #ffffff" x="237" y="176.5" width="120" height="37"/>
     <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="237" y="176.5" width="120" height="37"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="263" y="197">
+     <tspan x="263" y="197">Crontabber</tspan>
+    </text>
   </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="334.6" y="263.6">
-    <tspan x="334.6" y="263.6"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="263" y="197">
-    <tspan x="263" y="197">Crontabber</tspan>
-  </text>
-  <g>
+  <g><!--arrow between crontabber and HBase-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="649" y1="173.05" x2="366.709" y2="194.27"/>
     <polygon style="fill: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
   </g>
-  <g>
+  <g><!--arrow between crontabber and PG-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="366.306" y1="197.861" x2="540.694" y2="251.482"/>
     <polygon style="fill: #000000" points="359.137,195.657 370.165,193.817 366.306,197.861 367.226,203.375 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.137,195.657 370.165,193.817 366.306,197.861 367.226,203.375 "/>
     <polygon style="fill: #000000" points="547.863,253.686 536.835,255.526 540.694,251.482 539.774,245.968 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.863,253.686 536.835,255.526 540.694,251.482 539.774,245.968 "/>
   </g>
-  <g>
-    <rect style="fill: #ffffff" x="280" y="385" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="280" y="385" width="120" height="37"/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="258" y="368" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="258" y="368" width="120" height="37"/>
-  </g>
-  <g>
-    <rect style="fill: #ffffff" x="238" y="348" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="238" y="348" width="120" height="37"/>
-  </g>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="340" y="403.5">
-    <tspan x="340" y="403.5"></tspan>
-  </text>
-  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="264" y="370.5">
-    <tspan x="264" y="370.5">WebHeads</tspan>
-  </text>
-  <image x="111.3" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
-  <image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
-  <g>
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145.767" y1="194.002" x2="146.229" y2="130.836"/>
+  <g><!--arrow between crashing ff and collector-->
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145" y1="205" x2="145.284" y2="130.836"/>
     <polygon style="fill: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
   </g>
-  <ellipse style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" cx="145.5" cy="230.5" rx="33.5" ry="32.5"/>
-  <line style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" x1="169.188" y1="207.519" x2="121.812" y2="253.481"/>
-  <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 764.298 68.3344 C 616.117,62.2344 499.3,160 366.454,192.675"/>
+  <g><!--webhead rear box-->
+    <rect style="fill: #ffffff" x="280" y="385" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="280" y="385" width="120" height="37"/>
+    <!--webhead middle box-->
+    <rect style="fill: #ffffff" x="258" y="368" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="258" y="368" width="120" height="37"/>
+    <!--webhead top box-->
+    <rect style="fill: #ffffff" x="238" y="348" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="238" y="348" width="120" height="37"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="264" y="370.5">
+      <tspan x="264" y="370.5">WebHeads</tspan>
+    </text>
+  </g>
+  <g><!--arrow RMQ to crontabber -->
+    <path  style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 764.298 68.3344 C 616.117,62.2344 499.3,160 366.454,192.675"/>
     <polygon style="fill: #000000" points="359.171,194.466 367.688,187.222 366.454,192.675 370.076,196.933 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.171,194.466 367.688,187.222 366.454,192.675 370.076,196.933 "/>
   </g>
-  <g>
+  <g><!--arrow RMQ to middleware -->
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 764.293 71.1 C 612.044,71.1 495.3,216 366.659,278.448"/>
     <polygon style="fill: #000000" points="359.912,281.723 366.724,272.858 366.659,278.448 371.091,281.854 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.912,281.723 366.724,272.858 366.659,278.448 371.091,281.854 "/>
   </g>
-  <g>
+  <g><!--arrow RMQ to processor -->
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 899.3 65 C 967.3,95 865.3,135 868.907,224.272"/>
     <polygon style="fill: #000000" points="869.21,231.766 863.81,221.976 868.907,224.272 873.802,221.572 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="869.21,231.766 863.81,221.976 868.907,224.272 873.802,221.572 "/>
   </g>
-  <g>
+  <g><!--arrow processors to ES -->
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 806 255.5 C 724,294.5 678.211,383.1 592.392,383.1"/>
     <polygon style="fill: #000000" points="584.892,383.1 594.892,378.1 592.392,383.1 594.892,388.1 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="584.892,383.1 594.892,378.1 592.392,383.1 594.892,388.1 "/>
   </g>
-  <g>
+  <g><!--arrow middleware to webheads -->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="297.9" y1="301.2" x2="297.979" y2="338.264"/>
     <polygon style="fill: #000000" points="297.995,345.764 292.974,335.775 297.979,338.264 302.974,335.753 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="297.995,345.764 292.974,335.775 297.979,338.264 302.974,335.753 "/>
   </g>
-  <g>
+  <g><!--arrow webheads to FF -->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="238" y1="366.5" x2="191.436" y2="366.5"/>
     <polygon style="fill: #000000" points="183.936,366.5 193.936,361.5 191.436,366.5 193.936,371.5 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="183.936,366.5 193.936,361.5 191.436,366.5 193.936,371.5 "/>
   </g>
-  <g>
+  <g><!--arrow crashmover to RMQ -->
     <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 559 88.5 C 652,50.5 676.12,49.7818 754.656,60.5583"/>
     <polygon style="fill: #000000" points="762.087,61.5779 751.5,65.172 754.656,60.5583 752.859,55.2648 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="762.087,61.5779 751.5,65.172 754.656,60.5583 752.859,55.2648 "/>
   </g>
-  <g>
+  <g><!--symbol storage-->
     <rect style="fill: #ffffff" x="760" y="369.312" width="65.1818" height="32.5909"/>
     <ellipse style="fill: #ffffff" cx="792.591" cy="401.903" rx="32.5909" ry="9.31169"/>
     <ellipse style="fill: #ffffff" cx="792.591" cy="369.312" rx="32.5909" ry="9.31169"/>
@@ -293,9 +281,209 @@
       <tspan x="792.591" y="425.542">SymbolStorage</tspan>
     </text>
   </g>
-  <g>
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+  <g><!-- arrow symbol storage to processors -->
+    <path id="symbtoproc" style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+    <text  x="0" y="0" font-size="12" opacity="1" style="fill: #FF0000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal">
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- <animate begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+      <animateMotion begin= "30s" dur="0.5s" repeatCount="12" >
+        <mpath xlink:href="#symbtoproc"/>
+      </animateMotion>
+      <animateMotion begin="36s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion> -->
+      <tspan>*$@#+^?!</tspan>
+    </text>
     <polygon style="fill: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
+  </g>
+
+  <g>
+    <image x="115" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
+    <!--<image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/Animated_fire_by_nevit.gif">
+    </image> -->
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0.5" xlink:href="file:///home/lars/work/pytn14/resources/skeleton-fox.png">
+    </image>
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
+      <!--<animate  begin="2.1s" attributeType="CSS" attributeName="opacity" from="0" to="0.6" repeatCount="1" fill="freeze" dur="0.5s"  additive="replace"/> -->
+    </image>
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png">
+      <!--<animate  begin="2s" attributeType="CSS" attributeName="opacity" from="1" to="0" fill="freeze" dur="0.1s" repeatCount="5" additive="replace"/> -->
+    </image>
+  </g>
+
+  <g><!-- images and animation -->
+    <!-- IMAGE PATHS -->
+
+    <path id="backstage_hold" d="M-100-100" fill="none"/>
+
+    <path id="client_to_collector" d="M120,205 v -150 l 163, -20 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10 M270 25" fill="none" />
+    <path id="fs_to_rmq" d="M270 25 h 150 l 380 10 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
+    <path id="fs_to_hbase" d="M270 25 h 150 l 260 110 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
+    <path id="stuck_at_hbase" d="M680 145" fill="none" />
+    <path id="rmq_to_processor" d="M800 45   C 870,95 900,135 835,235" fill="none" />
+    <path id="rmq_to_processor2" d="M 800 45 h30 C 967.3,95 865.3,135 835,235 M 835,235" fill="none"/>
+    <path id="hbase_to_processor" d="M680 145  l 145 90  M835 235" fill="none" />
+    <path id="processor_to_pg" d="M835 235 l -260 10" fill="none" />
+    <path id="processor_to_pg2" d="M835 235 l -240 10" fill="none" />
+    <path id="vertical_processor_bouncy" d="M835 235 v 5 v -10 v 10 v -10 v 10 v -10  v 5 " />
+    <path id="horizontal_processor_bouncy" d="M835 235 h 5 h -10 h 10 h -10 h 10 h -10  h 5 " />
+    <path id="processor_to_hbase" d="M835 235 L700 145 " fill="none" />
+    <path id="processor_to_es" d="M835 235 l -280 120 h-80"  fill="none" />
+    <path id="processor_to_es2" d="M835 235 l -280 120 h-60"  fill="none" />
+    <!-- HBASE stationary raw_crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- TIMEPOINT 19 -->
+      <!-- <animateMotion begin="19s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#stuck_at_hbase"/>
+      </animateMotion>-->
+    </image>
+
+    <!-- RMQ crash id -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.bw.png">
+      <!-- TIMEPOINT 00 -->
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- TIMEPOINT 12 -->
+      <!-- <animate  attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+      <animateMotion begin="12" dur="7s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#fs_to_rmq"/>
+      </animateMotion>
+      <animateMotion begin="21" dur="6s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#rmq_to_processor2"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 30 -->
+      <!-- <animateMotion begin="30s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion> -->
+    </image>
+
+    <!--ES destined raw crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 35 -->
+      <!--   <animate  begin="35s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateMotion begin="36s" dur="6s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#horizontal_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 41.5 -->
+        <!--<animateMotion begin="41.5s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_es"/>
+        </animateMotion>-->
+    </image>
+
+    <!--ES destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 30 -->
+      <!--  <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateMotion begin="30s" dur="12s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 41 -->
+      <!--  <animateMotion begin="41s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_es2"/>
+        </animateMotion> -->
+    </image>
+
+    <!--PG destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 30 -->
+      <!--  <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="3"/>
+        <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 39 -->
+      <!--   <animateMotion begin="39s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_pg2"/>
+        </animateMotion> -->
+    </image>
+
+
+    <!-- Raw Crash destined for PG -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!--<animate  begin="4s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="0.5s" additive="replace"/>
+      <animateMotion begin="4s" dur="6s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#client_to_collector"/>
+      </animateMotion>-->
+      <!-- TIMEPOINT 12 -->
+      <!--<animateMotion begin="12s" dur="6s" repeatCount="1"  fill="freeze" additive="replace">
+        <mpath xlink:href="#fs_to_hbase"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 27 -->
+      <!-- <animateMotion begin="27s" dur="3s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#hbase_to_processor"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 30 -->
+      <!-- <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" from="0 34 34" to="360 34 34" dur="2s" repeatCount="3"/>
+      <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
+        <mpath xlink:href="#horizontal_processor_bouncy"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 32 -->
+      <!--<animateMotion begin="38s" dur="3s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#processor_to_pg"/>
+      </animateMotion> -->
+    </image>
+
+    <!--PG destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 32 -->
+      <!--  <animate  begin="32s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="3s" additive="replace"/>
+        <animateTransform begin="32s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="2"/>
+        <animateMotion begin="32s" dur="7s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 39 -->
+      <!--   <animateMotion begin="39s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_pg2"/>
+        </animateMotion> -->
+    </image>
+
+    <!--HBase destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 30 -->
+      <!--  <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="3"/>
+        <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 36 -->
+      <!--  <animateMotion begin="36s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_hbase"/>
+        </animateMotion>-->
+    </image>
+
+
+
   </g>
 </svg>

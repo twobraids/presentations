@@ -65,11 +65,17 @@
   </g>
   <g><!-- processors -->
     <rect style="fill: #ffffff" x="846" y="277" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="846" y="277" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="846" y="277" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
     <rect style="fill: #ffffff" x="826" y="257" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="826" y="257" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="826" y="257" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
     <rect style="fill: #ffffff" x="806" y="237" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="806" y="237" width="120" height="37"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="806" y="237" width="120" height="37">
+      <!--<animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="20s" dur="0.5s" repeatCount="indefinite" end="41s"/> -->
+    </rect>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="830" y="258.5">
       <tspan x="830" y="258.5">Processors</tspan>
     </text>
@@ -117,23 +123,41 @@
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="647.012,133.015 635.832,132.963 640.319,129.63 640.345,124.04 "/>
   </g>
   <g><!-- collectors -->
-    <rect style="fill: #ffffff" x="86.3" y="84.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="86.3" y="84.1" width="120" height="37"/>
-    <rect style="fill: #ffffff" x="64.3" y="67.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.3" y="67.1" width="120" height="37"/>
-    <rect style="fill: #ffffff" x="44.3" y="47.1" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="44.3" y="47.1" width="120" height="37"/>
+    <rect style="fill: #ffffff" x="86.3" y="84.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="86.3" y="84.1" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/>
+    </rect>
+    <rect style="fill: #ffffff" x="64.3" y="67.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="64.3" y="67.1" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/>
+    </rect>
+    <rect style="fill: #ffffff" x="44.3" y="47.1" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="44.3" y="47.1" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="4s" dur="0.5s" repeatCount="12"/>
+    </rect>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="70.3" y="69.6">
       <tspan x="70.3" y="69.6">Collectors</tspan>
     </text>
   </g>
   <g><!-- crashmovers -->
-    <rect style="fill: #ffffff" x="439" y="70" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="439" y="70" width="120" height="37"/>
-    <rect style="fill: #ffffff" x="421" y="55" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="421" y="55" width="120" height="37"/>
-    <rect style="fill: #ffffff" x="397" y="33" width="120" height="37"/>
-    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="397" y="33" width="120" height="37"/>
+    <rect style="fill: #ffffff" x="439" y="70" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="439" y="70" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/>
+    </rect>
+    <rect style="fill: #ffffff" x="421" y="55" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="421" y="55" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/>
+    </rect>
+    <rect style="fill: #ffffff" x="397" y="33" width="120" height="37">
+    </rect>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="397" y="33" width="120" height="37">
+      <animate attributeName="stroke" from="#000000" to="rgb(255, 0, 0)" begin="11s" dur="0.5s" repeatCount="14"/>
+    </rect>
     <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="416" y="55.5">
       <tspan x="416" y="55.5">CrashMovers</tspan>
     </text>
@@ -189,7 +213,7 @@
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.863,253.686 536.835,255.526 540.694,251.482 539.774,245.968 "/>
   </g>
   <g><!--arrow between crashing ff and collector-->
-    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145.767" y1="194.002" x2="146.229" y2="130.836"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="145" y1="205" x2="145.284" y2="130.836"/>
     <polygon style="fill: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="146.284,123.336 151.21,133.372 146.229,130.836 141.211,133.299 "/>
   </g>
@@ -258,29 +282,194 @@
     </text>
   </g>
   <g><!-- arrow symbol storage to processors -->
-    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+    <path id="symbtoproc" style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 826.3,388.1 A 66.0716,66.0716 0 0 0 906.701,323.632"/>
+    <text  x="0" y="0" font-size="12" opacity="1" style="fill: #FF0000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal">
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- <animate begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+      <animateMotion begin= "30s" dur="0.5s" repeatCount="12" >
+        <mpath xlink:href="#symbtoproc"/>
+      </animateMotion>
+      <animateMotion begin="36s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion> -->
+      <tspan>*$@#+^?!</tspan>
+    </text>
     <polygon style="fill: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="906.325,316.212 912.725,325.38 907.415,323.633 902.831,326.833 "/>
   </g>
-  <g><!-- images and animation -->
-      <!--                  origin  to cm to rmq       bounce                                        -->
-      <path id="rmqpath" d="M270 25 h 150 l 380 10     v 10 v-10 v10 v-10 v 10 v-10 v 10 v -10 v 10" fill="none" />
-        <image x="0" y="0" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.bw.png">
-           <animateMotion dur="7s" repeatCount="1" fill="freeze">
-                <mpath xlink:href="#rmqpath"/>
-           </animateMotion>
-      </image>
-      <!--                 origin  to cm to hb       bounce                                        -->
-      <path id="hbpath" d="M270 25 h 150 l 260 120   v-10 v10 v-10 v 10 v-10 v 10 v -10 v 10 v -10" fill="none" />
-        <image x="0" y="0" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
-           <animateMotion dur="6s" repeatCount="1" fill="freeze">
-                <mpath xlink:href="#hbpath"/>
-           </animateMotion>
-      </image>
-      <image x="111.3" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
-      <image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
+
+  <g>
+    <image x="115" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
+    <!--<image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/Animated_fire_by_nevit.gif">
+    </image> -->
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0.5" xlink:href="file:///home/lars/work/pytn14/resources/skeleton-fox.png">
+    </image>
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
+      <animate  begin="2.1s" attributeType="CSS" attributeName="opacity" from="0" to="0.6" repeatCount="1" fill="freeze" dur="0.5s"  additive="replace"/>
+    </image>
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png">
+      <animate  begin="2s" attributeType="CSS" attributeName="opacity" from="1" to="0" fill="freeze" dur="0.1s" repeatCount="5" additive="replace"/>
+    </image>
     <!-- circle with slash -->
-    <ellipse style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" cx="145.5" cy="230.5" rx="33.5" ry="32.5"/>
-    <line style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" x1="169.188" y1="207.519" x2="121.812" y2="253.481"/>
+    <!--<ellipse style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" cx="145.5" cy="230.5" rx="33.5" ry="32.5"/>
+    <line style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" x1="169.188" y1="207.519" x2="121.812" y2="253.481"/> -->
+  </g>
+
+  <g><!-- images and animation -->
+    <!-- IMAGE PATHS -->
+
+    <path id="backstage_hold" d="M-100-100" fill="none"/>
+
+    <path id="client_to_collector" d="M120,205 v -150 l 163, -20 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10 M270 25" fill="none" />
+    <path id="fs_to_rmq" d="M270 25 h 150 l 380 10 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
+    <path id="fs_to_hbase" d="M270 25 h 150 l 260 110 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
+    <path id="stuck_at_hbase" d="M680 145" fill="none" />
+    <path id="rmq_to_processor" d="M800 45   C 870,95 900,135 835,235" fill="none" />
+    <path id="rmq_to_processor2" d="M 800 45 h30 C 967.3,95 865.3,135 835,235 M 835,235" fill="none"/>
+    <path id="hbase_to_processor" d="M680 145  l 145 90  M835 235" fill="none" />
+    <path id="processor_to_pg" d="M835 235 l -260 10" fill="none" />
+    <path id="processor_to_pg2" d="M835 235 l -240 10" fill="none" />
+    <path id="vertical_processor_bouncy" d="M835 235 v 5 v -10 v 10 v -10 v 10 v -10  v 5 " />
+    <path id="horizontal_processor_bouncy" d="M835 235 h 5 h -10 h 10 h -10 h 10 h -10  h 5 " />
+    <path id="processor_to_hbase" d="M835 235 L700 145 " fill="none" />
+    <path id="processor_to_es" d="M835 235 l -280 120 h-80"  fill="none" />
+    <path id="processor_to_es2" d="M835 235 l -280 120 h-60"  fill="none" />
+    <!-- HBASE stationary raw_crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- TIMEPOINT 19 -->
+      <!-- <animateMotion begin="19s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#stuck_at_hbase"/>
+      </animateMotion>-->
+    </image>
+
+    <!-- RMQ crash id -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.bw.png">
+      <!-- TIMEPOINT 00 -->
+      <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion>
+      <!-- TIMEPOINT 12 -->
+      <animate  attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="1s" additive="replace"/>
+      <animateMotion begin="12" dur="7s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#fs_to_rmq"/>
+      </animateMotion>
+      <!-- TIMEPOINT 21-->
+       <!--<animateMotion begin="21" dur="6s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#rmq_to_processor2"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 30 -->
+      <!-- <animateMotion begin="30s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#backstage_hold"/>
+      </animateMotion> -->
+    </image>
+
+    <!--ES destined raw crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 35 -->
+      <!--   <animate  begin="35s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateMotion begin="36s" dur="6s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#horizontal_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 41.5 -->
+        <!--<animateMotion begin="41.5s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_es"/>
+        </animateMotion>-->
+    </image>
+
+    <!--ES destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 30 -->
+      <!--  <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateMotion begin="30s" dur="12s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 41 -->
+      <!--  <animateMotion begin="41s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_es2"/>
+        </animateMotion> -->
+    </image>
+
+
+    <!-- Raw Crash destined for PG -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <animate  begin="4s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="0.5s" additive="replace"/>
+      <animateMotion begin="4s" dur="6s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#client_to_collector"/>
+      </animateMotion>
+      <!-- TIMEPOINT 12 -->
+      <animateMotion begin="12s" dur="6s" repeatCount="1"  fill="freeze" additive="replace">
+        <mpath xlink:href="#fs_to_hbase"/>
+      </animateMotion>
+      <!-- TIMEPOINT 27 -->
+      <!-- <animateMotion begin="27s" dur="3s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#hbase_to_processor"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 30 -->
+      <!-- <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" from="0 34 34" to="360 34 34" dur="2s" repeatCount="3"/>
+      <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
+        <mpath xlink:href="#horizontal_processor_bouncy"/>
+      </animateMotion> -->
+      <!-- TIMEPOINT 32 -->
+      <!--<animateMotion begin="38s" dur="3s" repeatCount="1" fill="freeze" additive="replace">
+        <mpath xlink:href="#processor_to_pg"/>
+      </animateMotion> -->
+    </image>
+
+    <!--PG destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 32 -->
+      <!--  <animate  begin="32s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="3s" additive="replace"/>
+        <animateTransform begin="32s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="2"/>
+        <animateMotion begin="32s" dur="7s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 39 -->
+      <!--   <animateMotion begin="39s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_pg2"/>
+        </animateMotion> -->
+    </image>
+
+    <!--HBase destined processed crash -->
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+      <!-- TIMEPOINT 00 -->
+        <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#backstage_hold"/>
+        </animateMotion>
+      <!-- TIMEPOINT 30 -->
+      <!--  <animate  begin="30s" attributeType="CSS" attributeName="opacity" from="0" to="1" repeatCount="1" fill="freeze" dur="6s" additive="replace"/>
+        <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" to="0 34 34" from="360 34 34" dur="2s" repeatCount="3"/>
+        <animateMotion begin="30s" dur="6s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#vertical_processor_bouncy"/>
+        </animateMotion> -->
+      <!-- TIMEPOINT 36 -->
+      <!--  <animateMotion begin="36s" dur="3s" repeatCount="1" fill="freeze">
+          <mpath xlink:href="#processor_to_hbase"/>
+        </animateMotion>-->
+    </image>
+
+
+
   </g>
 </svg>
