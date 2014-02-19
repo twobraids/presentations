@@ -5,7 +5,6 @@
 <!--<video style="position: absolute; bottom: 0px; right: 0px; min-width: 100%; min-height: 800px width: auto; height: auto; z-index: -1000; overflow: hidden;" id="video_background" preload="auto" autoplay="false" muted="muted" volume="0">
 <source src="/home/lars/work/pytn14/resources/faceplant.fox.2.mp4" type="video/mp4">
 Video not supported </video>  -->
-<!--<video width="100%" src="./mozilla.mission.webm" controls preload autoplay> </video>-->
 <video   style="min-width: 100%; min-height: 100%;" src="/home/lars/work/pytn14/resources/faceplant.fox.2.mp4"  preload autoplay> </video>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -17,7 +16,14 @@ Video not supported </video>  -->
 
 <div>
 	<h1>Socorro</h1>
-	<p></p>
+	<ul>
+		<li>Introduction</li>
+		<li>Definitions</li>
+		<li>Socorro</li>
+		<li>Crashing Firefox on purpose</li>
+		<li>Tracing a Crash Through Socorro</li>
+		<li>Configman (if there is time)</li>
+	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -76,7 +82,7 @@ Video not supported </video>  -->
 <div>
 	<h1>Crash Reporter</h1>
 	<h2>What is a crash reporting system</h2>
-	<p>and why would any one need one?</p>
+	<p>and why would anyone need one?</p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -126,7 +132,7 @@ Video not supported </video>  -->
 	<h1>Socorro</h1>
 	<h2>What is it?</h2>
 	<ul>
-		<li>Mozilla Home Brewed Crash Reporter</li>
+		<li>Mozilla Homebrewed Crash Reporter</li>
 		<li>Open Source</li>
 		<li>Software as Performance Art</li>
 	</ul>
@@ -176,7 +182,7 @@ Video not supported </video>  -->
 	<h1>Breakpad</h1>
 	<h2>HTTP Post to Socorro contains:</h2>
 	<ul>
-		<li>metadata about program that crashed</li>
+		<li>metadata about the program that crashed</li>
 		<ul>
 			<li>ProductName & Version</li>
 			<li>Crashtime, TimeSinceLastCrash, TimeSinceStartup</li>
@@ -251,7 +257,7 @@ Video not supported </video>  -->
 	<h2>3 layer design</h2>
 	<ul>
 		<li>HTTP input</li>
-		<li>Rule based filtration</li>
+		<li>Rule-based filtration</li>
 		<li>Data storage to a file system</li>
 	</ul>
 </div>
@@ -327,7 +333,7 @@ Video not supported </video>  -->
 	<h1>CrashMover</h1>
 	<ul>
 		<li>move crashes from temporary File System storage into permanent HBase storage</li>
-		<li>push crash ids into RabbitMQ to tell processors what crashes to process</li>
+		<li>push crash IDs into RabbitMQ to tell processors what crashes to process</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -358,7 +364,7 @@ Video not supported </video>  -->
 	<ul>
 		<li>a queuing system for new crashes</li>
 		<li>tells the processors what to do next</li>
-		<li>saves only the id of a crash</li>
+		<li>saves only the ID of a crash</li>
 	</ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -548,7 +554,7 @@ Video not supported </video>  -->
 		<li>Components selected by configuration at run time</li>
 		<li>Instantiated and run on the fly</li>
 	</ul>
-	<p style="font-size:150%;" ><br /><em>This is software as performance art!</em></p>
+	<p style="font-size:150%;" ><br /><em>Software as performance art!</em></p>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -627,7 +633,7 @@ Video not supported </video>  -->
 	<h1>Configman</h1>
 	<h2>Generic Applications</h2>
 	<div style="float:left; width:50%">
-		<p>Allows Socorro to turn on proverbial dime.<br />&nbsp;</p>
+		<p>Allows Socorro to turn on a proverbial dime.<br />&nbsp;</p>
 		<p>RabbitMQ was provisioned and plugged in less than a week with
 	very little coding.</p>
 	</div>
@@ -638,7 +644,7 @@ Video not supported </video>  -->
 	<h1>Configman</h1>
 	<h2>Generic Applications</h2>
 	<div style="float:left; width:50%">
-		<p>All with the drawback of complexity moving from the code into configuration.</p>
+		<p>All the flexiblity with the drawback of complexity moving from the code into configuration.</p>
 	</div>
 	<img style="float:right; width:50%" src="/home/lars/work/pytn14/resources/lego.parts.png">
 </div>
