@@ -304,13 +304,16 @@
     <image x="115" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
     <!--<image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/Animated_fire_by_nevit.gif">
     </image> -->
-    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0.5" xlink:href="file:///home/lars/work/pytn14/resources/skeleton-fox.png">
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
+      <animate  begin="2.1s" attributeType="CSS" attributeName="opacity" from="0" to="0.5" repeatCount="1" fill="freeze" dur="0.5s"  additive="replace"/>
+    </image>
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-lars-skeleton-100.2.png">
     </image>
     <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
-      <animate  begin="2.1s" attributeType="CSS" attributeName="opacity" from="0" to="0.6" repeatCount="1" fill="freeze" dur="0.5s"  additive="replace"/>
+      <animate  begin="2.2s" attributeType="CSS" attributeName="opacity" from="0" to="0.6" repeatCount="4" fill="freeze" dur="0.1s"  additive="replace"/>
     </image>
     <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png">
-      <animate  begin="2s" attributeType="CSS" attributeName="opacity" from="1" to="0" fill="freeze" dur="0.1s" repeatCount="5" additive="replace"/>
+      <animate  begin="2s" attributeType="CSS" attributeName="opacity" from="1" to="0" fill="freeze" dur="0.1s" repeatCount="4" additive="replace"/>
     </image>
     <!-- circle with slash -->
     <!--<ellipse style="fill: none; fill-opacity:0; stroke-width: 8; stroke: #a52a2a" cx="145.5" cy="230.5" rx="33.5" ry="32.5"/>
