@@ -301,18 +301,18 @@
   </g>
 
   <g>
-    <image x="115" y="331.3" width="70.4" height="70.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png"/>
-    <!--<image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/Animated_fire_by_nevit.gif">
+    <image x="115" y="331.3" width="70.4" height="70.4" xlink:href="./ff-logo-100.png"/>
+    <!--<image x="119.6" y="205.1" width="56.4" height="56.4" xlink:href="./Animated_fire_by_nevit.gif">
     </image> -->
-    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="./inverse-fox.png">
       <animate  begin="2.1s" attributeType="CSS" attributeName="opacity" from="0" to="0.5" repeatCount="1" fill="freeze" dur="0.5s"  additive="replace"/>
     </image>
-    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-lars-skeleton-100.2.png">
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="./ff-logo-lars-skeleton-100.2.png">
     </image>
-    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/inverse-fox.png">
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="0" xlink:href="./inverse-fox.png">
       <animate  begin="2.2s" attributeType="CSS" attributeName="opacity" from="0" to="0.6" repeatCount="4" fill="freeze" dur="0.1s"  additive="replace"/>
     </image>
-    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/css/themes/mozilla/ff-logo-100.png">
+    <image x="115" y="205.1" width="70.4" height="70.4" opacity="1" xlink:href="./ff-logo-100.png">
       <animate  begin="2s" attributeType="CSS" attributeName="opacity" from="1" to="0" fill="freeze" dur="0.1s" repeatCount="4" additive="replace"/>
     </image>
     <!-- circle with slash -->
@@ -340,7 +340,7 @@
     <path id="processor_to_es" d="M835 235 l -280 120 h-80"  fill="none" />
     <path id="processor_to_es2" d="M835 235 l -280 120 h-60"  fill="none" />
     <!-- HBASE stationary raw_crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="1" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="1" xlink:href="./ff-logo-100.ghost.png">
       <!-- TIMEPOINT 00 -->
       <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
         <mpath xlink:href="#backstage_hold"/>
@@ -352,7 +352,7 @@
     </image>
 
     <!-- RMQ crash id -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.bw.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.bw.png">
       <!-- TIMEPOINT 00 -->
       <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
         <mpath xlink:href="#backstage_hold"/>
@@ -373,7 +373,7 @@
     </image>
 
     <!--ES destined raw crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.ghost.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
           <mpath xlink:href="#backstage_hold"/>
@@ -390,7 +390,7 @@
     </image>
 
     <!--ES destined processed crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.pale.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
           <mpath xlink:href="#backstage_hold"/>
@@ -408,7 +408,7 @@
 
 
     <!-- Raw Crash destined for PG -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.ghost.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.ghost.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
           <mpath xlink:href="#backstage_hold"/>
@@ -437,7 +437,7 @@
     </image>
 
     <!--PG destined processed crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.pale.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
           <mpath xlink:href="#backstage_hold"/>
@@ -455,7 +455,7 @@
     </image>
 
     <!--HBase destined processed crash -->
-    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="file:///home/lars/work/pytn14/resources/ff-logo-100.pale.png">
+    <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.pale.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
           <mpath xlink:href="#backstage_hold"/>
