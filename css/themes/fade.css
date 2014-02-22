@@ -18,6 +18,8 @@
 .slide-view-module .slide-before, .slide-view-module .slide-after {
 	position: absolute;
 	z-index: -1;
+        height:800;
+
 }
 .slide-current {
 	opacity: 1;
