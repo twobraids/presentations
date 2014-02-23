@@ -1,118 +1,236 @@
 <div class="slide-layout-title">
-	<h1>Slides</h1>
-	<h2>Presentations with HTML</h2>
+	<img style="width:600px" border="0" src="./resources/nest.jpg" />
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Why?</h1>
-	<p>I got fed up with using Keynote and Powerpoint to create and give presentations.  I'm a web developer for pete's sake, can't I do it in HTML?</p>
+	<img style="height:600px" border="0" src="./resources/pellet-stove.jpg" />
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Yes</h1>
-	<p>So, I made a simple presentation framework for the web.  You're looking at it.</p>
+	<img style="height:600px" border="0" src="./resources/high-medium-low.jpg" />
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Simple</h1>
-	<p>You just make slides in plain old HTML, and the framework will present them for you.  You can create themes and layouts with CSS.</p>
+	<img style="height:600px" border="0" src="./resources/switchwires.jpg" />
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Examples</h1>
-	<p>The next few slides show some examples of very simple layouts you might expect to see in a slide presentation.</p>
-</div>
+	<h2>High = OR at 24V; BL at 0V</h2>
+	<h2>Medium = OR at 0V; BL at 0V</h2>
+	<h2>Low = OR at 0V; BL at 24V</h2>
 <hr>
-<div class="slide-layout-title">
-	<h1>Just a Title</h1>
-</div>
-<hr>
-<div class="slide-layout-title">
-	<h1>Title</h1>
-	<h2>With Subtitle</h2>
-</div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Title</h1>
-	<h2>Subtitle</h2>
-	<p>This is a slide with title, subtitle, and some paragraph text. This slide uses a different layout that shifts everything upward to account for the paragraph text.</p>
+<style>
+table,td
+{
+border:1px solid white;
+text-align:center;
+}
+th
+{
+background:#999999;
+}
+table
+{
+width:100%;
+}
+th
+{
+height:50px;
+}
+</style>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td>X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>X</td><td>X</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>X</td><td>X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td style="background:#007700">0</td><td>0</td><td>0</td><td style="background:#007700">0</td><td>X</td><td>X</td></tr>
+<tr><td style="background:#007700">0</td><td>0</td><td>1</td><td style="background:#007700">0</td><td>X</td><td>X</td></tr>
+<tr><td style="background:#007700">0</td><td>1</td><td>0</td><td style="background:#007700">0</td><td>X</td><td>X</td></tr>
+<tr><td style="background:#007700">0</td><td>1</td><td>1</td><td style="background:#007700">0</td><td>X</td><td>X</td></tr>
+<tr><td style="background:#007700">1</td><td>0</td><td>0</td><td style="background:#007700">1</td><td>1</td><td>0</td></tr>
+<tr><td style="background:#007700">1</td><td>0</td><td>1</td><td style="background:#007700">1</td><td>X</td><td>X</td></tr>
+<tr><td style="background:#007700">1</td><td>1</td><td>0</td><td style="background:#007700">1</td><td>0</td><td>0</td></tr>
+<tr><td style="background:#007700">1</td><td>1</td><td>1</td><td style="background:#007700">1</td><td>0</td><td>1</td></tr>
+</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Title</h1>
-	<h2>Subtitle and Bullets</h2>
-	<ul>
-		<li>Titles, and paragraph text are just HTML elements</li>
-		<ul>
-			<li>e.g. <code>h1</code>, <code>h2</code>, <code>p</code></li>
-		</ul>
-		<li>Bullets, of course</li>
-		<ul>
-			<li>nest,</li>
-			<ul>
-				<li>as you'd expect</li>
-			</ul>
-		</ul>
-	</ul>
+<h2>PSW = W1
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
+</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Links</h1>
-	<p>Since it's HTML, linking is easy, and means you don't have to jump out of Powerpoint or Keynote to view the link.  The back button works, too ... <a href="http://google.com/">try it</a></p>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td style="background:#000077">1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>More Links</h1>
-	<p>You can link to other slides, too, and the back button will still work like you think it should.  <a href="#11">Try it</a>.</p>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td style="background:#000077">0</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td style="background:#000077">1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Layouts</h1>
-	<h2>Just use CSS</h2>
-	<ul>
-		<li>Layouts are just CSS classes</li>
-		<ul>
-			<li>e.g. <code>slide-layout-title</code></li>
-		</ul>
-		<li>There are a few built-in, as you've seen</li>
-		<li>You can define your own</li>
-	</ul>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Themes</h1>
-	<h2>You guessed it, CSS</h2>
-	<ul>
-		<li>Themes are also CSS classes</li>
-		<li>You're looking at the 'gray' theme right now</li>
-		<li>You can, of course, define your own</li>
-	</ul>
+<h2>BL = not W2 and not W3
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Transitions</h1>
-	<h2>CSS again!</h2>
-	<ul>
-		<li>Slide transitions are defined using CSS3</li>
-		<li>This presentation uses the 'fade' transition</li>
-		<li>Can be integrated into a theme or mixed-and-matched</li>
-		<li>And yep, you can define your own</li>
-	</ul>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Mobile</h1>
-	<h2>Landscape, portrait, touch, swipe</h2>
-	<p>It has mobile viewport support in the builtin template and themes, plus touch and swipe event support for navigation.</p>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
+<tr><td style="background:orange">1</td><td style="background:orange">1</td><td style="background:orange">1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
+</table>
 </div>
-<hr>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1>Engineered</h1>
-	<h2>MVC, OOCSS, and AMD</h2>
-	<p>Cutting edge tech, packaged for simplicity.  Use it out of the box, or drop in code for your own slide models, views, and controllers.</p>
+<table>
+<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
+<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td style="background:orange">0</td><td style="background:orange">0</td><td style="background:orange">1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td style="background:orange">0</td><td style="background:orange">1</td><td style="background:orange">1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
+<tr><td style="background:orange">1</td><td style="background:orange">0</td><td style="background:orange">1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
+<tr><td style="background:orange">1</td><td style="background:orange">1</td><td style="background:orange">1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
+</table>
 </div>
-<hr>
-<div class="slide-layout-title">
-	<h1>Get it</h1>
-	<h2>Now available on <a href="https://github.com/briancavalier/slides">github</a></h2>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<h2>OR = (not W1 and not W2 and W3) or (not W1 and W2 and W3) or (W1 and W2 and W3)</h2>
 </div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<h2>OR =  W3</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div style="background-color:#777777">
+	<img style="height:600px;width:50%" src="./resources/NestPelletConversionSchematic7.svg"  />
+	</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/cut1.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/splice1.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/splice2.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/wires.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/circuitry.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/stage1.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/stage2.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/stage3.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="height:600px" border="0"  src="./resources/happycat.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<p>http://www.twobraids.com/2014/01/hacking-pellet-stove-to-work-with-nest.html</p>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
