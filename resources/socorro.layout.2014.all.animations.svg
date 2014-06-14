@@ -363,7 +363,7 @@
         <mpath xlink:href="#fs_to_rmq"/>
       </animateMotion>
       <animateMotion begin="21" dur="6s" repeatCount="1" fill="freeze" additive="replace">
-        <mpath xlink:href="#rmq_to_processor2"/>
+        <mpath xlink:href="#rmq_to_processor"/>
       </animateMotion>
       <!-- TIMEPOINT 30 -->
       <animateMotion begin="30s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">

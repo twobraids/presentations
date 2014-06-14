@@ -361,7 +361,7 @@
       </animateMotion>
       <!-- TIMEPOINT 21-->
        -<animateMotion begin="9" dur="6s" repeatCount="1" fill="freeze" additive="replace">
-        <mpath xlink:href="#rmq_to_processor2"/>
+        <mpath xlink:href="#rmq_to_processor"/>
       </animateMotion>
       <!-- TIMEPOINT 30 -->
       <animateMotion begin="18s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
