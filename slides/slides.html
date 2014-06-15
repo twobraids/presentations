@@ -1,16 +1,42 @@
-<div class="slide-layout-title">
-	<img style="display:block; margin-left:auto; margin-right:auto; width:600px" border="0" src="./resources/nest.jpg" />
+<div>
+<style>
+table,td
+{
+border:1px solid white;
+text-align:center;
+}
+th
+{
+background:#999999;
+}
+table
+{
+width:100%;
+}
+th
+{
+height:50px;
+}
+</style>
+	<h2 style="text-align:center">a gift from a friend</h2>
+	<img style="display:block; margin-left:auto; margin-right:auto; width:500px" border="0" src="./resources/nest.jpg" />
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h2 style="text-align:center">but I live here</h2>
 	<img style="display:block; margin-left:auto; margin-right:auto; height:600px" border="0" src="./resources/yurts.jpg" />
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h2 style="text-align:center">and heat with fire</h2>
 	<img style="display:block; margin-left:auto; margin-right:auto; height:600px" border="0" src="./resources/pellet-stove.jpg" />
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">manual control</h2>
 	<img style="display:block; margin-left:auto; margin-right:auto; height:600px" border="0" src="./resources/high-medium-low.jpg" />
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -42,35 +68,167 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="display:block; margin-left:auto; margin-right:auto; height:600px" border="0" src="./resources/switchwires.jpg" />
+	<h1 style="text-align:center">S P D T</h1>
+	<div>
+		<div style="float:left; width:45%">
+			<h2 style="text-align:right">Single Pole</h2>
+		</div>
+		<div style="float:right; width:45%">
+			<h2 style="text-align:left">Double Throw</h2>
+		</div>
+	</div>
+		<video   style="display:block; margin-left:auto; margin-right:auto; min-width: 50%;" src="resources/C1.ogv"  preload autoplay> </video>
+	</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">behind this switch</h2>
+	<img style="display:block; margin-left:auto; margin-right:auto; height:600px" border="0" src="./resources/high-medium-low.jpg" />
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2>High = OR at 24V; BL at 0V</h2>
-	<h2>Medium = OR at 0V; BL at 0V</h2>
-	<h2>Low = OR at 0V; BL at 24V</h2>
-<hr>
+	<h2 style="text-align:center">
+			3 wires<br>
+			<div style="display:block; margin-left:auto; margin-right:auto; background:yellow;width:75%">Yellow</div>
+			<div style="display:block; margin-left:auto; margin-right:auto; background:orange;width:75%">Orange</div>
+			<div style="display:block; margin-left:auto; margin-right:auto; background:blue;width:75%">Blue</div>
+	</h2>
+	<img style="display:block; margin-left:auto; margin-right:auto; height:500px" border="0" src="./resources/switchwires.close.jpg" />
+</div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<style>
-table,td
-{
-border:1px solid white;
-text-align:center;
-}
-th
-{
-background:#999999;
-}
-table
-{
-width:100%;
-}
-th
-{
-height:50px;
-}
-</style>
+	<h2 style="text-align:center">Voltage Probe<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th></tr>
+		<tr><td>High</td><td>24V</td><td>0V</td></tr>
+		<tr><td>Medium</td><td>0V</td><td>0V</td></tr>
+		<tr><td>Low</td><td>0V</td><td>24V</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Voltage Probe<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th></tr>
+		<tr><td>High</td><td>24V</td><td>24V</td><td>0V</td></tr>
+		<tr><td>Medium</td><td>24V</td><td>0V</td><td>0V</td></tr>
+		<tr><td>Low</td><td>24V</td><td>0V</td><td>24V</td></tr>
+		<tr><td>Off</td><td>0V</td><td>24V</td><td>0V</td></tr>
+		<tr><td>Off</td><td>0V</td><td>0V</td><td>0V</td></tr>
+		<tr><td>Off</td><td>0V</td><td>0V</td><td>24V</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>0</td></tr>
+		<tr><td>Medium</td><td>1</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>1</td><td>0</td><td>1</td></tr>
+		<tr><td>Off</td><td>0</td><td>1</td><td>0</td></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>1</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>1</td></tr>
+		<tr><td>Off</td><td>0</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+		<tr><td>Medium</td><td>1</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>1</td><td>0</td><td>1</td></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>1</td></tr>
+		<tr><td>Off</td><td>0</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td>0</td><td>1</td><td>1</td></tr>
+		<tr><td>Medium</td><td>1</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>1</td><td>0</td><td>1</td></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">what does Nest send?</h2>
+	<img style="display:block; margin-left:auto; margin-right:auto; width:500px" border="0" src="./resources/nest.jpg" />
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Input Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>0</td><td>0</td><td>1</td></tr>
+		<tr><td>Medium</td><td>0</td><td>1</td><td>1</td></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Input Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th></tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>0</td><td>0</td><td>1</td></tr>
+		<tr><td>Medium</td><td>0</td><td>1</td><td>1</td></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>1</td></tr>
+		<tr><td>Medium</td><td>0</td><td>1</td><td>0</td></tr>
+		<tr><td>High</td><td>1</td><td>0</td><td>0</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Input Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th  style="background:#000000" colspan="3">Input</th><th  style="background:#000000" colspan="3">Output</th></th>
+		<tr>
+			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
+			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
+		</tr>
+		<tr><td>Off</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+		<tr><td>Medium</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+		<tr><td>Medium</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+		<tr><td>High</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td>1</td><td>0</td><td>1</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr><td>&nbsp;</td><td>1</td><td>1</td><td>0</td><td>X</td><td>X</td><td>X</td></tr>
+		<tr><td>High</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Input Logic Table<br></h2>
+	<table>
+		<tr><th style="background:#000000">&nbsp;</th><th  style="background:#000000" colspan="3">Input</th><th  style="background:#000000" colspan="3">Output</th></th>
+		<tr>
+			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
+			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
+		</tr>
+		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#003300">0</td><td>0</td><td>0</td></tr>
+		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#003300">1</td><td>0</td><td>1</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#003300">1</td><td>0</td><td>0</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#003300">1</td><td>0</td><td>0</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#003300">1</td><td>1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#003300">X</td><td>X</td><td>X</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#003300">X</td><td>X</td><td>X</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#003300">1</td><td>1</td><td>0</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 <table>
 <tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
 <tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
