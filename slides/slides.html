@@ -50,14 +50,14 @@ height:50px;
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1 style="text-align:center">S P D T</h1>	
+	<h1 style="text-align:center">S P D T</h1>
 	<div style="align:left; width:45%">
 	  <h2 style="text-align:right">Single Pole</h2>
 	</div>
 	<div style="align:right; width:45%">
 	  <h2 style="text-align:left">&nbsp;</h2>
 	</div>
-	
+
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -297,8 +297,8 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td>X</td><td>X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>1</td><td>X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td>X</td><td>1</td><td>1</td></tr>
 	</table>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -307,12 +307,76 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">1</td><td>1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#770000">X</td><td style="background:#770000">X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td>1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = not(W2)W3 + W2W3
+		WW = ¬W1•¬W2•W3 + ¬W1•W2•W3 + W1•¬W2•W3 + W1•W2•W3 + ...
+	</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div style="text-align:center">
+		WW = ¬W1•¬W2•W3 + ¬W1•W2•W3 + W1•¬W2•W3 + W1•W2•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3(¬W2 + W2) +  W1•W3(•¬W2 + W2) + ...
+	</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div style="text-align:center">
+		WW = ¬W1•¬W2•W3 + ¬W1•W2•W3 + W1•¬W2•W3 + W1•W2•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3(¬W2 + W2) +  W1•W3(•¬W2 + W2) + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3 + W1•W3 + ...
+	</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div style="text-align:center">
+		WW = ¬W1•¬W2•W3 + ¬W1•W2•W3 + W1•¬W2•W3 + W1•W2•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3(¬W2 + W2) +  W1•W3(•¬W2 + W2) + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3 + W1•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = W3•(¬W1 + W1) + ...
+	</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div style="text-align:center">
+		WW = ¬W1•¬W2•W3 + ¬W1•W2•W3 + W1•¬W2•W3 + W1•W2•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3(¬W2 + W2) +  W1•W3(•¬W2 + W2) + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = ¬W1•W3 + W1•W3 + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = W3•(¬W1 + W1) + ...
+	</div>
+	<div style="text-align:center">
+		<br>
+		WW = W3 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -321,12 +385,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">1</td><td>1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#770000">X</td><td style="background:#770000">X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td>1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3(not(W2) + W2)
+		WW = W3 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -335,12 +399,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">1</td><td>1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#770000">X</td><td style="background:#770000">X</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#330000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3
+		WW = W3 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -349,12 +413,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#330000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3
+		WW = W3 + W2•W3 + W2•¬W3 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -363,12 +427,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#330000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3 + W2W3 + W2not(W3)
+		WW = W3 + W2•(W3 + ¬W3) + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -377,12 +441,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#330000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3 + W2(W3 + not(W3))
+		WW = W3 + W2 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -391,12 +455,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#330000">X</td><td style="background:#330000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		WW = W3 + W2
+		WW = W3 + W2 + ...
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -405,22 +469,8 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#220000">1</td><td style="background:#220000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
-	</table>
-	<div style="text-align:center">
-		<br><br>
-		WW = W3 + W2
-	</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<h2 style="text-align:center">White Wire Karnaugh Map<br></h2>
-	<table>
-		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
-		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#220000">1</td><td style="background:#220000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td style="background:#770000">X</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#330000">X</td><td style="background:#330000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
@@ -433,8 +483,8 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#220000">1</td><td style="background:#220000">1</td><td style="background:#220000">1</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td style="background:#220000">1</td><td style="background:#220000">X</td><td style="background:#220000">X</td><td style="background:#220000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#330000">1</td><td style="background:#330000">X</td><td style="background:#330000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td style="background:#330000">1</td><td style="background:#330000">X</td><td style="background:#330000">1</td><td style="background:#330000">1</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
@@ -450,14 +500,14 @@ height:50px;
 			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
 			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
 		</tr>
-		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#220000">0</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#770000">0</td><td>1</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#220000">1</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td>0</td></tr>
-		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td>X</td></tr>
-		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#220000">X</td><td style="background:#770000">X</td><td>X</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#770000">1</td><td>0</td></tr>
+		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:#770000">0</td><td>0</td></tr>
+		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>1</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>0</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>0</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#770000">1</td><td>0</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:#770000">X</td><td>X</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:#770000">X</td><td>X</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">1</td><td>0</td></tr>
 	</table>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -466,8 +516,8 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>1</td><td>X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>0</td><td>X</td><td>1</td><td>0</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
@@ -479,12 +529,12 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td><td style="background:#770000">1</td></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>0</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td>0</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
-		OW = W1
+		OW = W3
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -496,140 +546,69 @@ height:50px;
 			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
 			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
 		</tr>
-		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#220000">0</td><td style="background:#220000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#220000">0</td><td style="background:#770000">1</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#220000">1</td><td style="background:#220000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#220000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#220000">1</td><td style="background:#220000">1</td><td style="background:#770000">0</td></tr>
-		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#220000">X</td><td style="background:#220000">X</td><td style="background:#770000">X</td></tr>
-		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#220000">X</td><td style="background:#220000">X</td><td style="background:#770000">X</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#220000">1</td><td style="background:#220000">1</td><td style="background:#770000">0</td></tr>
+		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
+		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">1</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:#770000">X</td></tr>
+		<tr><td>&nbsp;</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:#770000">X</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td></tr>
 	</table>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<h2>PSW = W1
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td>0</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td>0</td><td>0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
-</table>
+	<h2 style="text-align:center">Blue Wire Karnaugh Map<br></h2>
+	<table>
+		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
+		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td>1</td><td>X</td><td>0</td><td>0</td></tr>
+	</table>
+	<div style="text-align:center">
+		<br><br>
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td>0</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td style="background:#000077">1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
-</table>
+	<h2 style="text-align:center">Blue Wire Karnaugh Map<br></h2>
+	<table>
+		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
+		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
+		<tr><td style="background:#007700">W1<br>0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1<br>1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>0</td><td>0</td></tr>
+	</table>
+	<div style="text-align:center">
+		<br><br>
+		BW = W1•¬W2
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td style="background:#000077">0</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td style="background:#000077">1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
-</table>
+	<div style="text-align:center">
+		<br><br>
+		WW = W3 + W2 + W1
+	</div>
+	<div style="text-align:center">
+		<br><br>
+		OW = W3
+	</div>
+	<div style="text-align:center">
+		<br><br>
+		BW = W1•¬W2
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td style="background:#000077">0</td><td style="background:#000077">0</td><td>1</td><td style="background:#000077">1</td><td>0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td style="background:#000077">X</td><td>X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td style="background:#000077">0</td><td>0</td></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>1</td><td style="background:#000077">0</td><td>1</td></tr>
-</table>
+	<div style="text-align:center">
+		<br><br>
+		TODO: complete logic video
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<h2>BL = not W2 and not W3
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
-<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
-</table>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
-<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
-<tr><td style="background:orange">1</td><td style="background:orange">1</td><td style="background:orange">1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
-</table>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-<table>
-<tr><th colspan="3">Input</th><th colspan="3">Output</th></th>
-<tr><th>W1</th><th>W2</th><th>W3</th><th>PSW</th><th>BL</th><th>OR</th></tr>
-<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td style="background:orange">0</td><td style="background:orange">0</td><td style="background:orange">1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td style="background:orange">0</td><td style="background:orange">1</td><td style="background:orange">1</td><td>0</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td style="background:orange">0</td></tr>
-<tr><td style="background:orange">1</td><td style="background:orange">0</td><td style="background:orange">1</td><td>1</td><td>X</td><td style="background:orange">X</td></tr>
-<tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td style="background:orange">0</td></tr>
-<tr><td style="background:orange">1</td><td style="background:orange">1</td><td style="background:orange">1</td><td>1</td><td>0</td><td style="background:orange">1</td></tr>
-</table>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-<h2>OR = (not W1 and not W2 and W3) or (not W1 and W2 and W3) or (W1 and W2 and W3)</h2>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-<h2>OR =  W3</h2>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<div style="background-color:#777777">
-	<img style="height:600px;width:50%" src="./resources/NestPelletConversionSchematic7.svg"  />
+	<div style="background-color:#777777;display:block; margin-left:22%; margin-right:22%">
+		<img style="display:block; margin-left:auto; margin-right:auto; height:600px" src="./resources/NestPelletConversionSchematic8.svg"  />
 	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
