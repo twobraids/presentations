@@ -842,14 +842,14 @@ height:50px;
 			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
 			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
 		</tr>
-		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>1</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td><td>0</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#770000">1</td><td>0</td></tr>
-		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:#770000">X</td><td>X</td></tr>
-		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:#770000">X</td><td>X</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#770000">1</td><td>0</td></tr>
+		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:orange">0</td><td>0</td></tr>
+		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:orange">0</td><td>1</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:orange">0</td><td>0</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:orange">0</td><td>0</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:orange">1</td><td>0</td></tr>
+		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:orange">X</td><td>X</td></tr>
+		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:orange">X</td><td>X</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:orange">1</td><td>0</td></tr>
 	</table>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -861,9 +861,6 @@ height:50px;
 		<tr><td style="background:#007700">W1 0</td><td>0</td><td>1</td><td>X</td><td>0</td></tr>
 		<tr><td style="background:#007700">W1 1</td><td>0</td><td>X</td><td>1</td><td>0</td></tr>
 	</table>
-	<div style="text-align:center">
-		<br><br>
-	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -871,8 +868,18 @@ height:50px;
 	<table>
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
-		<tr><td style="background:#007700">W1 0</td><td>0</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>0</td></tr>
-		<tr><td style="background:#007700">W1 1</td><td>0</td><td style="background:#770000">X</td><td style="background:#770000">1</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 0</td><td>0</td><td style="background:orange">1</td><td style="background:orange">X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 1</td><td>0</td><td style="background:orange">X</td><td style="background:orange">1</td><td>0</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Orange Wire Karnaugh Map<br></h2>
+	<table>
+		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
+		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
+		<tr><td style="background:#007700">W1 0</td><td>0</td><td style="background:orange">1</td><td style="background:orange">X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 1</td><td>0</td><td style="background:orange">X</td><td style="background:orange">1</td><td>0</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
@@ -888,14 +895,14 @@ height:50px;
 			<th style="background:#000000">&nbsp;</th><th>White<br>3</th><th>White<br>2</th><th>White<br>1</th>
 			<th>White<br>Wire</th><th style="background:orange">Orange<br>Wire</th><th style="background:blue">Blue<br>Wire</th>
 		</tr>
-		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">1</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:#770000">0</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td></tr>
-		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:#770000">X</td></tr>
-		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:#770000">X</td></tr>
-		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:#770000">0</td></tr>
+		<tr><td>Off</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">0</td><td style="background:#330000">0</td><td style="background:blue">0</td></tr>
+		<tr><td>Low</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:blue">1</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:blue">0</td></tr>
+		<tr><td>Medium</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">0</td><td style="background:blue">0</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">0</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:blue">0</td></tr>
+		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#007700">1</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:blue">X</td></tr>
+		<tr><td>X</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">0</td><td style="background:#330000">X</td><td style="background:#330000">X</td><td style="background:blue">X</td></tr>
+		<tr><td>High</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#007700">1</td><td style="background:#330000">1</td><td style="background:#330000">1</td><td style="background:blue">0</td></tr>
 	</table>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -941,7 +948,17 @@ height:50px;
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
 		<tr><td style="background:#007700">W1 0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr>
-		<tr><td style="background:#007700">W1 1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>0</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 1</td><td style="background:blue">1</td><td style="background:blue">X</td><td>0</td><td>0</td></tr>
+	</table>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Blue Wire Karnaugh Map<br></h2>
+	<table>
+		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
+		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
+		<tr><td style="background:#007700">W1 0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 1</td><td style="background:blue">1</td><td style="background:blue">X</td><td>0</td><td>0</td></tr>
 	</table>
 	<div style="text-align:center">
 		<br><br>
@@ -979,7 +996,7 @@ height:50px;
 		<tr><th>&nbsp;</th><th style="background:#007700"  colspan="4">W2/W3</th></tr>
 		<tr><th>&nbsp;</th><th style="background:#007700">0/0</th><th style="background:#007700">0/1</th><th style="background:#007700">1/1</th><th style="background:#007700">1/0</th></tr>
 		<tr><td style="background:#007700">W1 0</td><td>0</td><td>0</td><td>X</td><td>0</td></tr>
-		<tr><td style="background:#007700">W1 1</td><td style="background:#770000">1</td><td style="background:#770000">X</td><td>0</td><td>0</td></tr>
+		<tr><td style="background:#007700">W1 1</td><td style="background:blue">1</td><td style="background:blue">X</td><td>0</td><td>0</td></tr>
 	</table>
 	<div>
 		<video   style="display:block; margin-left:auto; margin-right:auto; min-width: 50%;" src="resources/blue-wire-logic-demo.ogv"  preload autoplay> </video>
