@@ -10,4 +10,12 @@
 *.mp4
 *.mov
 *.m4v
+*.log
+*.backup
+*.dia
+*.webm
+*.mkv
+*.xcf
+*.ogg
+*.svg
 
