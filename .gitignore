@@ -3,3 +3,11 @@
 /components
 /bower_components
 .DS_Store
+*.png
+*.jpg
+*.gif
+*.ogv
+*.mp4
+*.mov
+*.m4v
+
