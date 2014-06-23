@@ -94,37 +94,6 @@ footer p {
 	margin-top: 3em;
 }
 
-@media screen and (width: 800px) {
-	.slide {
-		font-size: 90%;
-	}
-
-	.slide-container {
-		margin-top: 1em;
-	}
-
-	.slide .slide-layout-title {
-		padding-top: 0;
-	}
-
-	.slide p {
-		font-size: 1.25em;
-		margin-left: .25em;
-	}
-
-	.slide h2 {
-		margin-left: .25em;
-	}
-
-	.slide li {
-		font-size: 1.25em;
-	}
-
-	h1 {
-		background: green;
-	}
-
-}
 
 td {
 	border:1px solid white;
@@ -141,6 +110,3 @@ table {
 	width:100%;
 	text-align:center;
 }
-/*th {
-	height:50px;
-}*/
