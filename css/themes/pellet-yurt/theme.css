@@ -98,7 +98,7 @@ footer p {
 	.slide {
 		font-size: 90%;
 	}
-	
+
 	.slide-container {
 		margin-top: 1em;
 	}
@@ -106,12 +106,12 @@ footer p {
 	.slide .slide-layout-title {
 		padding-top: 0;
 	}
-	
+
 	.slide p {
 		font-size: 1.25em;
 		margin-left: .25em;
 	}
-	
+
 	.slide h2 {
 		margin-left: .25em;
 	}
@@ -120,25 +120,23 @@ footer p {
 		font-size: 1.25em;
 	}
 
-table,td
-{
-border:1px solid white;
-text-align:center;
 }
-td
-{
-vertical-align:middle;
+
+td {
+	border:1px solid white;
+	text-align:center;
+	vertical-align:middle;
 }
-th
-{
-background:#999999;
-vertical-align:middle;
+th {
+	border:1px solid white;
+	background:#999999;
+	vertical-align:middle;
 }
-table
-{
-width:100%;
+table {
+	border:1px solid white;
+	width:100%;
+	text-align:center;
 }
-th
-{
-height:50px;
-}}
+/*th {
+	height:50px;
+}*/
