@@ -94,10 +94,9 @@ footer p {
 	margin-top: 3em;
 }
 
-@media screen and (max-device-width: 640px) {
+@media screen and (max-device-width: 480px) {
 	.slide {
-		background: #777700;
-		font-size: 80%;
+		font-size: 90%;
 	}
 
 	.slide-container {
