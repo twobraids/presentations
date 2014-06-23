@@ -96,6 +96,7 @@ footer p {
 
 @media screen and (max-device-width: 640px) {
 	.slide {
+		background: #777700;
 		font-size: 80%;
 	}
 
