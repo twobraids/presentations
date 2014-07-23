@@ -258,7 +258,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<div class="block_centered">
+<div class="half_width">
 <pre class="three_quarter_size_text">
 defaults = {
     "hostname": "localhost",
@@ -276,8 +276,7 @@ config = configuration(defaults)
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<div class="block_centered">
+<div class="half_width">
 <pre class="three_quarter_size_text">
 defaults = {
     "hostname": "localhost",
@@ -293,10 +292,8 @@ from configman import configuration
 config = configuration(defaults)
 </pre>
 </div>
-</div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<div class="block_centered">
+<div class="half_width">
 <pre class="three_quarter_size_text grayout">
 defaults = {
     "hostname": "localhost",
@@ -311,7 +308,6 @@ from configman import configuration
 
 config = configuration(defaults)
 </pre>
-</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -412,8 +408,8 @@ optional arguments:
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="halfsize_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 # hostname
 #hostname=twobraids.com
 
@@ -439,8 +435,8 @@ optional arguments:
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 {
    "hostname" : "twobraids.com",
    "port" : 5432,
@@ -470,8 +466,8 @@ optional arguments:
 	<h2 style="text-align:center;color:#00FF00"><br><br>Nested Namespaces</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 default = {
         "storage": {
             "hostname": "localhost",
@@ -490,8 +486,8 @@ $ python o2.py --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 usage: ...
 
 optional arguments:
@@ -515,8 +511,8 @@ optional arguments:
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="halfsize_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 [storage]
 
     # hostname
@@ -540,8 +536,8 @@ optional arguments:
 	<h2 style="text-align:center;color:orange"><br><br>Dynamic Loading</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 class Postgres(object):
     required_config = {
         "hostname": "localhost",
@@ -553,8 +549,8 @@ class Postgres(object):
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 default = {
         "storage": {
             "storage_class": Postgres
@@ -569,8 +565,8 @@ $ python o3.py --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="halfsize_text">
+<div class="half_width halfsize_text">
+<pre>
 usage: ...
 
 optional arguments:
@@ -589,8 +585,8 @@ optional arguments:
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-<pre class="three_quarter_size_text">
+<div class="half_width three_quarter_size_text">
+<pre>
 
 class MooseBase(object):
     required_config = {
@@ -1053,9 +1049,8 @@ config = configuration(
 	<h2 style="text-align:center;color:violet"><br><br>the configuration object</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<div class="three_quarter_size_text two-indent">
-<tt>defaults = {<br>
+<div class="half_width three_quarter_size_text two-indent">
+<tt><br>defaults = {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"hostname": "localhost",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"port": 5432,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"dbname": "my_db",<br>
@@ -1067,11 +1062,9 @@ config = configuration(
 from configman import configuration<br></tt>
 <tt>config</tt><tt> = configuration(defaults)<br></tt>
 </div>
-</div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<div class="three_quarter_size_text two-indent">
-<tt  style="color:#333333">defaults = {<br>
+<div class="half_width three_quarter_size_text two-indent">
+<tt  style="color:#333333"><br>defaults = {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"hostname": "localhost",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"port": 5432,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"dbname": "my_db",<br>
@@ -1082,7 +1075,6 @@ from configman import configuration<br></tt>
 <tt  style="color:#333333">
 from configman import configuration<br></tt>
 <tt style="color:violet">config</tt><tt style="color:#333333"> = configuration(defaults)<br></tt>
-</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
