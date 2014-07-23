@@ -51,15 +51,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line02.jpg">
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
 	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line03.jpg">
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line04.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -67,23 +59,52 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line06.jpg">
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
 	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line07.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line08.jpg">
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line09.jpg">
+d	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line09.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width quartersize_text">
+<pre>
+(defun match (p s)
+  (cond
+   ((null p) (null s))  ;match if both are null,
+                        ; but not if p is null and s is not null.
+   ((atom (car p))
+    (and s
+         (equal (car p) (car s))
+         (match (cdr p) (cdr s))))
+   ((and s (eq (caar p) '?))
+    (cond ((match (cdr p) (cdr s))
+           (set (cadar p) (car s))
+           t)
+          (t nil)))
+   ((eq (caar p) '*)     ;case when  p  starts with * form
+    (cond ((and s (match (cdr p) (cdr s)))
+           (set (cadar p) (list (car s))) t)
+          ((match (cdr p) s)
+           (set (cadar p) nil) t)
+          ((and s (match p (cdr s)))
+           (set (cadar p) (cons (car s) (eval (cadar p)))) t)
+          (t nil)))
+   ((and s
+         (apply (caar p) (list (car s)))
+         (match (cdr p) (cdr s)))
+    (set (cadar p) (car s)) t)
+   (t nil)))
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.color.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
@@ -560,6 +581,10 @@ default = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:85%" src="resources/lego.sequence2.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 <pre class="three_quarter_size_text"">
 $ python o3.py --help
 </pre>
@@ -585,6 +610,10 @@ optional arguments:
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:85%" src="resources/lego.sequence1.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
 <div class="half_width three_quarter_size_text">
 <pre>
 
@@ -600,6 +629,14 @@ class MooseBase(object):
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_size_text">
 	<tt>$ python o3.py </tt><tt style="color:orange">--storage.storage_class=MooseBase</tt><tt> --help</tt>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:85%" src="resources/lego.sequence3.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:85%" src="resources/lego.sequence4.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="half_width halfsize_text">
@@ -851,7 +888,7 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.png">
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.color.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
