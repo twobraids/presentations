@@ -47,7 +47,43 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line3.png">
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line01.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line02.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line03.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line04.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line05.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line06.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line07.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line08.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line09.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -562,6 +598,7 @@ class MooseBase(object):
         "hostname": "localhost",
         "url": "http://twobraids.com/",
         "auth_key": "675A8BFF2099",
+        "swamp_number": 1,
     }
 </pre>
 </div>
@@ -580,6 +617,7 @@ optional arguments:
   --storage.url STORAGE.URL
   --storage.hostname STORAGE.HOSTNAME
   --storage.auth_key STORAGE.AUTH_KEY
+  --storage.swamp_number STORAGE.SWAMP_NUMBER
 
 </pre>
 </div>
@@ -607,10 +645,10 @@ class&nbsp;BothBase(object):<br>
 <br>
 class&nbsp;BothBase(object):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">primary</div>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;Postgres,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">secondary</div>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;MooseBase,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
@@ -624,15 +662,15 @@ class&nbsp;BothBase(object):<br>
 <br>
 class&nbsp;BothBase(object):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">primary</div>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight_orange">storage_class</div>":&nbsp;Postgres,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;Postgres,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">secondary</div>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight_orange">storage_class</div>":&nbsp;MooseBase,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;MooseBase,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 </tt>
-</div>
+</span>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_size_text">
@@ -662,6 +700,7 @@ optional arguments:
   --storage.secondary.url STORAGE.SECONDARY.URL
   --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
   --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
+  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -687,6 +726,7 @@ optional arguments:
   --storage.secondary.url STORAGE.SECONDARY.URL
   --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
   --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
+  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -712,6 +752,7 @@ optional arguments:
   --storage.secondary.url STORAGE.SECONDARY.URL
   --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
   --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
+  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -737,6 +778,7 @@ optional arguments:
   --storage.secondary.url STORAGE.SECONDARY.URL
   --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
   --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
+  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -762,6 +804,7 @@ optional arguments:
   --storage.secondary.url STORAGE.SECONDARY.URL
   --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
   --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
+  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -819,7 +862,7 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line3.png">
+	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.png">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -892,41 +935,113 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="three_quarter_size_text two-indent">
+<pre class="halfsize_text two-indent">
 from configman import configuration
 
 config = configuration(
+</pre><pre class="halfsize_text two-indent">
     definition_source=defaults,
-</pre><pre class="three_quarter_size_text two-indent">
+</pre><pre class="halfsize_text two-indent">
     values_source_list=[
+</pre><pre class="halfsize_text two-indent">
         {'host': 'localhost'},
+</pre><pre class="halfsize_text two-indent">
         configman.config_file
+</pre><pre class="halfsize_text two-indent">
         os.environ,
+</pre><pre class="halfsize_text two-indent">
         an_imported_module,
+</pre><pre class="halfsize_text two-indent">
         some_class_instance.__dict__,
+</pre><pre class="halfsize_text two-indent">
         getopt,
+</pre><pre class="halfsize_text two-indent">
     ]
-</pre><pre class="three_quarter_size_text two-indent">
+</pre><pre class="halfsize_text two-indent">
 )
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="three_quarter_size_text grayout two-indent">
+<pre class="halfsize_text two-indent">
 from configman import configuration
 
 config = configuration(
+</pre><pre class="halfsize_text two-indent grayout">
     definition_source=defaults,
-</pre><pre class="three_quarter_size_text two-indent">
+</pre><pre class="halfsize_text two-indent grayout">
     values_source_list=[
+</pre><pre class="halfsize_text two-indent grayout">
         {'host': 'localhost'},
+</pre><pre class="halfsize_text two-indent grayout">
         configman.config_file
+</pre><pre class="halfsize_text two-indent grayout">
         os.environ,
+</pre><pre class="halfsize_text two-indent grayout">
         an_imported_module,
+</pre><pre class="halfsize_text two-indent grayout">
         some_class_instance.__dict__,
+</pre><pre class="halfsize_text two-indent grayout">
         getopt,
+</pre><pre class="halfsize_text two-indent grayout">
     ]
-</pre><pre class="three_quarter_size_text grayout two-indent">
+</pre><pre class="halfsize_text two-indent">
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<pre class="halfsize_text two-indent">
+from configman import configuration
+
+config = configuration(
+</pre><pre class="halfsize_text two-indent">
+    definition_source=defaults,
+</pre><pre class="halfsize_text two-indent">
+    values_source_list=[
+</pre><pre class="halfsize_text two-indent grayout">
+        {'host': 'localhost'},
+</pre><pre class="halfsize_text two-indent grayout">
+        configman.config_file
+</pre><pre class="halfsize_text two-indent grayout">
+        os.environ,
+</pre><pre class="halfsize_text two-indent grayout">
+        an_imported_module,
+</pre><pre class="halfsize_text two-indent grayout">
+        some_class_instance.__dict__,
+</pre><pre class="halfsize_text two-indent grayout">
+        getopt,
+</pre><pre class="halfsize_text two-indent">
+    ]
+</pre><pre class="halfsize_text two-indent">
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<pre class="halfsize_text two-indent grayout">
+from configman import configuration
+
+config = configuration(
+</pre><pre class="halfsize_text two-indent">
+    definition_source=defaults,
+</pre><pre class="halfsize_text two-indent grayout">
+    values_source_list=[
+</pre><pre class="halfsize_text two-indent" style="color:cyan">
+        {'host': 'localhost'},
+</pre><pre class="halfsize_text two-indent" style="color:#00FF00">
+        configman.config_file
+</pre><pre class="halfsize_text two-indent" style="color:yellow">
+        os.environ,
+</pre><pre class="halfsize_text two-indent" style="color:violet">
+        an_imported_module,
+</pre><pre class="halfsize_text two-indent" style="color:red">
+        some_class_instance.__dict__,
+</pre><pre class="halfsize_text two-indent" style="color:orange">
+        getopt,
+</pre><pre class="halfsize_text two-indent">
+    ]
+</pre><pre class="halfsize_text two-indent">
 )
 </pre>
 </div>
@@ -1023,9 +1138,24 @@ fetch_transform_save = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h2 style="text-align:center">Socorro Collector</h2>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:50%" src="resources/socorro.collector.configman.png">
+</div
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Socorro Crashmover</h2>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:60%" src="resources/socorro.crashmover.configman.png">
+</div
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 	<h2 style="text-align:center">Socorro Processor</h2>
-	<img style="display:block; margin-left: auto; margin-right: auto; width:80%" src="resources/socorro.processor.png">
+	<img style="display:block; margin-left: auto; margin-right: auto; width:70%" src="resources/socorro.processor.png">
 </div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Socorro Middleware</h2>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:70%" src="resources/socorro.middleware.configman.png">
+</div
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Socorro Processor</h2>
