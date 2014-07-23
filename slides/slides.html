@@ -1112,13 +1112,61 @@ fetch_transform_save = {
 </div
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h2 style="text-align:center">Socorro Collector</h2>
+<div class="half_width halfsize_text">
+<pre>
+
+
+fetch_transform_save = {
+    fetch_storage_class: WSGIBreakpadPOST
+    transformation_class: Throttler,
+    save_storage_class: FileSystemTemporaryStorage,
+    producer_consumer_class: ApacheWebServer
+}
+</pre>
+</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 	<h2 style="text-align:center">Socorro Crashmover</h2>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:60%" src="resources/socorro.crashmover.configman.png">
 </div
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h2 style="text-align:center">Socorro Crashmover</h2>
+<div class="half_width halfsize_text">
+<pre>
+
+
+fetch_transform_save = {
+    fetch_storage_class: FileSystemTemporaryStorage
+    transformation_class: Null,
+    save_storage_class: HBase, RabbitMQ,
+    producer_consumer_class: Multithreaded
+}
+</pre>
+</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 	<h2 style="text-align:center">Socorro Processor</h2>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:70%" src="resources/socorro.processor.png">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center">Socorro Processor</h2>
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+
+fetch_transform_save = {
+    fetch_storage_class: HBase
+    transformation_class: HybridProcessor2012; Breakpad Stackwalker,
+    save_storage_class: HBase; ElasticSearch; Postgres,
+    producer_consumer_class: Multithreaded; RabbitMQ
+}
+</pre>
+</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -1127,16 +1175,16 @@ fetch_transform_save = {
 </div
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center">Socorro Processor</h2>
-<div class="block_centered" style="width:70%">
-<pre class="halfsize_text">
+	<h2 style="text-align:center">Socorro Middleware</h2>
+<div class="three_quarter_width halfsize_text">
+<pre>
 
 
 fetch_transform_save = {
-    fetch_storage_class: HBase
-    transformation_class: HybridProcessor2012; Breakpad Stackwalker,
-    save_storage_class: HBase; ElasticSearch; Postgres,
-    producer_consumer_class: Multithreaded; RabbitMQ
+    fetch_storage_class: HTTP
+    transformation_class: Null,
+    save_storage_class: HBase, Postgres, ElasticSearch, RabbitMQ
+    producer_consumer_class: ApacheWebServer
 }
 </pre>
 </div>
@@ -1262,13 +1310,16 @@ fetch_transform_save = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center"><br>K Lars Lohn</h2>
-	<div style="text-align:center">
+	<h2 class="text_centered"><br>K Lars Lohn</h2>
+	<div class="text_centered">
 		<ul>
 			<li>lars@mozilla.com</li>
 			<li>twitter: 2braids</li>
 			<li>blog: twobraids.com</li>
 		</ul>
+	</div>
+	<div class="text_centered larger_size_text cyan"><br>
+		http://uncommonrose.com/configman
 	</div>
 	</h2>
 </div>
