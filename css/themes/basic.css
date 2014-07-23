@@ -122,6 +122,10 @@ pre code tt span {
 	margin-left:5%;
 }
 
+.two-indent {
+	margin-left:10%;
+}
+
 
 .highlight {
 	color: #FFFF00;
@@ -133,50 +137,41 @@ pre code tt span {
 
 .terminal {
 	color: #00FF00;
-	margin-left: 5%;
 }
 
 .halfsize_terminal {
 	color: #00FF00;
 	font-size: 50%;
-	margin-left: 5%;
 }
 
 .grayout {
 	color: #333333;
-	margin-left: 5%;
 }
 
 .larger_size_text {
 	font-size: 150%;
-	margin-left: 5%;
 }
 
 .three_quarter_size_text {
 	font-size: 150%;
-	margin-left: 5%;
 }
 
 .three_quarter_size_highlight_text {
 	font-size: 150%;
 	color: #FFFF00;
-	margin-left: 5%;
 }
 
 .halfsize_text {
 	font-size: 100%;
-	margin-left: 5%;
 }
 
 .halfsize_higlight_text {
 	font-size: 100%;
 	color: #FFFF00;
-	margin-left: 5%;
 }
 
 .quartersize_text {
 	font-size: 75%;
-	margin-left: 5%;
 }
 
 .text_centered {

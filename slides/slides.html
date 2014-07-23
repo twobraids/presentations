@@ -25,22 +25,22 @@
 
 <div>
 	<h1 style="text-align:left; margin-left:5%">Lars</h1>
-	<p style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</p>
+	<div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
         <img style="position: fixed; right: 200px; top: 100px; height: 600px" src="resources/larsalope.jpg">
 	<h1 style="text-align:left; margin-left:5%">Lars</h1>
-	<p style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</p>
+	<div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
         <img style="position: fixed; right: 200px; top: 100px; height: 600px" src="resources/larsalope.jpg">
 	<h1 style="text-align:left; margin-left:5%">Lars</h1>
-	<p style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</p>
-	<p style="text-align:left; margin-left:5%"><br>does not know any<br>
+	<div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
+	<div style="text-align:left; margin-left:5%"><br>does not know any<br>
 	the cast members of<br>
 	Duck Dynasty
-	</p>
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -134,12 +134,25 @@
 <div>
 	<h2 style="text-align:center"><br>They all eventually boil down<br>
 	to the same thing:</h2>
-	<h2 style="text-align:center;color:#FFFF00;"><br>Key / Value Mapping</h2>
+	<h2 style="text-align:center;color:#FFFF00;"><br>Key / Value Storage</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<div>
+	<h2 style="text-align:center"><br>They all eventually boil down<br>
+	to the same thing:</h2>
+	<h2 style="text-align:center;color:#FFFF00;"><br>Mapping</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center;color:orange;"><br><br>What if they all had<br>
 	a compatible API?</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h2 style="text-align:center;color:orange;"><br><br>What if they all had<br>
+	a compatible API?</h2>
+	<h2 style="text-align:center;color:white;"><br><br>like, maybe, <tt>collections.Mapping</tt>?</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -222,6 +235,7 @@ defaults = {
 </pre>
 <pre class="three_quarter_size_text">
 from configman import configuration
+
 config = configuration(defaults)
 </pre>
 </div>
@@ -240,6 +254,7 @@ defaults = {
 </pre>
 <pre class="three_quarter_size_text grayout">
 from configman import configuration
+
 config = configuration(defaults)
 </pre>
 </div>
@@ -258,6 +273,7 @@ defaults = {
 </pre>
 <pre class="three_quarter_size_text" style="color:cyan">
 from configman import configuration
+
 config = configuration(defaults)
 </pre>
 </div>
@@ -591,10 +607,10 @@ class&nbsp;BothBase(object):<br>
 <br>
 class&nbsp;BothBase(object):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">primary</div>":&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;Postgres,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">secondary</div>":&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;MooseBase,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
@@ -608,11 +624,11 @@ class&nbsp;BothBase(object):<br>
 <br>
 class&nbsp;BothBase(object):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;Postgres,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">primary</div>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight_orange">storage_class</div>":&nbsp;Postgres,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;MooseBase,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight">secondary</div>":&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<div class="highlight_orange">storage_class</div>":&nbsp;MooseBase,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 </tt>
@@ -807,20 +823,21 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center;color:cyan"><br><br>More Control</h2>
+	<h2 style="text-align:center;color:cyan"><br><br>more control</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 <div class="block_centered">
 <pre class="halfsize_text">
 
-required_config = configman.Namespace()
-required_config.add_option(
-    name="storage_class",
-    doc="a qualified classname for a storage class",
-    default="postgres",
-    from_string_converter=configman.converters.class_converter,
-)
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	required_config.storage.add_option(
+	    name="storage_class",
+	    doc="a qualified classname for a storage class",
+	    default="Postgres",
+	    from_string_converter=configman.converters.class_converter,
+	)
 </pre>
 </div>
 </div>
@@ -829,76 +846,97 @@ required_config.add_option(
 	<h2 style="text-align:center">Option Options</h2>
 <div class="block_centered">
 <pre class="halfsize_text">
-        default
-        doc
-        from_string_converter
-        to_string_converter
-        short_form
-        exclude_from_print_conf
-        exclude_from_dump_conf
-        is_argument
-        likely_to_be_changed
-        not_for_definition
-        reference_value_from
+                  default
+                  doc
+                  from_string_converter
+                  to_string_converter
+                  short_form
+                  exclude_from_print_conf
+                  exclude_from_dump_conf
+                  is_argument
+                  likely_to_be_changed
+                  not_for_definition
+                  reference_value_from
+</pre>
+</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<div class="block_centered">
+<pre class="halfsize_text">
+
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	required_config.storage.add_option(
+	    name="storage_class",
+	    doc="a qualified classname for a storage class",
+	    default="Postgres",
+	    from_string_converter=configman.converters.class_converter,
+	)
 </pre>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center"><br>Anything for which</p>
-	<p class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></p>
-	<p class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</p>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center"><br>Anything for which</p>
-	<p class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></p>
-	<p class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</p>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="three_quarter_size_text">
+<pre class="three_quarter_size_text two-indent">
 from configman import configuration
 
 config = configuration(
     definition_source=defaults,
-</pre><pre class="three_quarter_size_text">
+</pre><pre class="three_quarter_size_text two-indent">
     values_source_list=[
-        os.environ,
         {'host': 'localhost'},
+        configman.config_file
+        os.environ,
         an_imported_module,
         some_class_instance.__dict__,
-        commandline,
+        getopt,
     ]
-</pre><pre class="three_quarter_size_text">
+</pre><pre class="three_quarter_size_text two-indent">
 )
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="three_quarter_size_text grayout">
+<pre class="three_quarter_size_text grayout two-indent">
 from configman import configuration
 
 config = configuration(
     definition_source=defaults,
-</pre><pre class="three_quarter_size_text">
+</pre><pre class="three_quarter_size_text two-indent">
     values_source_list=[
-        os.environ,
         {'host': 'localhost'},
+        configman.config_file
+        os.environ,
         an_imported_module,
         some_class_instance.__dict__,
-        commandline,
+        getopt,
     ]
-</pre><pre class="three_quarter_size_text grayout">
+</pre><pre class="three_quarter_size_text grayout two-indent">
 )
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center">the configuration object</h2>
-	<div class="three_quarter_size_text">
+	<h2 style="text-align:center;color:violet"><br><br>the configuration object</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<div class="three_quarter_size_text two-indent">
 <tt>defaults = {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"hostname": "localhost",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"port": 5432,<br>
@@ -914,8 +952,7 @@ from configman import configuration<br></tt>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center">the configuration object</h2>
-	<div class="three_quarter_size_text">
+	<div class="three_quarter_size_text two-indent">
 <tt  style="color:#333333">defaults = {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"hostname": "localhost",<br>
 &nbsp;&nbsp;&nbsp;&nbsp;"port": 5432,<br>
@@ -926,31 +963,31 @@ from configman import configuration<br></tt>
 </tt>
 <tt  style="color:#333333">
 from configman import configuration<br></tt>
-<tt style="color:yellow">config</tt><tt style="color:#333333"> = configuration(defaults)<br></tt>
+<tt style="color:violet">config</tt><tt style="color:#333333"> = configuration(defaults)<br></tt>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center">the configuration object</h2>
-	<p class="larger_size_text" style="text-align:center"><br><tt>isinstance(</tt><tt style="color:yellow">config</tt><tt>, collections.Mapping) == True</tt></p>
+	<h2 style="text-align:center;color:violet">the configuration object</h2>
+	<div class="larger_size_text" style="text-align:center"><br><tt>isinstance(</tt><tt style="color:violet">config</tt><tt>, collections.Mapping) == True</tt></div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center">the configuration object</h2>
-	<p class="larger_size_text" style="text-align:center"><br><tt>isinstance(</tt><tt style="color:yellow">config</tt><tt>, collections.Mapping) == True</tt></p>
-	<p class="larger_size_text" style="text-align:center"><br>with the dot operator overloaded</p>
-	<p class="larger_size_text" style="text-align:center"><br>
+	<h2 style="text-align:center;color:violet">the configuration object</h2>
+	<div class="larger_size_text" style="text-align:center"><br><tt>isinstance(</tt><tt style="color:violet">config</tt><tt>, collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>with the dot operator overloaded</div>
+	<div class="larger_size_text" style="text-align:center"><br>
 	<tt>
 	print config.storage_class<br>
 	print config.primary.host<br>
 	print config.secondary.url
-	</tt></p>
+	</tt></div>
 
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center"><br>Great,<br>you've got all this<br>flexibility,<br>what use is it?</p>
+	<div class="larger_size_text" style="text-align:center"><br>Great,<br>you've got all this<br>flexibility,<br>what use is it?</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -1008,18 +1045,18 @@ fetch_transform_save = {
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Socorro is...</h2>
-	<p class="larger_size_text" style="text-align:center"><br>a collection of<br>cooperating classes</p>
+	<div class="larger_size_text" style="text-align:center"><br>a collection of<br>cooperating classes</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Socorro is...</h2>
-	<p class="larger_size_text" style="text-align:center"><br> set of<br>well defined and consistent<br>Business Logic APIs</p>
+	<div class="larger_size_text" style="text-align:center"><br> set of<br>well defined and consistent<br>Business Logic APIs</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Socorro is...<br><br></h2>
 	<img style="float:right;width:50%" src="resources/socorro.behind.the.scenes.jpg">
-	<p class="larger_size_text" style="text-align:center"><br><br><br>loosely glued together<br>with frameworks based on<br>Configman</p>
+	<div class="larger_size_text" style="text-align:center"><br><br><br>loosely glued together<br>with frameworks based on<br>Configman</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -1028,36 +1065,36 @@ fetch_transform_save = {
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>agility</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>agility</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>agility</p>
-	<p class="larger_size_text" style="text-align:center">new components can be developed and deployed rapidly</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>agility</div>
+	<div class="larger_size_text" style="text-align:center">new components can be developed and deployed rapidly</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>continuous deployment</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>continuous deployment</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>continuous deployment</p>
-	<p class="larger_size_text" style="text-align:center">dead simple to feature flag<br>
-	new or experimental features</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>continuous deployment</div>
+	<div class="larger_size_text" style="text-align:center">dead simple to feature flag<br>
+	new or experimental features</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>integrates into IT culture</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>integrates into IT culture</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Benefits</h2>
-	<p class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>integrates into IT culture</p>
-	<p class="larger_size_text" style="text-align:center">use whatever<br>Key/Value store<br>is locally fashionable</p>
+	<div class="larger_size_text" style="text-align:center;color:#FFFF00;font-size:150%"><br>integrates into IT culture</div>
+	<div class="larger_size_text" style="text-align:center">use whatever<br>Key/Value store<br>is locally fashionable</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -1066,50 +1103,50 @@ fetch_transform_save = {
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Downsides</h2>
-	<p class="larger_size_text" style="text-align:center"><br>moves complexity from code<br>into the configuration</p>
+	<div class="larger_size_text" style="text-align:center"><br>moves complexity from code<br>into the configuration</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Downsides</h2>
-	<p class="larger_size_text" style="text-align:center"><br>causes a<br>combinitorial explosion<br>in arrangement of<br>components</p>
+	<div class="larger_size_text" style="text-align:center"><br>causes a<br>combinitorial explosion<br>in arrangement of<br>components</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Downsides</h2>
-	<p class="larger_size_text" style="text-align:center"><br>integration testing becomes</p>
-	<p class="larger_size_text" style="text-align:center;color:orange;"><br>CRITICAL</p>
+	<div class="larger_size_text" style="text-align:center"><br>integration testing becomes</div>
+	<div class="larger_size_text" style="text-align:center;color:orange;"><br>CRITICAL</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Downsides</h2>
-	<p class="larger_size_text" style="text-align:center"><br>takes time to understand</p>
+	<div class="larger_size_text" style="text-align:center"><br>takes time to understand</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center">Configman Downsides</h2>
-	<p class="larger_size_text" style="text-align:center"><br>written by an old insane man<br>
+	<div class="larger_size_text" style="text-align:center"><br>written by an old insane man<br>
 	that hates writing documentation<br>
 	and rails against coding style standards
-	</p>
+	</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center;color:green;font-size:150%"><br><tt>sudo pip install configman</tt></p>
-	<p class="larger_size_text" style="text-align:center;"><br>gets the production release used in Socorro</p>
+	<div class="larger_size_text" style="text-align:center;color:green;font-size:150%"><br><tt>sudo pip install configman</tt></div>
+	<div class="larger_size_text" style="text-align:center;"><br>gets the production release used in Socorro</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center;color:green"><br><tt>git clone git@github.com:twobraids/configman.git configman</tt></p>
-	<p class="larger_size_text" style="text-align:center;color:green"><tt>git fetch origin bleeding-edge:bleeding-edge</tt></p>
-	<p class="larger_size_text" style="text-align:center;color:green"><tt>git checkout bleeding-edge</tt></p>
-	<p class="larger_size_text" style="text-align:center;"><br>gets the really fun stuff</p>
+	<div class="larger_size_text" style="text-align:center;color:green"><br><tt>git clone git@github.com:twobraids/configman.git configman</tt></div>
+	<div class="larger_size_text" style="text-align:center;color:green"><tt>git fetch origin bleeding-edge:bleeding-edge</tt></div>
+	<div class="larger_size_text" style="text-align:center;color:green"><tt>git checkout bleeding-edge</tt></div>
+	<div class="larger_size_text" style="text-align:center;"><br>gets the really fun stuff</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h1 style="text-align:center">Configman</h1>
-	<p class="larger_size_text" style="text-align:center;"><br><br>Questions & Comments</p>
+	<div class="larger_size_text" style="text-align:center;"><br><br>Questions & Comments</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
