@@ -149,8 +149,13 @@ pre code tt span {
 	color: #333333;
 }
 
+
 .larger_size_text {
 	font-size: 150%;
+}
+
+.large_size_text {
+	font-size: 200%;
 }
 
 .three_quarter_size_text {
