@@ -399,8 +399,7 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt> --admin.dump_conf=o1.ini</tt><br>
-<tt>$</tt>
+<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -408,8 +407,16 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
+<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
+</div>
+	<img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-twobraids-ethel-fred-wilma-01.jpg">
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<div class="three_quarter_size_text">
+<tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
+<tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
 <tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt> --admin.dump_conf=o1.ini</tt><br>
-<tt>$</tt>
 </div>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-twobraids-ethel-fred-wilma-01.jpg">
 </div>
@@ -1124,16 +1131,16 @@ from configman import configuration<br></tt>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:50%" src="resources/socorro.fts.png">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="three_quarter_width three_quarter_size_text">
 <pre>
 
-
-fetch_transform_save = {
-    fetch_storage_class: ...,
-    transformation_class: ...,
-    save_storage_class: ...,
-    producer_consumer_class: ...,
-}
+class FetchTransformSaveApp(RequiredConfig):
+    required_config = {
+        fetch_storage_class: ...,
+        transformation_class: ...,
+        save_storage_class: ...,
+        producer_consumer_class: ...,
+    }
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -1148,7 +1155,7 @@ fetch_transform_save = {
 <pre>
 
 
-fetch_transform_save = {
+defaults = {
     fetch_storage_class: WSGIBreakpadPOST
     transformation_class: Throttler,
     save_storage_class: FileSystemTemporaryStorage,
@@ -1169,7 +1176,7 @@ fetch_transform_save = {
 <pre>
 
 
-fetch_transform_save = {
+defaults = {
     fetch_storage_class: FileSystemTemporaryStorage
     transformation_class: Null,
     save_storage_class: HBase, RabbitMQ,
@@ -1190,7 +1197,7 @@ fetch_transform_save = {
 <pre>
 
 
-fetch_transform_save = {
+defaults = {
     fetch_storage_class: HBase
     transformation_class: HybridProcessor2012; Breakpad Stackwalker,
     save_storage_class: HBase; ElasticSearch; Postgres,
@@ -1211,7 +1218,7 @@ fetch_transform_save = {
 <pre>
 
 
-fetch_transform_save = {
+defaults = {
     fetch_storage_class: HTTP
     transformation_class: Null,
     save_storage_class: HBase, Postgres, ElasticSearch, RabbitMQ
