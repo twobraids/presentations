@@ -917,6 +917,40 @@ optional arguments:
 	<img style="position: fixed; left: 0px; top: 0px; width:100%" src="resources/line10.color.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width three_quarter_size_text">
+<pre>
+class Postgres(object):
+    required_config = {</pre><pre>
+        "dbapi_module": psycopg2,</pre><pre>
+        "hostname": "localhost",
+        "port": 5432,
+        "name": "my_db",
+        "user": "lars",
+        "password": 'secrets',
+    }
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width three_quarter_size_text">
+<pre>
+class Postgres(object):
+    required_config = {</pre><pre class="orange">
+        "dbapi_module": psycopg2,</pre><pre>
+        "hostname": "localhost",
+        "port": 5432,
+        "name": "my_db",
+        "user": "lars",
+        "password": 'secrets',
+    }
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+<pre class="three_quarter_size_text">
+$ python o1.py <span class="orange">--dbapi_module=PyGreSQL</span> --help
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center;color:cyan"><br><br>more control</h2>
 </div>
