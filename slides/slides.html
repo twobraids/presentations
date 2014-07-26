@@ -520,6 +520,157 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+	<h1 style="text-align:center">Configman</h1>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configration requirements</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h1 style="text-align:center">Configman</h1>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</div>
+	<h2 class="text_centered"><br>Definition Sources</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h1 style="text-align:center">Configman</h1>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
+	<h1 style="text-align:center">Configman</h1>
+	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
+	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
+	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
+	<h2 class="text_centered"><br>Value/Overlay Sources</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre>
+
+from configman import configuration
+
+config = configuration(defaults)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre>
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre>)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre>
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre>
+    values_source_list=[
+</pre><pre class="green">
+        configman.config_file
+</pre><pre class="yellow">
+        os.environ,
+</pre><pre class="orange">
+        getopt,
+</pre><pre>
+    ]
+</pre><pre>
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre class="grayout">
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre class="grayout">
+    values_source_list=[
+</pre><pre class="green">
+        configman.config_file
+</pre><pre class="yellow">
+        os.environ,
+</pre><pre class="orange">
+        getopt,
+</pre><pre class="grayout">
+    ]
+</pre><pre class="grayout">
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre class="grayout">
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre class="grayout">
+    values_source_list=[
+</pre><pre class="cyan">
+        {'host': 'localhost'},
+</pre><pre class="green">
+        configman.config_file
+</pre><pre class="yellow">
+        os.environ,
+</pre><pre class="orange">
+        getopt,
+</pre><pre class="grayout">
+    ]
+</pre><pre class="grayout">
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre class="grayout">
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre class="grayout">
+    values_source_list=[
+</pre><pre class="cyan">
+        {'host': 'localhost'},
+</pre><pre class="green">
+        configman.config_file
+</pre><pre class="yellow">
+        os.environ,
+</pre><pre class="violet">
+        an_imported_module,
+</pre><pre class="red">
+        some_class_instance.__dict__,
+</pre><pre class="orange">
+        getopt,
+</pre><pre>
+    ]
+</pre><pre>
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 	<h2 style="text-align:center;color:#00FF00"><br><br>Nested Namespaces</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -970,8 +1121,59 @@ $ python o1.py <span class="orange">--dbapi_module=PyGreSQL</span> --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text two-indent">
+<pre>
+
+from configman import configuration
+
+config = configuration(
+</pre><pre>
+    definition_source=defaults,
+</pre><pre>
+    values_source_list=[
+</pre><pre class="cyan">
+        {'dbapi_module': 'PyGreSQL'},
+</pre><pre class="green">
+        configman.config_file
+</pre><pre class="yellow">
+        os.environ,
+</pre><pre class="orange">
+        getopt,
+</pre><pre>
+    ]
+</pre><pre>
+)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
 <div>
 	<h2 style="text-align:center;color:cyan"><br><br>more control</h2>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width large_size_text">
+	<div class="text_centered cyan">Namespace</div>
+	<div class="text_centered green">Options</div>
+	<div class="text_centered orange">Aggregations</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width large_size_text">
+	<div class="text_centered cyan">Namespace</div>
+	<div class="text_centered grayout">Options</div>
+	<div class="text_centered grayout">Aggregations</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width large_size_text">
+	<div class="text_centered grayout">Namespace</div>
+	<div class="text_centered green">Options</div>
+	<div class="text_centered grayout">Aggregations</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width halfsize_text">
@@ -985,6 +1187,45 @@ $ python o1.py <span class="orange">--dbapi_module=PyGreSQL</span> --help
 	    default="Postgres",
 	    from_string_converter=configman.converters.class_converter,
 	)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width large_size_text">
+	<div class="text_centered grayout">Namespace</div>
+	<div class="text_centered grayout">Options</div>
+	<div class="text_centered orange">Aggregations</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	required_config.storage.add_option('storage_class')
+	required_config.storage.add_aggregation(
+	    'connection',
+	    database_connection_fn
+	)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+def database_connection_fn(global_config, local_config):
+    dsn = ('host=%(host)s dbname=%(database)s 
+           'user=%(user)s password=%(password)s') % local_config
+    return local_config.dbapi_module.connect(dsn)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width">
+<pre class="three_quarter_size_text">
+from configman import configuration
+
+config = configuration(required_config)
+
+cursor = config.storage.connection.cursor()
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -1005,136 +1246,6 @@ not_for_definition<br>
 reference_value_from<br>
 </p>
 </div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<h1 style="text-align:center">Configman</h1>
-	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
-	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></div>
-	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<h1 style="text-align:center">Configman</h1>
-	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
-	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing. collections.Mapping) == True</tt></div>
-	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width halfsize_text two-indent">
-<pre>
-
-from configman import configuration
-
-config = configuration(
-</pre><pre>
-    definition_source=defaults,
-</pre><pre>
-    values_source_list=[
-</pre><pre>
-        {'host': 'localhost'},
-</pre><pre>
-        configman.config_file
-</pre><pre>
-        os.environ,
-</pre><pre>
-        an_imported_module,
-</pre><pre>
-        some_class_instance.__dict__,
-</pre><pre>
-        getopt,
-</pre><pre>
-    ]
-</pre><pre>
-)
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width halfsize_text two-indent">
-<pre>
-
-from configman import configuration
-
-config = configuration(
-</pre><pre class="grayout">
-    definition_source=defaults,
-</pre><pre class="grayout">
-    values_source_list=[
-</pre><pre class="grayout">
-        {'host': 'localhost'},
-</pre><pre class="grayout">
-        configman.config_file
-</pre><pre class="grayout">
-        os.environ,
-</pre><pre class="grayout">
-        an_imported_module,
-</pre><pre class="grayout">
-        some_class_instance.__dict__,
-</pre><pre class="grayout">
-        getopt,
-</pre><pre class="grayout">
-    ]
-</pre><pre>
-)
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width halfsize_text two-indent">
-<pre>
-
-from configman import configuration
-
-config = configuration(
-</pre><pre>
-    definition_source=defaults,
-</pre><pre>
-    values_source_list=[
-</pre><pre class="grayout">
-        {'host': 'localhost'},
-</pre><pre class="grayout">
-        configman.config_file
-</pre><pre class="grayout">
-        os.environ,
-</pre><pre class="grayout">
-        an_imported_module,
-</pre><pre class="grayout">
-        some_class_instance.__dict__,
-</pre><pre class="grayout">
-        getopt,
-</pre><pre>
-    ]
-</pre><pre>
-)
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width halfsize_text two-indent">
-<pre class="grayout">
-
-from configman import configuration
-
-config = configuration(
-</pre><pre>
-    definition_source=defaults,
-</pre><pre class="grayout">
-    values_source_list=[
-</pre><pre class="cyan">
-        {'host': 'localhost'},
-</pre><pre class="green">
-        configman.config_file
-</pre><pre class="yellow">
-        os.environ,
-</pre><pre class="violet">
-        an_imported_module,
-</pre><pre class="red">
-        some_class_instance.__dict__,
-</pre><pre class="orange">
-        getopt,
-</pre><pre>
-    ]
-</pre><pre>
-)
-</pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
