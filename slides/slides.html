@@ -1166,10 +1166,11 @@ config = configuration(
 	<div class="text_centered grayout">Aggregations</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
+<div class="three_quarter_width">
 <pre>
 
 	required_config = configman.Namespace()
+	
 	required_config.namespace('storage')
 </pre>
 </div>
@@ -1185,51 +1186,98 @@ config = configuration(
 
 	required_config = configman.Namespace()
 	required_config.namespace('storage')
+	
 	required_config.storage.add_option(
+</pre><pre>
 	    name="storage_class",
+</pre><pre>
 	    doc="a qualified classname for a storage class",
+</pre><pre>
 	    default="Postgres",
+</pre><pre>
 	    from_string_converter=configman.converters.class_converter,
+</pre><pre>
 	)
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width large_size_text">
-	<div class="text_centered grayout">Namespace</div>
-	<div class="text_centered grayout">Options</div>
-	<div class="text_centered orange">Aggregations</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width halfsize_text">
-<pre>
+<pre class="grayout">
 
 	required_config = configman.Namespace()
 	required_config.namespace('storage')
-	required_config.storage.add_option('storage_class')
-	required_config.storage.add_aggregation(
-	    'connection',
-	    database_connection_fn
+	
+	required_config.storage.add_option(
+</pre><pre class="cyan">
+	    name="storage_class",
+</pre><pre class="grayout">
+	    doc="a qualified classname for a storage class",
+</pre><pre class="grayout">
+	    default="Postgres",
+</pre><pre class="grayout">
+	    from_string_converter=configman.converters.class_converter,
+</pre><pre class="grayout">
 	)
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width halfsize_text">
-<pre>
+<pre class="grayout">
 
-def database_connection_fn(global_config, local_config):
-    dsn = ('host=%(host)s dbname=%(database)s 
-           'user=%(user)s password=%(password)s') % local_config
-    return local_config.dbapi_module.connect(dsn)
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	
+	required_config.storage.add_option(
+</pre><pre class="grayout">
+	    name="storage_class",
+</pre><pre class="cyan">
+	    doc="a qualified classname for a storage class",
+</pre><pre class="grayout">
+	    default="Postgres",
+</pre><pre class="grayout">
+	    from_string_converter=configman.converters.class_converter,
+</pre><pre class="grayout">
+	)
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width">
-<pre class="three_quarter_size_text">
-from configman import configuration
+<div class="three_quarter_width halfsize_text">
+<pre class="grayout">
 
-config = configuration(required_config)
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	
+	required_config.storage.add_option(
+</pre><pre class="grayout">
+	    name="storage_class",
+</pre><pre class="grayout">
+	    doc="a qualified classname for a storage class",
+</pre><pre class="cyan">
+	    default="Postgres",
+</pre><pre class="grayout">
+	    from_string_converter=configman.converters.class_converter,
+</pre><pre class="grayout">
+	)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre class="grayout">
 
-cursor = config.storage.connection.cursor()
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	
+	required_config.storage.add_option(
+</pre><pre class="grayout">
+	    name="storage_class",
+</pre><pre class="grayout">
+	    doc="a qualified classname for a storage class",
+</pre><pre class="grayout">
+	    default="Postgres",
+</pre><pre class="cyan">
+	    from_string_converter=configman.converters.class_converter,
+</pre><pre class="grayout">
+	)
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -1250,6 +1298,49 @@ not_for_definition<br>
 reference_value_from<br>
 </p>
 </div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width large_size_text">
+	<div class="text_centered grayout">Namespace</div>
+	<div class="text_centered grayout">Options</div>
+	<div class="text_centered orange">Aggregations</div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+	required_config = configman.Namespace()
+	required_config.namespace('storage')
+	required_config.storage.add_option('storage_class')
+	
+</pre><pre class="cyan">
+	required_config.storage.add_aggregation(
+	    'connection',
+	    database_connection_fn
+	)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width halfsize_text">
+<pre>
+
+def database_connection_fn(global_config, local_config):
+
+    dsn = ('host=%(host)s dbname=%(database)s 
+           'user=%(user)s password=%(password)s') % local_config
+		   
+    return local_config.dbapi_module.connect(dsn)
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="three_quarter_width">
+<pre class="three_quarter_size_text">
+from configman import configuration
+
+config = configuration(required_config)
+
+cursor = config.storage.connection.cursor()
+</pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
