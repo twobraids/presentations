@@ -18,7 +18,7 @@
 .slide-view-module .slide-before, .slide-view-module .slide-after {
 	position: absolute;
 	z-index: -1;
-        height:800;
+	height:100%;
 
 }
 .slide-current {
