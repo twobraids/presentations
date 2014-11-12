@@ -1,0 +1,379 @@
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Augmenting<br>the resource based<br>implementations<br>
+        are several useful<br><span class="blue">meta CrashStorage classes</span>
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        for a_store in self.store_collection.itervalues():</pre>
+<pre>            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="white">            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):
+        try:
+            primary_crashstore.save_processed(processed_crash)
+        except FailureException:
+            secondary_crashstore.save_processed(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
+        try:
+            primary_crashstore.save_processed(processed_crash)
+        except FailureException:
+            secondary_crashstore.save_processed(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
+        try:
+            <span class="white">primary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
+        except FailureException:
+            <span>secondary_crashstore</span>.<span>save_processed</span>(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):
+        try:
+            <span class="white">primary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
+        <span class="red">except FailureException</span>:
+            <span>secondary_crashstore</span>.<span>save_processed</span>(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):
+        try:
+            <span>primary_crashstore</span>.<span>save_processed</span>(processed_crash)
+        <span class="red">except FailureException</span>:
+            <span class="white">secondary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre>        start_time = self.start_timer()</pre>
+<pre>        self.wrapped_crashstore.save_processed(processed_crash)</pre>
+<pre>        end_time = self.end_timer()</pre>
+<pre>        logger.debug(</pre>
+<pre>            '%s save_processed %s',</pre>
+<pre>            self.tag,</pre>
+<pre>            end_time - start_time</pre>
+<pre>        )</pre>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre>        start_time = self.start_timer()</pre>
+<pre>        self.wrapped_crashstore.save_processed(processed_crash)</pre>
+<pre>        end_time = self.end_timer()</pre>
+<pre>        logger.debug(</pre>
+<pre>            '%s save_processed %s',</pre>
+<pre>            self.tag,</pre>
+<pre>            end_time - start_time</pre>
+<pre>        )</pre>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="green">        start_time = self.start_timer()</pre>
+<pre class="white">        self.wrapped_crashstore.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+<pre class="green">        end_time = self.end_timer()</pre>
+<pre class="grayout">        logger.debug(</pre>
+<pre class="grayout">            '%s save_processed %s',</pre>
+<pre class="grayout">            self.tag,</pre>
+<pre class="grayout">            end_time - start_time</pre>
+<pre class="grayout">        )</pre>
+</pre>
+    </div>
+</div>
+
+
+
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre>
+
+    a_processed_crash = {...}</pre>
+<pre>    destination_module_as_string = sys.argv[1]</pre>
+<pre>    destination_module = __import__(
+        destination_module_as_string
+    )</pre>
+<pre>    destination = destination_module.CrashStorage()</pre>
+<pre>    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre>
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
+    )</pre>
+<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre>    <span class="green">destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
+    )</pre>
+<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="blue">destination_module</span> = <span class="white">__import__</span>(
+        <span class="green">destination_module_as_string</span>
+    )</pre>
+<pre class="grayout">    <span>destination</span> = <span>destination_module.CrashStorage()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="grayout">destination_module</span> = <span class="white">__import__</span>(
+        <span class="grayout">destination_module_as_string</span>
+    )</pre>
+<pre class="grayout">    <span>destination</span> = <span>destination_module.CrashStorage()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="grayout">destination_module</span> = <span class="white">__import__</span>(
+        <span class="green">destination_module_as_string</span>
+    )</pre>
+<pre class="grayout">    <span>destination</span> = <span>destination_module.CrashStorage()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    <span class="blue">destination_module</span> = <span class="grayout">__import__</span>(
+        <span class="grayout">destination_module_as_string</span>
+    )</pre>
+<pre class="grayout">    <span>destination</span> = <span>destination_module.CrashStorage()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    <span>destination_module</span> = __import__(
+        <span>destination_module_as_string</span>
+    )</pre>
+<pre>    <span class="violet">destination</span> = <span class="blue">destination_module</span>.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span>a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    <span>destination_module</span> = __import__(
+        <span>destination_module_as_string</span>
+    )</pre>
+<pre class="grayout">    <span>destination</span> = <span>destination_module</span>.CrashStorage()</pre>
+<pre class="white">    <span class="violet">destination</span>.<span class="orange">save_processed</span>(<span class="yellow">a_processed_crash</span>)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2009
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2010
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2013
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2015
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro Pi<br>a solo work
+    </h2>
+</div>

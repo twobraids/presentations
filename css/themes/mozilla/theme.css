@@ -7,9 +7,11 @@
 @import "../basic.css";
 
 html {
-	background: #000;
-	background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1000, from(#222), to(#000));
-	background-image: -moz-radial-gradient(center 45deg, circle closest-side, #222 0, #000 1000px);
+	background: #000000;
+	/*background-image: url('ff-logo-100.png') no-repeat top right;*/
+	background-image: url('ff-logo-100.png');
+	background-repeat: no-repeat;
+	background-position: top right;
 }
 
 footer p {
@@ -19,7 +21,10 @@ footer p {
 #slide-container {
 	margin-top: 4em;
 	background: none;
-	height: 768px;
+	/*height: 800px;*/
+/*	outline-color: green;
+	outline-style: solid;
+	outline-width:2px;*/
 }
 
 .slide {
@@ -42,22 +47,27 @@ footer p {
 
 .slide h1.logo {
 	background: url(../../../im/hovercraft-logotype-800.png) no-repeat 50% 50%;
-	text-indent: -9999px;
+	/*text-indent: -9999px;*/
 }
 
 .slide h2 {
 	margin-top: 0;
-	margin-left: .5em;
+	/*margin-left: .5em;*/
 }
 
 .slide p {
-	color: #eee;
-	margin-left: 2em;
+	/*color: #eee;*/
+	/*margin-left: 2em;*/
+}
+
+.slide ul {
+	/*color: #eee;*/
+	/*margin-left: 2em;*/
 }
 
 .slide em {
 	font-style: italic;
-	color: #fff;
+	/*color: #fff;*/
 }
 
 .slide ul > ul {

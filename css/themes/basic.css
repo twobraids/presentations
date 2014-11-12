@@ -14,11 +14,17 @@ html {
 body {
 	font-size: 100%;
 	color: #222;
+	/*height: 100%;*/
+	width: 100%;
+/*	outline-color: white;
+	outline-style: solid;
+	outline-width:2px; */
 }
 
 footer {
+	height: 0px;
 	min-width: 40em;
-	width: 80%;
+	width: 100%;
 	margin: 1em auto;
 	font-size: 1em;
 	text-align: right;
@@ -33,23 +39,35 @@ em {
 	color: #888;
 }
 
-pre code {
+/*img {
+	outline-color: yellow;
+	outline-style: solid;
+	outline-width:2px;
+}*/
+
+/*h2 {
+	outline-color: green;
+	outline-style: solid;
+	outline-width:2px;
+}*/
+
+pre code tt span {
     background-color: transparent;
+	font-size: 150%;
 }
 
 .slide h1, .slide h2, .slide h3, .slide h4, .slide h5 {
 	font-weight: bold;
-	margin: .25em 0;
+	margin: 0 0;
 }
 
 .slide h1 {
-	font-size: 3em;
+	font-size: 5em;
 	margin-top: 0;
 }
 
 .slide h2 {
-	font-size: 1.5em;
-	color: #666;
+	font-size: 2em;
 }
 
 .slide p {
@@ -62,18 +80,21 @@ pre code {
 	width: 100%;
 	height: 100%;
 	min-width: 40em;
-	min-height: 20em;
+	min-height: 899px;
 	padding: 0;
 	margin: 0;
 }
 
 .slide {
-	font-size: 200%;
+	font-size: 100%;
 	top: 0;
-	left: 10%;
-	width: 80%;
+	/*left: 10%;*/
+	width: 100%;
 	min-height: 5em;
 	margin: 0 auto;
+/*	outline-color: red;
+	outline-style: solid;
+	outline-width:2px;*/
 }
 
 .slide-current {
@@ -97,6 +118,425 @@ pre code {
 	display: none;
 }
 
+.one-indent {
+	margin-left:5%;
+}
+
+.two-indent {
+	margin-left:10%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+.highlight {
+	color: #FFFF00;
+}
+
+.highlight_orange {
+	color: orange;
+}
+
+.terminal {
+	color: #00FF00;
+}
+
+.halfsize_terminal {
+	color: #00FF00;
+	font-size: 50%;
+}
+
+.grayout {
+	color: #333333;
+}
+
+
+.gray {
+	color: #333333;
+}
+
+
+.lightgray {
+	color: #999999;
+}
+
+.lightgray-back {
+	background: #999999;
+	color:black;
+}
+
+.darkgray {
+	color:DimGray;
+}
+
+.darkestgray {
+	color:#222222;
+}
+
+.darkgray-back {
+	background: DimGray;
+	color:#999999;
+}
+
+
+
+.larger_size_text {
+	font-size: 150%;
+}
+
+.large_size_text {
+	font-size: 200%;
+}
+
+.huge_size_text {
+	font-size: 400%;
+}
+
+.three_quarter_size_text {
+	font-size: 150%;
+}
+
+.three_quarter_size_highlight_text {
+	font-size: 150%;
+	color: #FFFF00;
+}
+
+.halfsize_text {
+	font-size: 100%;
+}
+
+.halfsize_higlight_text {
+	font-size: 100%;
+	color: #FFFF00;
+}
+
+.quartersize_text {
+	font-size: 75%;
+}
+
+.text_centered {
+	text-align: center;
+}
+
+.text_left {
+	text-align: left;
+}
+
+.block_centered {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.block_right {
+	display:block;
+	margin-left:auto;
+	margin-right:100px;
+}
+
+.block_left {
+	display:block;
+	margin-right:auto;
+	float;
+}
+
+.full-width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
+.third_width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:33%;
+}
+
+.flames {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+	height:100%;
+}
+
+.quarter_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:25%;
+}
+
+.third_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:33%;
+}
+
+.third_width_left {
+	display:block;
+	float:left;
+	margin-right:auto;
+	width:33%;
+}
+
+.third_width_center {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:33%;
+}
+
+.half_width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+}
+
+.half_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:50%;
+}
+
+.three_quarter_width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:75%;
+}
+
+
+.lego-framework {
+	background: Sienna;
+	color: black;
+}
+
+.lego-multithread {
+	background: olive;
+	color: white;
+}
+
+.lego-multiprocess {
+	background: maroon;
+	color: white;
+}
+
+.lego-coop-multitask {
+	background: indigo;
+	color: white;
+}
+
+.cyan {
+	color:cyan;
+}
+
+.cyan-back {
+	background:cyan;
+	color:black;
+}
+
+.green {
+	color:#00FF00;
+}
+
+.green-back {
+	background:#00FF00;
+	color:black;
+}
+
+.dark-green {
+	color:DarkGreen;
+}
+
+.dark-green-back {
+	background:DarkGreen;
+	color:white;
+}
+
+.dark-red {
+	color:darkred;
+}
+
+.darkred-back {
+	background:darkred;
+	color:white;
+}
+
+.red {
+	color:red;
+}
+
+.red-back {
+	background:red;
+	color:white;
+}
+
+.yellow {
+	color:yellow;
+}
+
+.yellow-back {
+	background:yellow;
+}
+
+.violet {
+	color:violet;
+}
+
+.violet-back {
+	background:violet;
+	color:black;
+}
+
+.blue {
+	color:#8888FF;
+}
+
+.blue-back {
+	background:#8888FF;
+	color:black;
+}
+
+.dark-blue {
+	color:DarkBlue;
+}
+
+.dark-blue-back {
+	background:DarkBlue;
+	color:white;
+}
+
+.orange {
+	color:orange;
+}
+
+.orange-back {
+	background:orange;
+	color:black;
+}
+
+.indigo {
+	color:indigo;
+}
+
+.indigo-back {
+	background:indigo;
+	color:white;
+}
+
+.black {
+	color:black;
+}
+
+.white {
+	color:white;
+}
+
+.white-back {
+	background:white;
+	color:black;
+}
+
+.pink {
+	color:pink;
+}
+
+.pink-back {
+	background:pink;
+	color:black;
+}
+
+.black_key {
+	color:white;
+        background:black;
+}
+
+.white_key {
+	color:black;
+        background:white;
+}
+
+.orange_white_key {
+	color:black;
+        background:orange;
+}
+
+.green_white_key {
+	color:white;
+        background:green;
+}
+
+.orange_black_key {
+	color:orange;
+        background:black;
+}
+
+.fetch_object {
+    color:black;
+    background:pink;
+}
+
+.save_object {
+    color:black;
+    background:gray;
+}
+
+.multistore_object {
+    color:fuchsia;
+}
+
+.multistore-back {
+    background:fuchsia;
+    color: white;
+}
+
+.nothing{
+}
+
+.lego-grid {
+    font-size: 50%;
+    background: black;
+    border=2px solid white;
+}
+
+table,td
+{
+border:4px solid black;
+text-align:center;
+background: white;
+}
+td
+{
+vertical-align:middle;
+}
+th
+{
+background:#999999;
+vertical-align:middle;
+}
+table
+{
+width:100%;
+}
+th
+{
+height:50px;
+}
+tr {
+height: 2em;
+}
+
+
+
+
 @media screen and (max-device-width: 480px) {
 /*	body {
 		height: auto;
@@ -106,14 +546,14 @@ pre code {
 		font-size: 100%;
 		min-height: auto;
 	}
-	
+
 	.slide-view-module {
 		min-width: 0;
 		min-height: 0;
 	}
-	
+
 	footer {
-		margin-top: 2em;
+		margin-top: 0;
 		min-width: 0;
 		font-size: .75em;
 	}
