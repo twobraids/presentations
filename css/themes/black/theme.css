@@ -19,6 +19,7 @@ footer p {
 #slide-container {
 	margin-top: 4em;
 	background: none;
+	height: 768px;
 }
 
 .slide {
