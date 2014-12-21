@@ -234,6 +234,45 @@ pre code tt span {
 	color:orange;
 }
 
+.black {
+	color:black;
+}
+
+.black_key {
+	color:white;
+        background:black;
+}
+
+.white_key {
+	color:black;
+        background:white;
+}
+
+table,td
+{
+border:4px solid black;
+text-align:center;
+background: white;
+}
+td
+{
+vertical-align:middle;
+}
+th
+{
+background:#999999;
+vertical-align:middle;
+}
+table
+{
+width:100%;
+}
+th
+{
+height:50px;
+}
+
+
 @media screen and (max-device-width: 480px) {
 /*	body {
 		height: auto;
