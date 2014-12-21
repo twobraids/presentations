@@ -190,6 +190,12 @@ pre code tt span {
 	margin-right:auto;
 }
 
+.block_right {
+	display:block;
+	margin-left:auto;
+	margin-right:100px;
+}
+
 .half_width {
 	display:block;
 	margin-left:auto;
