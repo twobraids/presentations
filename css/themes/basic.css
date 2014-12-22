@@ -248,6 +248,21 @@ pre code tt span {
         background:white;
 }
 
+.orange_white_key {
+	color:black;
+        background:orange;
+}
+
+.green_white_key {
+	color:white;
+        background:green;
+}
+
+.orange_black_key {
+	color:orange;
+        background:black;
+}
+
 table,td
 {
 border:4px solid black;
