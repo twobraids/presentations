@@ -196,6 +196,33 @@ pre code tt span {
 	margin-right:100px;
 }
 
+.block_left {
+	display:block;
+	margin-right:auto;
+	float;
+}
+
+.third_width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:33%;
+}
+
+.third_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:33%;
+}
+
+.third_width_left {
+	display:block;
+	float:left;
+	margin-right:auto;
+	width:33%;
+}
+
 .half_width {
 	display:block;
 	margin-left:auto;
