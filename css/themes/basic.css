@@ -119,6 +119,10 @@ pre code tt span {
 	display: none;
 }
 
+.space-below {
+	margin-bottom: 2em;
+}
+
 .one-indent {
 	margin-left:5%;
 }
