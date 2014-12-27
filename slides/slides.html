@@ -1207,7 +1207,8 @@
 
 def save_processed(self, processed_crash):</pre>
 <pre>    self.transaction(</pre>
-<pre>        self._save_processed_transaction,
+<pre>        self._save_processed_transaction,</pre>
+<pre>
         processed_crash</pre>
 <pre>    )</pre>
 </div>
@@ -1221,10 +1222,57 @@ def save_processed(self, processed_crash):</pre>
 
 def save_processed(self, processed_crash):</pre>
 <pre>    self.transaction(</pre>
-<pre class="grayout">        self._save_processed_transaction,
+<pre class="grayout">        self._save_processed_transaction,</pre>
+<pre class="grayout">
         processed_crash</pre>
 <pre>    )</pre>
 </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage for PostgreSQL<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent"><pre class="grayout">
+
+def save_processed(self, processed_crash):</pre>
+<pre>    self.transaction(</pre>
+<pre class="cyan">        self._save_processed_transaction,</pre>
+<pre class="grayout">
+        processed_crash</pre>
+<pre>    )</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage for PostgreSQL<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent"><pre class="grayout">
+
+def save_processed(self, processed_crash):</pre>
+<pre>    self.transaction(</pre>
+<pre class="cyan">        self._save_processed_transaction,</pre>
+<pre class="yellow">
+        processed_crash</pre>
+<pre>    )</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage for PostgreSQL<br>
+    </h2>
+    <div class="terminal two-indent "><pre>
+
+def save_processed(self, processed_crash):</pre>
+<pre>    self.transaction(</pre>
+<pre>        self._save_processed_transaction,</pre>
+<pre>
+        processed_crash</pre>
+<pre>    )</pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1234,12 +1282,43 @@ def save_processed(self, processed_crash):</pre>
     <div>
         <div class="terminal two-indent"><pre>
 
-def _save_processed_transaction(self, connection, processed_crash):
-    report_id = self._save_processed_report(connection, processed_crash)
-    self._save_plugins(connection, processed_crash, report_id)
-    self._save_extensions(connection, processed_crash, report_id)
-    self._save_processed_crash(connection, processed_crash)
-</pre>
+def _save_processed_transaction(self, <span>connection</span>, processed_crash):</pre>
+<pre>    report_id = self._save_processed_report(connection, processed_crash)</pre>
+<pre>    self._save_plugins(connection, processed_crash, report_id)</pre>
+<pre>    self._save_extensions(connection, processed_crash, report_id)</pre>
+<pre>    self._save_processed_crash(connection, processed_crash)</pre>
+    </div>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        CrashStorage for PostgreSQL<br>
+    </h2>
+    <div>
+        <div class="terminal two-indent"><pre class="grayout">
+
+def _save_processed_transaction(self, <span class="cyan">connection</span>, processed_crash):</pre>
+<pre class="grayout">    report_id = self._save_processed_report(connection, processed_crash)</pre>
+<pre class="grayout">    self._save_plugins(connection, processed_crash, report_id)</pre>
+<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
+<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
+    </div>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        CrashStorage for PostgreSQL<br>
+    </h2>
+    <div>
+        <div class="terminal two-indent"><pre class="grayout">
+
+def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
+<pre class="grayout">    report_id = self._save_processed_report(connection, processed_crash)</pre>
+<pre class="grayout">    self._save_plugins(connection, processed_crash, report_id)</pre>
+<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
+<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
     </div>
 </div>
 </div>
