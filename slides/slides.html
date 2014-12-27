@@ -1200,20 +1200,42 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <h2>
+	CrashStorage for PostgreSQL<br>
+    </h2>
+    <div class="terminal two-indent larger_size_text"><pre>
+
+def save_processed(self, processed_crash):</pre>
+<pre>    self.transaction(</pre>
+<pre>        self._save_processed_transaction,
+        processed_crash</pre>
+<pre>    )</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+	CrashStorage for PostgreSQL<br>
+    </h2>
+    <div class="terminal two-indent larger_size_text"><pre class="grayout">
+
+def save_processed(self, processed_crash):</pre>
+<pre>    self.transaction(</pre>
+<pre class="grayout">        self._save_processed_transaction,
+        processed_crash</pre>
+<pre>    )</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <h2 class="text_centered">
 	CrashStorage for PostgreSQL<br>
     </h2>
-    <div class="halfsize_terminal one-indent">
-    def save_processed(self, processed_crash):
-        self.transaction(self._save_processed_transaction, processed_crash)
-
-    def _save_processed_transaction(self, connection, processed_crash):
-        report_id = self._save_processed_report(connection, processed_crash)
-        self._save_plugins(connection, processed_crash, report_id)
-        self._save_extensions(connection, processed_crash, report_id)
-        self._save_processed_crash(connection, processed_crash)
-
-
+    <div class="terminal two-indent"><pre>
+def _save_processed_transaction(self, connection, processed_crash):
+    report_id = self._save_processed_report(connection, processed_crash)
+    self._save_plugins(connection, processed_crash, report_id)
+    self._save_extensions(connection, processed_crash, report_id)
+    self._save_processed_crash(connection, processed_crash)
+</pre>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
