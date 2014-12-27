@@ -1432,6 +1432,21 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <h2>
+        CrashStorage for HBase<br>
+    </h2>
+    <div>
+        <div class="terminal two-indent quartersize_text"><pre>
+
+        def do_save(connection, row_id, columns_and_values):
+            crash_report_table = connection.table('crash_reports')
+            crash_report_table.put(
+                row_id,
+                columns_and_values
+            )
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <h2 class="text_centered">
         Socorro treats the disjoint<br>set of CrashStorage classes<br>as if they were the same<br>
     </h2>
