@@ -1022,14 +1022,14 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-	CrashStorage is a<br>business logic API<br>
-	that does not care about<br>implementation
+	CrashStorage is a <span class="yellow">set of classes</span><br>
+	that implement a<br><span class="green">business logic API</span>
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2  class="text_centered">
-	The CrashStorage API is implemented for:
+	The CrashStorage API<br>is implemented for:
     </h2>
     <ul class="text_centered space-above larger_size_text">
 	<li class="white">HBase</li>
@@ -1201,18 +1201,61 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
+	CrashStorage for PostgreSQL<br>
+    </h2>
+    <div class="halfsize_terminal one-indent">
+    def save_processed(self, processed_crash):
+        self.transaction(self._save_processed_transaction, processed_crash)
+
+    def _save_processed_transaction(self, connection, processed_crash):
+        report_id = self._save_processed_report(connection, processed_crash)
+        self._save_plugins(connection, processed_crash, report_id)
+        self._save_extensions(connection, processed_crash, report_id)
+        self._save_processed_crash(connection, processed_crash)
+
+
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
 	Socorro treats the disjoint<br>set of CrashStorage classes<br>as if they were the same<br>
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
-<div class="slide-layout-title">
+<div>
     <h2 class="text_centered">
-        the Well Tempered API
+	Socorro treats the disjoint<br>set of CrashStorage classes<br>as if they were the same<br>
     </h2>
-    <h2 class="text_centered green">
-        Movement 4<br>Andante
+    <h2 class="text_centered orange">
+        How is this helpful?
     </h2>
 
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+	Socorro easily scales up or down
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+	Socorro Pi<br>a solo work
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+	Socorro S3<br>massive cloud system
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2>
+	New external resources<br>are implemented<br>
+
+    </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
