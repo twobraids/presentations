@@ -1238,7 +1238,7 @@ def save_processed(self, processed_crash):</pre>
 
 def save_processed(self, processed_crash):</pre>
 <pre>    self.transaction(</pre>
-<pre class="cyan">        self._save_processed_transaction,</pre>
+<pre class="orange">        self._save_processed_transaction,</pre>
 <pre class="grayout">
         processed_crash</pre>
 <pre>    )</pre>
@@ -1254,7 +1254,7 @@ def save_processed(self, processed_crash):</pre>
 
 def save_processed(self, processed_crash):</pre>
 <pre>    self.transaction(</pre>
-<pre class="cyan">        self._save_processed_transaction,</pre>
+<pre class="orange">        self._save_processed_transaction,</pre>
 <pre class="yellow">
         processed_crash</pre>
 <pre>    )</pre>
@@ -1414,7 +1414,29 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
         CrashStorage for HBase<br>
     </h2>
     <div>
-        <div class="terminal two-indent quartersize_text"><pre>
+        <div class="terminal two-indent quartersize_text"><pre class="grayout">
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        crash_id = processed_crash['uuid']
+        <span class="yellow">row_id</span> = crash_id_to_row_id(crash_id)
+        <span class="yellow">columns_and_values</span> = {
+            "timestamps:processed": processed_crash['completeddatetime'],
+            "processed_data:signature": processed_crash['signature'],
+            "processed_data:json": json.dumps(
+                processed_crash
+            ),
+            "flags:processed": ""
+        }
+</pre>
+<pre class="grayout">        self.transaction(self.do_save, row_id, columns_and_values)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage for HBase<br>
+    </h2>
+    <div>
+        <div class="terminal two-indent quartersize_text"><pre class="grayout">
 
     def save_processed(self, processed_crash):</pre>
 <pre class="grayout">        crash_id = processed_crash['uuid']
@@ -1428,7 +1450,7 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
             "flags:processed": ""
         }
 </pre>
-<pre>        self.transaction(self.do_save, row_id, columns_and_values)</pre>
+<pre>        self.transaction(<span class="orange">self.do_save</span>, <span class="yellow">row_id</span>, <span class="yellow">columns_and_values</span>)</pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1438,7 +1460,7 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
     <div>
         <div class="terminal two-indent quartersize_text"><pre>
 
-        def do_save(connection, row_id, columns_and_values):
+        def do_save(<span class="cyan">connection</span>, <span class="yellow">row_id</span>, <span class="yellow">columns_and_values</span>):
             crash_report_table = connection.table('crash_reports')
             crash_report_table.put(
                 row_id,
@@ -1463,9 +1485,210 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <h2 class="text_centered">
-        Socorro easily scales up or down
+    <h2>
+        Dynamic Loading
     </h2>
+    <div class="terminal two-indent"><pre>
+
+    destination_class_as_string = args[1]</pre>
+<pre>    destination_class = __import__(destination_class_as_string)</pre>
+<pre>    destination = destination_class()</pre>
+<pre>    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="cyan">destination_class_as_string</span> = args[1]</pre>
+<pre class="grayout">    destination_class = __import__(destination_class_as_string)</pre>
+<pre class="grayout">    destination = destination_class()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="cyan">destination_class_as_string</span> = args[1]</pre>
+<pre>    <span class="blue">destination_class</span> = __import__(<span class="cyan">destination_class_as_string</span>)</pre>
+<pre class="grayout">    destination = destination_class()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="cyan">destination_class_as_string</span> = args[1]</pre>
+<pre>    <span class="blue">destination_class</span> = __import__(<span class="cyan">destination_class_as_string</span>)</pre>
+<pre>    <span class="violet">destination</span> = <span class="blue">destination_class()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="cyan">destination_class_as_string</span> = args[1]</pre>
+<pre>    <span class="blue">destination_class</span> = __import__(<span class="cyan">destination_class_as_string</span>)</pre>
+<pre>    <span class="violet">destination</span> = <span class="blue">destination_class()</span></pre>
+<pre>    <span class="violet">destination</span>.save_processed(<span class="yellow">a_processed_crash</span>)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class MultiCrashStorage(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        for a_store in self.store_collection.itervalues():</pre>
+<pre>            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class MultiCrashStorage(CrashStorage):
+
+    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
+<pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class MultiCrashStorage(CrashStorage):
+
+    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
+<pre>        for <span class="blue">a_store</span> in self.<span class="cyan">store_collection</span>.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class MultiCrashStorage(CrashStorage):
+
+    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
+<pre>        for <span class="blue">a_store</span> in self.<span class="cyan">store_collection</span>.itervalues():</pre>
+<pre>            <span class="blue">a_store</span>.save_processed(<span class="yellow">processed_crash</span>)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class FallbackCrashStorage(CrashStorage):
+
+    def save_processed(self, processed_crash):
+        try:
+            primary_crashstore.save_processed(processed_crash)
+        except FailureException:
+            secondary_crashstore.save_processed(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class FallbackCrashStorage(CrashStorage):
+
+    def save_processed(self, processed_crash):
+        try:
+            <span class="green">primary_crashstore</span>.save_processed(processed_crash)
+        except FailureException:
+            <span class="orange">secondary_crashstore</span>.save_processed(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class BenchmarkingCrashStorage(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        start_time = self.start_timer()</pre>
+<pre>        self.wrapped_crashstore.save_processed(processed_crash)</pre>
+<pre>        end_time = self.end_timer()</pre>
+<pre>        logger.debug(</pre>
+<pre>            '%s save_processed %s',</pre>
+<pre>            self.tag,</pre>
+<pre>            end_time - start_time</pre>
+<pre>        )</pre>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class BenchmarkingCrashStorage(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        start_time = self.start_timer()</pre>
+<pre class="grayout">        self.wrapped_crashstore.save_processed(processed_crash)</pre>
+<pre>        end_time = self.end_timer()</pre>
+<pre class="grayout">        logger.debug(</pre>
+<pre class="grayout">            '%s save_processed %s',</pre>
+<pre class="grayout">            self.tag,</pre>
+<pre class="grayout">            end_time - start_time</pre>
+<pre class="grayout">        )</pre>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro is a Crash Reporting<br>
+        LEGO set
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro is a Crash Reporting<br>
+        LEGO set
+    </h2>
+
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1487,6 +1710,16 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2 class="text_centered">
+        the Well Tempered API
+    </h2>
+    <h2 class="text_centered green">
+        Movement 4<br>Andante
+    </h2>
+
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
         Music Notation
@@ -1500,6 +1733,9 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
     <h2 class="text_centered">
         Music Notation
     </h2>
+    <h2 class="text_centered grayout">
+        the programs of the Music world?
+    </h2>
     <h2 class="text_centered red">
         OR
     </h2>
@@ -1508,6 +1744,12 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
 </div>
     <h2 class="text_centered">
         Music Notation
+    </h2>
+    <h2 class="text_centered grayout">
+        the programs of the Music world?
+    </h2>
+    <h2 class="text_centered grayout">
+        OR
     </h2>
     <h2 class="text_centered">
         the log files of the Music world?
