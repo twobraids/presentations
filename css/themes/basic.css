@@ -192,6 +192,10 @@ pre code tt span {
 	text-align: center;
 }
 
+.text_left {
+	text-align: left;
+}
+
 .block_centered {
 	display:block;
 	margin-left:auto;
