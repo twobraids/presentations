@@ -285,6 +285,10 @@ pre code tt span {
 	color:black;
 }
 
+.white {
+	color:white;
+}
+
 .black_key {
 	color:white;
         background:black;
