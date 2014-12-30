@@ -129,25 +129,33 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <p class="text_centered large_size_text">
-        Vivaldi<br>
-        Concerto for Oboe<br>in G minor
-    </p>
-    <p class="text_centered large_size_text yellow">
-    written 400 years ago
-    </p>
+    <img class="block_right" style="float:left; height: 600px" src="resources/Antonio_Vivaldi.jpg">
+    <div class="block_centered space-below">
+        <h2 class="text_centered">
+            <span class="yellow">Vivaldi, Concerto in G</span><br>
+            <span class="green">for Oboe</span>
+         </h2>
+    </div>
+    <div class="block_centered">
+        <h2 class="text_centered">
+            written 400 years ago
+        </h2>
+    </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <p class="text_centered large_size_text">
-        Vivaldi<br>
-        did not compose for<br><br>
-    </p>
-    <ul class="text_centered">
+    <img class="block_right" style="float:left; height: 600px" src="resources/Antonio_Vivaldi.jpg">
+    <div class="block_centered space-below">
+        <h2 class="text_centered">
+            <span class="yellow">Vivaldi, Concerto in G</span><br>
+            <span class="green">not written for</span>
+         </h2>
+    </div>
+    <ul class="text_centered three_quarter_size_text">
         <li>Electric Bassoon</li>
         <li>Indian Sitar</li>
         <li>Turkish Zither</li>
-        <li>Jamacan Steel Drum</li>
+        <li>Jamaican Steel Drum</li>
 
     </ul>
 </div>
@@ -188,9 +196,7 @@
     <h1 style="text-align:left; margin-left:5%">Lars</h1>
     <div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
     <div style="text-align:left; margin-left:5%">
-    <br>does not know any<br>
-    the cast members of<br>
-    Duck Dynasty
+    <br>"get off my lawn"
     </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -210,7 +216,7 @@
 <div class="slide-layout-title">
     <h2 class="text_centered">
         An API should be<br>
-        indepentent of the<br>
+        indepentent of its<br>
         implementation
     </h2>
 </div>
@@ -224,7 +230,7 @@
 <div class="slide-layout-title">
     <h2 class="text_centered">
         An API should be<br>
-        indepentent of the<br>
+        indepentent of its<br>
         implementation
     </h2>
 </div>
@@ -240,7 +246,7 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div class="slide-layout-title">
-    <h2 class="text_centered yellow">
+    <h2 class="text_centered orange">
     Remedial Music Theory<br>for programmers
     </h2>
 
@@ -915,7 +921,7 @@
     the tuning of scales is called
     </h2>
     <h2 class="text_centered orange">
-    Temperment
+    Temperament
     </h2>
 
 </div>
@@ -925,38 +931,82 @@
     modern tuning is called
     </h2>
     <h2 class="text_centered green">
-    Equal Temperment
+    Equal Temperament
     </h2>
 
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-    500 years ago each instrument had its own
+    500 years ago<br><span class="orange">each instrument</span><br>had its
     </h2>
-    <h2 class="text_centered">
-    Temperment
+    <h2 class="text_centered orange">
+        own temperament
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-    music playable on one instrument
+    music playable on<br>one instrument
     </h2>
     <h2 class="text_centered red">
-    was not necessarily playable on another
+    was not necessarily<br>playable on another
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-    reason #1 why 400 year old music still works today:
+    how does modern
+    </h2>
+    <h2 class="text_centered green">
+    Equal Temperament
+    </h2>
+    <h2 class="text_centered">
+    work?
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered orange">
+    by cheating
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-    reason #1 why 400 year old music still works today:
+    we sacrifice the perfect 
+    </h2>
+    <h2 class="text_centered">
+    for the
+    </h2>
+    <h2 class="text_centered">
+    Good Enough 
+    </h2>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+    and that set the music world
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+    and that set the music world
+    </h2>
+    <h2 class="text_centered red">
+    <span class="large_size_text">ON FIRE</span>
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+    reason #1<br>why 400 year old music<br>still works today:
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+    reason #1<br>why 400 year old music<br>still works today:
     </h2>
     <h2 class="text_centered green">
     Compromising on Tuning Standards
@@ -1502,16 +1552,16 @@ def _save_processed_transaction(self, <span class="cyan">connection</span>, <spa
         <div class="terminal two-indent quartersize_text"><pre class="grayout">
 
     def save_processed(self, processed_crash):</pre>
-<pre>        crash_id = processed_crash['uuid']
-        <span class="yellow">row_id</span> = crash_id_to_row_id(crash_id)
-        <span class="yellow">columns_and_values</span> = {
+<pre>        <span class="grayout">crash_id = processed_crash['uuid']</span>
+        <span class="yellow">row_id</span><span class="grayout"> = crash_id_to_row_id(crash_id)</span>
+        <span class="yellow">columns_and_values</span><span class="grayout"> = {
             "timestamps:processed": processed_crash['completeddatetime'],
             "processed_data:signature": processed_crash['signature'],
             "processed_data:json": json.dumps(
                 processed_crash
             ),
             "flags:processed": ""
-        }
+        }</span>
 </pre>
 <pre class="grayout">        self.transaction(self.do_save, row_id, columns_and_values)</pre>
 </div>

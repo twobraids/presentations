@@ -124,7 +124,7 @@ pre code tt span {
 }
 
 .space-above {
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 .one-indent {
@@ -164,6 +164,10 @@ pre code tt span {
 
 .large_size_text {
 	font-size: 200%;
+}
+
+.huge_size_text {
+	font-size: 400%;
 }
 
 .three_quarter_size_text {
