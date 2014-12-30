@@ -119,6 +119,10 @@ pre code tt span {
 	display: none;
 }
 
+.twelve_column {
+    width:8%
+}
+
 .space-below {
 	margin-bottom: 2em;
 }
