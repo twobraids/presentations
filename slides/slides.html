@@ -251,33 +251,35 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <img class="block_right quarter_width_right hidden" src="resources/larsalope.jpg">
     <div class="two-indent large_size_text">
-        <h2 class="green ">Lars</h2>
+        <h2 class="lightgray ">Lars</h2>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <img class="block_right quarter_width_right hidden" src="resources/larsalope.jpg">
     <div class="two-indent large_size_text">
-        <h2 class="green ">Lars</h2>
+        <h2 class="lightgray ">Lars</h2>
     </div>
     <div class="space-below space-above two-indent">
         <div>the Mozilla Web Engineering<br>Herd Patriarch</div>
     </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
-    <img class="block_right quarter_width_right"  src="resources/larsalope.jpg">
-    <div class="two-indent space-above large_size_text">
-        <h2 class="green ">Lars</h2>
+    <img class="block_right quarter_width_right" src="resources/larsalope.jpg">
+    <div class="two-indent large_size_text">
+        <h2 class="lightgray ">Lars</h2>
     </div>
-    <div class="space-below two-indent">
+    <div class="space-below space-above two-indent">
         <div>the Mozilla Web Engineering<br>Herd Patriarch</div>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
-    <img class="block_right" style="float:right; height: 600px" src="resources/larsalope.jpg">
+    <img class="block_right quarter_width_right" src="resources/larsalope.jpg">
     <div class="two-indent large_size_text">
-        <h2 class="green ">Lars</h2>
+        <h2 class="lightgray ">Lars</h2>
     </div>
     <div class="space-below space-above two-indent">
         <div>the Mozilla Web Engineering<br>Herd Patriarch</div>
@@ -290,12 +292,13 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
-    <img class="block_right" style="float:right; height: 600px" src="resources/larsalope.jpg">
-    <h1 style="text-align:left; margin-left:5%">Lars</h1>
-    <div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
-    <div style="text-align:left; margin-left:5%">
+    <img class="block_right quarter_width_right" src="resources/larsalope.jpg">
+    <div class="two-indent large_size_text">
+        <h2 class="lightgray ">Lars</h2>
     </div>
-
+    <div class="space-below space-above two-indent">
+        <div>the Mozilla Web Engineering<br>Herd Patriarch</div>
+    </div>
     <div class="space-above two-indent">
     <h2 class="orange">
         skeptic
@@ -304,10 +307,12 @@
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div style="-moz-transition: opacity 1ms ease;">
-    <img class="block_right" style="float:right; height: 600px" src="resources/larsalope.jpg">
-    <h1 style="text-align:left; margin-left:5%">Lars</h1>
-    <div style="text-align:left; margin-left:5%"><br>the Mozilla Web Engineering <br>Herd Patriarch</div>
-    <div style="text-align:left; margin-left:5%">
+    <img class="block_right quarter_width_right" src="resources/larsalope.jpg">
+    <div class="two-indent large_size_text">
+        <h2 class="lightgray ">Lars</h2>
+    </div>
+    <div class="space-below space-above two-indent">
+        <div>the Mozilla Web Engineering<br>Herd Patriarch</div>
     </div>
     <div class="space-above two-indent">
     <h2 class="red">
@@ -1567,7 +1572,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class MultiCrashStorage(CrashStorage):
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
     def save_processed(self, processed_crash):</pre>
 <pre>        for a_store in self.store_collection.itervalues():</pre>
@@ -1581,9 +1586,9 @@ class MultiCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class MultiCrashStorage(CrashStorage):
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
 <pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
 <pre class="grayout">            a_store.save_processed(processed_crash)</pre>
     </div>
@@ -1595,10 +1600,10 @@ class MultiCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class MultiCrashStorage(CrashStorage):
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
-<pre>        for <span class="blue">a_store</span> in self.<span class="cyan">store_collection</span>.itervalues():</pre>
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre>        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
 <pre class="grayout">            a_store.save_processed(processed_crash)</pre>
     </div>
 </div>
@@ -1609,11 +1614,11 @@ class MultiCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class MultiCrashStorage(CrashStorage):
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, <span class="yellow">processed_crash</span>):</pre>
-<pre>        for <span class="blue">a_store</span> in self.<span class="cyan">store_collection</span>.itervalues():</pre>
-<pre>            <span class="blue">a_store</span>.save_processed(<span class="yellow">processed_crash</span>)</pre>
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre>        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre>            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1625,7 +1630,7 @@ class MultiCrashStorage(CrashStorage):
 
 class FallbackCrashStorage(CrashStorage):
 
-    def save_processed(self, processed_crash):
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
         try:
             primary_crashstore.save_processed(processed_crash)
         except FailureException:
@@ -1640,13 +1645,47 @@ class FallbackCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre class="grayout">
 
-class FallbackCrashStorage(CrashStorage):
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, processed_crash):
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
         try:
-            <span class="green">primary_crashstore</span>.save_processed(processed_crash)
+            <span class="white">primary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
         except FailureException:
-            <span class="orange">secondary_crashstore</span>.save_processed(processed_crash)
+            <span>secondary_crashstore</span>.<span>save_processed</span>(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
+        try:
+            <span class="white">primary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
+        <span class="red">except FailureException</span>:
+            <span>secondary_crashstore</span>.<span>save_processed</span>(processed_crash)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre class="grayout">
+
+class <span class="white">FallbackCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):
+        try:
+            <span>primary_crashstore</span>.<span>save_processed</span>(processed_crash)
+        <span class="red">except FailureException</span>:
+            <span class="white">secondary_crashstore.</span><span class="orange">save_processed</span><span class="white">(</span><span class="yellow">processed_crash</span><span class="white">)</span>
 </pre>
     </div>
 </div>
@@ -1657,9 +1696,9 @@ class FallbackCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class BenchmarkingCrashStorage(CrashStorage):
+class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, processed_crash):</pre>
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
 <pre>        start_time = self.start_timer()</pre>
 <pre>        self.wrapped_crashstore.save_processed(processed_crash)</pre>
 <pre>        end_time = self.end_timer()</pre>
@@ -1678,12 +1717,12 @@ class BenchmarkingCrashStorage(CrashStorage):
     </h2>
     <div class="terminal two-indent"><pre class="grayout">
 
-class BenchmarkingCrashStorage(CrashStorage):
+class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
 
-    def save_processed(self, processed_crash):</pre>
-<pre>        start_time = self.start_timer()</pre>
-<pre class="grayout">        self.wrapped_crashstore.save_processed(processed_crash)</pre>
-<pre>        end_time = self.end_timer()</pre>
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre class="green">        start_time = self.start_timer()</pre>
+<pre class="white">        self.wrapped_crashstore.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+<pre class="green">        end_time = self.end_timer()</pre>
 <pre class="grayout">        logger.debug(</pre>
 <pre class="grayout">            '%s save_processed %s',</pre>
 <pre class="grayout">            self.tag,</pre>

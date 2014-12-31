@@ -139,6 +139,10 @@ pre code tt span {
 	margin-left:10%;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 
 .highlight {
 	color: #FFFF00;
@@ -159,6 +163,16 @@ pre code tt span {
 
 .grayout {
 	color: #333333;
+}
+
+
+.gray {
+	color: #333333;
+}
+
+
+.lightgray {
+	color: #999999;
 }
 
 
