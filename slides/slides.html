@@ -1152,9 +1152,141 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-        CrashStorage is a <span class="yellow"><br>set of classes</span><br>
-        that implement a<br><span class="green">business logic API</span>
+        CrashStorage<br><span class="yellow"><br>a hierarchy of classes</span><br>
+        that implement a<br><span class="green">a business logic API</span>
     </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage Base<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent">
+<pre>
+class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
+</pre>
+<pre>    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre>    def <span>save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
+<pre>    def <span>get_raw_crash</span>(self, crash_id):
+        raise NotImplementedError("get_raw_crash is not implemented")
+</pre>
+
+<pre>    def <span>get_raw_dump</span>(self, crash_id, name=None):
+        raise NotImplementedError("get_raw_dump is not implemented")
+</pre>
+
+<pre>    def <span>get_processed</span>(self, crash_id):
+        raise NotImplementedError(
+            "get_unredacted_processed is not implemented"
+        )
+</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage Base<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent">
+<pre class="grayout">
+class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
+</pre>
+<pre class="grayout">    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre class="grayout">    def <span>save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
+<pre class="grayout">    def <span>get_raw_crash</span>(self, crash_id):
+        raise NotImplementedError("get_raw_crash is not implemented")
+</pre>
+
+<pre class="grayout">    def <span>get_raw_dump</span>(self, crash_id, name=None):
+        raise NotImplementedError("get_raw_dump is not implemented")
+</pre>
+
+<pre class="grayout">    def <span>get_processed</span>(self, crash_id):
+        raise NotImplementedError(
+            "get_unredacted_processed is not implemented"
+        )
+</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage Base<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent">
+<pre class="grayout">
+class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
+</pre>
+<pre class="grayout">    def <span class="cyan">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre class="grayout">    def <span class="cyan">save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
+<pre class="grayout">    def <span class="grayout">get_raw_crash</span>(self, crash_id):
+        raise NotImplementedError("get_raw_crash is not implemented")
+</pre>
+
+<pre class="grayout">    def <span class="grayout">get_raw_dump</span>(self, crash_id, name=None):
+        raise NotImplementedError("get_raw_dump is not implemented")
+</pre>
+
+<pre class="grayout">    def <span class="grayout">get_processed</span>(self, crash_id):
+        raise NotImplementedError(
+            "get_unredacted_processed is not implemented"
+        )
+</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage Base<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent">
+<pre class="grayout">
+class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
+</pre>
+<pre class="grayout">    def <span class="cyan">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre class="grayout">    def <span class="cyan">save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
+<pre class="grayout">    def <span class="orange">get_raw_crash</span>(self, crash_id):
+        raise NotImplementedError("get_raw_crash is not implemented")
+</pre>
+
+<pre class="grayout">    def <span class="orange">get_raw_dump</span>(self, crash_id, name=None):
+        raise NotImplementedError("get_raw_dump is not implemented")
+</pre>
+
+<pre class="grayout">    def <span class="orange">get_processed</span>(self, crash_id):
+        raise NotImplementedError(
+            "get_unredacted_processed is not implemented"
+        )
+</pre>
+</div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
