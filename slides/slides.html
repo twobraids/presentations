@@ -708,7 +708,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -730,7 +730,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -752,7 +752,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -774,7 +774,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -796,7 +796,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -818,7 +818,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -840,7 +840,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -862,7 +862,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+    major scale
     </h2>
         <table>
             <tr>
@@ -884,9 +884,9 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+     major scale
     </h2>
-        <table>
+       <table>
             <tr>
                 <td class="white_key twelve_column larger_size_text"><br><br>0<br><br><br><br><br>&nbsp;</td>
                 <td class="black_key twelve_column larger_size_text"><br><br>1<br><br><br><br><br>&nbsp;</td>
@@ -906,7 +906,7 @@
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
-    8 tone major scale
+     major scale
     </h2>
         <table>
             <tr>
@@ -1175,17 +1175,15 @@ class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
 
 <pre>    def <span>get_raw_crash</span>(self, crash_id):
-        raise NotImplementedError("get_raw_crash is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre>    def <span>get_raw_dump</span>(self, crash_id, name=None):
-        raise NotImplementedError("get_raw_dump is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre>    def <span>get_processed</span>(self, crash_id):
-        raise NotImplementedError(
-            "get_unredacted_processed is not implemented"
-        )
+        raise NotImplementedError(...)
 </pre>
 </div>
 </div>
@@ -1208,17 +1206,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
 
 <pre class="grayout">    def <span>get_raw_crash</span>(self, crash_id):
-        raise NotImplementedError("get_raw_crash is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre class="grayout">    def <span>get_raw_dump</span>(self, crash_id, name=None):
-        raise NotImplementedError("get_raw_dump is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre class="grayout">    def <span>get_processed</span>(self, crash_id):
-        raise NotImplementedError(
-            "get_unredacted_processed is not implemented"
-        )
+        raise NotImplementedError("...")
 </pre>
 </div>
 </div>
@@ -1241,17 +1237,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
 
 <pre class="grayout">    def <span class="grayout">get_raw_crash</span>(self, crash_id):
-        raise NotImplementedError("get_raw_crash is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre class="grayout">    def <span class="grayout">get_raw_dump</span>(self, crash_id, name=None):
-        raise NotImplementedError("get_raw_dump is not implemented")
+        raise NotImplementedError("...")
 </pre>
 
 <pre class="grayout">    def <span class="grayout">get_processed</span>(self, crash_id):
-        raise NotImplementedError(
-            "get_unredacted_processed is not implemented"
-        )
+        raise NotImplementedError(...)
 </pre>
 </div>
 </div>
@@ -1292,15 +1286,17 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <div>
     <div>
         <img class="third_width_right " src="resources/socorro.fts.png">
-    <div>
-    <div class="larger_size_text">
-        Most Socorro applications follow this form<br><br>
+    </div>
+    <div class="block_left space-below">
+        <h2>
+            Generic Socorro Application
+        </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="green">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="cyan">get_*</tt>
     </div>
     <div class="larger_size_text">
-        Transform: <tt>Transform.</tt><tt class="cyan">transform</tt>
+        Transform: <tt>Transform.</tt><tt>transform</tt>
     </div>
     <div class="larger_size_text">
         Save: <tt>CrashStorage.</tt><tt class="orange">save_*</tt>
@@ -1310,33 +1306,17 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <div>
     <div>
         <img class="third_width_right " src="resources/socorro.fts.png">
-    <div>
-    <div class="larger_size_text grayout">
-        Most Socorro applications follow this form<br><br>
+    </div>
+    <div class="block_left space-below">
+        <h2>
+            Generic Socorro Application
+        </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="green">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="cyan">get_*</tt>
     </div>
     <div class="larger_size_text grayout">
-        Transform: <tt>Transform.</tt><tt class="grayout">transform</tt>
-    </div>
-    <div class="larger_size_text grayout">
-        Save: <tt>CrashStorage.</tt><tt class="grayout ">save_*</tt>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_right " src="resources/socorro.fts.png">
-    <div>
-    <div class="larger_size_text grayout">
-        Most Socorro applications follow this form<br><br>
-    </div>
-    <div class="larger_size_text grayout">
-        Fetch: <tt>CrashStorage.</tt><tt class="grayout">get_*</tt>
-    </div>
-    <div class="larger_size_text">
-        Transform: <tt>Transform.</tt><tt class="cyan">transform</tt>
+        Transform: <tt>Transform.</tt><tt>transform</tt>
     </div>
     <div class="larger_size_text grayout">
         Save: <tt>CrashStorage.</tt><tt class="grayout">save_*</tt>
@@ -1346,15 +1326,17 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <div>
     <div>
         <img class="third_width_right " src="resources/socorro.fts.png">
-    <div>
-    <div class="larger_size_text grayout">
-        Most Socorro applications follow this form<br><br>
+    </div>
+    <div class="block_left space-below">
+        <h2>
+            Generic Socorro Application
+        </h2>
     </div>
     <div class="larger_size_text grayout">
         Fetch: <tt>CrashStorage.</tt><tt class="grayout">get_*</tt>
     </div>
     <div class="larger_size_text grayout">
-        Transform: <tt>Transform.</tt><tt class="grayout">transform</tt>
+        Transform: <tt>Transform.</tt><tt>transform</tt>
     </div>
     <div class="larger_size_text">
         Save: <tt>CrashStorage.</tt><tt class="orange">save_*</tt>
@@ -1534,376 +1516,9 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div class="terminal two-indent "><pre>
-
-def save_processed(self, processed_crash):</pre>
-<pre>    self.transaction(</pre>
-<pre>        self._save_processed_transaction,</pre>
-<pre>
-        processed_crash</pre>
-<pre>    )</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-    <div class="terminal two-indent"><pre class="grayout">
-
-def save_processed(self, processed_crash):</pre>
-<pre>    self.transaction(</pre>
-<pre class="grayout">        self._save_processed_transaction,</pre>
-<pre class="grayout">
-        processed_crash</pre>
-<pre>    )</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-    <div class="terminal two-indent"><pre class="grayout">
-
-def save_processed(self, processed_crash):</pre>
-<pre>    self.transaction(</pre>
-<pre class="orange">        self._save_processed_transaction,</pre>
-<pre class="grayout">
-        processed_crash</pre>
-<pre>    )</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-    <div class="terminal two-indent"><pre class="grayout">
-
-def save_processed(self, processed_crash):</pre>
-<pre>    self.transaction(</pre>
-<pre class="orange">        self._save_processed_transaction,</pre>
-<pre class="yellow">
-        processed_crash</pre>
-<pre>    )</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div class="terminal two-indent "><pre>
-
-def save_processed(self, processed_crash):</pre>
-<pre>    self.transaction(</pre>
-<pre>        self._save_processed_transaction,</pre>
-<pre>
-        processed_crash</pre>
-<pre>    )</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre>
-
-def _save_processed_transaction(self, <span>connection</span>, processed_crash):</pre>
-<pre>    report_id = self._save_processed_report(connection, processed_crash)</pre>
-<pre>    self._save_plugins(connection, processed_crash, report_id)</pre>
-<pre>    self._save_extensions(connection, processed_crash, report_id)</pre>
-<pre>    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, processed_crash):</pre>
-<pre class="grayout">    report_id = self._save_processed_report(connection, processed_crash)</pre>
-<pre class="grayout">    self._save_plugins(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
-<pre class="grayout">    report_id = self._save_processed_report(connection, processed_crash)</pre>
-<pre class="grayout">    self._save_plugins(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
-<pre class="green">    report_id = self._save_processed_report(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>)</pre>
-<pre class="grayout">    self._save_plugins(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
-<pre class="green">    report_id = self._save_processed_report(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>)</pre>
-<pre class="green">    self._save_plugins(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>, report_id)</pre>
-<pre class="grayout">    self._save_extensions(connection, processed_crash, report_id)</pre>
-<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
-<pre class="green">    report_id = self._save_processed_report(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>)</pre>
-<pre class="green">    self._save_plugins(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>, report_id)</pre>
-<pre class="green">    self._save_extensions(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>, report_id)</pre>
-<pre class="grayout">    self._save_processed_crash(connection, processed_crash)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for PostgreSQL<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-def _save_processed_transaction(self, <span class="cyan">connection</span>, <span class="yellow">processed_crash</span>):</pre>
-<pre class="green">    report_id = self._save_processed_report(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>)</pre>
-<pre class="green">    self._save_plugins(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>, report_id)</pre>
-<pre class="green">    self._save_extensions(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>, report_id)</pre>
-<pre class="green">    self._save_processed_crash(<span class="cyan">connection</span>, <span class="yellow">processed_crash</span>)</pre>
-    </div>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for HBase<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre>
-
-    def save_processed(self, processed_crash):</pre>
-<pre>        crash_id = processed_crash['uuid']
-        row_id = crash_id_to_row_id(crash_id)
-        columns_and_values = {
-            "timestamps:processed": processed_crash['completeddatetime'],
-            "processed_data:signature": processed_crash['signature'],
-            "processed_data:json": json.dumps(
-                processed_crash
-            ),
-            "flags:processed": ""
-        }
-</pre>
-<pre>        self.transaction(self.do_save, row_id, columns_and_values)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for HBase<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-    def save_processed(self, processed_crash):</pre>
-<pre>        <span class="grayout">crash_id = processed_crash['uuid']</span>
-        <span class="yellow">row_id</span><span class="grayout"> = crash_id_to_row_id(crash_id)</span>
-        <span class="yellow">columns_and_values</span><span class="grayout"> = {
-            "timestamps:processed": processed_crash['completeddatetime'],
-            "processed_data:signature": processed_crash['signature'],
-            "processed_data:json": json.dumps(
-                processed_crash
-            ),
-            "flags:processed": ""
-        }</span>
-</pre>
-<pre class="grayout">        self.transaction(self.do_save, row_id, columns_and_values)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for HBase<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre class="grayout">
-
-    def save_processed(self, processed_crash):</pre>
-<pre class="grayout">        crash_id = processed_crash['uuid']
-        row_id = crash_id_to_row_id(crash_id)
-        columns_and_values = {
-            "timestamps:processed": processed_crash['completeddatetime'],
-            "processed_data:signature": processed_crash['signature'],
-            "processed_data:json": json.dumps(
-                processed_crash
-            ),
-            "flags:processed": ""
-        }
-</pre>
-<pre>        self.transaction(<span class="orange">self.do_save</span>, <span class="yellow">row_id</span>, <span class="yellow">columns_and_values</span>)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage for HBase<br>
-    </h2>
-    <div>
-        <div class="terminal two-indent quartersize_text"><pre>
-
-        def do_save(<span class="cyan">connection</span>, <span class="yellow">row_id</span>, <span class="yellow">columns_and_values</span>):
-            crash_report_table = connection.table('crash_reports')
-            crash_report_table.put(
-                row_id,
-                columns_and_values
-            )
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
     <h2 class="text_centered">
-        Socorro treats the disjoint<br>set of CrashStorage classes<br>as if they were the same<br>
+        Socorro treats<br>all these different<br>resources<br>as if they were the same
     </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2 class="text_centered">
-        Socorro treats the disjoint<br>set of CrashStorage classes<br>as if they were the same<br>
-    </h2>
-    <h2 class="text_centered orange">
-        How is this helpful?
-    </h2>
-
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-    a_processed_crash = {...}</pre>
-<pre>    destination_module_as_string = sys.argv[1]</pre>
-<pre>    destination_module = __import__(destination_module_as_string)</pre>
-<pre>    destination = destination_module.CrashStorage()</pre>
-<pre>    destination.save_processed(a_processed_crash)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-    <span class="yellow">a_processed_crash<span> = {...}</pre>
-<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre class="grayout">    destination_module = __import__(destination_module_as_string)</pre>
-<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
-<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-    <span class="yellow">a_processed_crash<span> = {...}</pre>
-<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
-<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
-<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-    <span class="yellow">a_processed_crash<span> = {...}</pre>
-<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
-<pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
-<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-    <span class="yellow">a_processed_crash<span> = {...}</pre>
-<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
-<pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
-<pre>    <span class="violet">destination</span>.save_processed(<span class="yellow">a_processed_crash</span>)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent three_quarter_size_text text_left">
-        <pre>
-
-        <span class="green">$ _<span></pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal two-indent three_quarter_size_text text_left">
-        <pre>
-
-        <span class="green">$ python ./save.py socorro.external.postgreql<span></pre>
-<pre>        <span class="green">$ _<span></pre>
-    </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -2039,36 +1654,97 @@ class BenchmarkingCrashStorage(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    a_processed_crash = {...}</pre>
+<pre>    destination_module_as_string = sys.argv[1]</pre>
+<pre>    destination_module = __import__(destination_module_as_string)</pre>
+<pre>    destination = destination_module.CrashStorage()</pre>
+<pre>    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    destination_module = __import__(destination_module_as_string)</pre>
+<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
+<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
+<pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
+<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
+<pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
+<pre>    <span class="violet">destination</span>.save_processed(<span class="yellow">a_processed_crash</span>)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <h2 class="text_centered">
-        Socorro is a Crash Reporting<br>
-        LEGO set
+        Socorro 2009
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-        Socorro is a Crash Reporting<br>
-        LEGO set
+        Socorro 2010
     </h2>
-
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2013
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Socorro 2015
+    </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
         Socorro Pi<br>a solo work
-    </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2 class="text_centered">
-        Socorro S3<br>massive cloud system
-    </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div class="slide-layout-title">
-    <h2>
-        New external resources<br>are implemented<br>
-
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2220,7 +1896,27 @@ class BenchmarkingCrashStorage(CrashStorage):
         within threads<br>
         within a single process
     </h2>
-
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Music Notation
+    </h2>
+    <h2 class="text_centered yellow">
+        arranging == refactoring
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Music Notation
+    </h2>
+    <h2 class="text_centered yellow">
+        arranging == refactoring
+    </h2>
+    <h2>
+    a composition can have its threading model changed
+    </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div class="slide-layout-title">
