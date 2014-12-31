@@ -1740,7 +1740,9 @@ class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
 
     a_processed_crash = {...}</pre>
 <pre>    destination_module_as_string = sys.argv[1]</pre>
-<pre>    destination_module = __import__(destination_module_as_string)</pre>
+<pre>    destination_module = __import__(
+        destination_module_as_string
+    )</pre>
 <pre>    destination = destination_module.CrashStorage()</pre>
 <pre>    destination.save_processed(a_processed_crash)</pre>
 </div>
@@ -1752,8 +1754,24 @@ class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
     <div class="terminal one-indent"><pre>
 
     <span class="yellow">a_processed_crash<span> = {...}</pre>
+<pre class="grayout">    <span>destination_module_as_string</span> = sys.argv[1]</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
+    )</pre>
+<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
+<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Dynamic Loading
+    </h2>
+    <div class="terminal one-indent"><pre class="grayout">
+
+    <span class="yellow">a_processed_crash<span> = {...}</pre>
 <pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre class="grayout">    destination_module = __import__(destination_module_as_string)</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
 <pre class="grayout">    destination = destination_module.CrashStorage()</pre>
 <pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
 </div>
@@ -1766,20 +1784,8 @@ class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
 
     <span class="yellow">a_processed_crash<span> = {...}</pre>
 <pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
-<pre class="grayout">    destination = destination_module.CrashStorage()</pre>
-<pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal one-indent"><pre>
-
-    <span class="yellow">a_processed_crash<span> = {...}</pre>
-<pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
 <pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
 <pre class="grayout">    destination.save_processed(a_processed_crash)</pre>
 </div>
@@ -1792,7 +1798,8 @@ class <span class="white">BenchmarkingCrashStorage</span>(CrashStorage):
 
     <span class="yellow">a_processed_crash<span> = {...}</pre>
 <pre>    <span class="cyan">destination_module_as_string</span> = sys.argv[1]</pre>
-<pre>    <span class="blue">destination_module</span> = __import__(<span class="cyan">destination_module_as_string</span>)</pre>
+<pre class="grayout">    destination_module = __import__(
+        destination_module_as_string
 <pre>    <span class="violet">destination</span> = <span class="blue">destination_module.CrashStorage()</span></pre>
 <pre>    <span class="violet">destination</span>.save_processed(<span class="yellow">a_processed_crash</span>)</pre>
 </div>
