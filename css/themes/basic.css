@@ -229,6 +229,13 @@ pre code tt span {
 	width:33%;
 }
 
+.quarter_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:25%;
+}
+
 .third_width_right {
 	display:block;
 	float:right;
