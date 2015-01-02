@@ -1755,24 +1755,30 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
-<div >
+<div>
     <h2 class="text_centered">
-        Music Notation
-    </h2>
-    <h2 class="text_centered yellow">
-        arranging == refactoring
+    reason #2<br>why 400 year old music<br>still works today:
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
-<div >
+<div>
     <h2 class="text_centered">
-        Music Notation
+    reason #2<br>why 400 year old music<br>still works today:
     </h2>
-    <h2 class="text_centered yellow">
-        arranging == refactoring
+    <h2 class="text_centered green">
+    The source code is available
     </h2>
-    <h2>
-    a composition can have its threading model changed
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+    reason #2<br>why 400 year old music<br>still works today:
+    </h2>
+    <h2 class="text_centered green">
+    The source code is available
+    </h2>
+    <h2 class="text_centered green">
+    which is readily refactorable
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1786,15 +1792,119 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <div>
-        <img class="block_centered third_width" src="resources/socorro.fts.png">
+    <h2  class="text_centered">
+        Socorro's<br>Chromatic Scale:
+    </h2>
+    <ul class="text_centered space-above larger_size_text">
+        <li class="white">HBase - <span class="red">an NoSQL thingy</span></li>
+        <li class="white">RabbitMQ - <span class="orange">a queue</span></li>
+        <li class="white">File System - <span class="yellow">a local store</span></li>
+        <li class="white">Elastic Search - <span class="green">search & analytics</span></li>
+        <li class="white">PostgreSQL - <span class="cyan">an RDBMS</span></li>
+        <li class="white">HTTP - <span class="blue">a protocol</span></li>
+        <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
+    </ul>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        Augmenting<br>the resource based<br>implementations<br>
+        are several useful<br><span class="blue">meta CrashStorage classes</span>
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        for a_store in self.store_collection.itervalues():</pre>
+<pre>            a_store.save_processed(processed_crash)</pre>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
 
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="white">            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+ <pre>import socorro.ext.http.crashstorage as HTTPCrashStore
+fetch_object = HTTPCrashStore(config)
+</pre>
+ <pre>from socorro.ext.meta.crashstorage import MultiCrashStore
+save_object = MultiCrashStore(config)
+</pre>
+ <pre>from socorro.ext.rabbitmq.crashstorage import RabbitMQCrashStore
+save_object.add_storage(RabbitMQCrashStore(config))
+</pre>
+ <pre>from socorro.ext.hbase.crashstorage import HBaseCrashStore
+save_object.add_storage(HBaseCrashStore)
+</pre>
+ <pre>app = FetchTransformSaveApp(
+    fetch_object,
+    transform_object,
+    save_object,
+    threading_model
+)
+</pre>
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <div>
-        <video   style="display:block; margin-left:auto; margin-right:auto; min-width: 50%; max-width: 100%" src="resources/fugue001.bassoon.mkv"  preload autoplay> </video>
+        <img class="third_width_right" src="resources/socorro.fts.png">
     </div>
-<hr><!---------------------------------------------------------------------------------------------->
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_right" src="resources/socorro.fts.png">
+    </div>
 
+</div>
