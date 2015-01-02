@@ -1819,7 +1819,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
     </h2>
     <div class="terminal two-indent"><pre>
 
-class <span class="white">MultiCrashStorage</span>(CrashStorage):
+class <span class="white">MultiCrashStore</span>(CrashStorage):
 
     def save_processed(self, processed_crash):</pre>
 <pre>        for a_store in self.store_collection.itervalues():</pre>
@@ -1897,8 +1897,151 @@ save_object.add_storage(HBaseCrashStore)
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+<pre class="white">import socorro.ext.http.crashstorage as <span class="blue">HTTPCrashStore</span>
+<span class="fetch_object">fetch_object</span> = <span class="blue">HTTPCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStore
+save_object = MultiCrashStore(config)
+</pre>
+ <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import RabbitMQCrashStore
+save_object.add_storage(RabbitMQCrashStore(config))
+</pre>
+ <pre class="grayout">from socorro.ext.hbase.crashstorage import HBaseCrashStore
+save_object.add_storage(HBaseCrashStore)
+</pre>
+ <pre class="grayout">app = FetchTransformSaveApp(
+    fetch_object,
+    transform_object,
+    save_object,
+    threading_model
+)
+</pre>
+     </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
+<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
+</pre>
+ <pre class="white">from socorro.ext.meta.crashstorage import <span class="white">MultiCrashStore</span>
+<span class="save_object">save_object</span> = <span class="white">MultiCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
+</pre>
+ <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
+</pre>
+ <pre class="grayout">app = FetchTransformSaveApp(
+    <span class="grayout">fetch_object</span>,
+    <span class="grayout">transform_object</span>,
+    <span class="grayout">save_object</span>,
+    <span class="grayout">threading_model</span>
+)
+</pre>
+     </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
+<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
+<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
+</pre>
+ <pre class="white">from socorro.ext.rabbitmq.crashstorage import <span class="orange">RabbitMQCrashStore</span>
+<span class="save_object">save_object</span>.add_storage(<span class="orange">RabbitMQCrashStore</span>(config))
+</pre>
+ <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
+</pre>
+ <pre class="grayout">app = FetchTransformSaveApp(
+    <span class="grayout">fetch_object</span>,
+    <span class="grayout">transform_object</span>,
+    <span class="grayout">save_object</span>,
+    <span class="grayout">threading_model</span>
+)
+</pre>
+     </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
+<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
+<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
+</pre>
+ <pre class="white">from socorro.ext.hbase.crashstorage import <span class="red">HBaseCrashStore</span>
+<span class="save_object">save_object</span>.add_storage(<span class="red">HBaseCrashStore</span>)
+</pre>
+ <pre class="grayout">app = FetchTransformSaveApp(
+    <span class="grayout">fetch_object</span>,
+    <span class="grayout">transform_object</span>,
+    <span class="grayout">save_object</span>,
+    <span class="grayout">threading_model</span>
+)
+</pre>
+     </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Tutti
+    </h2>
+    <div>
+<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
+<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
+<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
+</pre>
+ <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
+</pre>
+ <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
+<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
+</pre>
+ <pre class="white">app = FetchTransformSaveApp(
+    <span class="fetch_object">fetch_object</span>,
+    <span class="grayout">transform_object</span>,
+    <span class="save_object">save_object</span>,
+    <span class="grayout">threading_model</span>
+)
+</pre>
+     </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <div>
         <img class="third_width_right" src="resources/socorro.fts.png">
+    </div>
+    <h2>
+        Tutti
+    </h2>
+    <div class="space-above white">
+        <pre class="one-indent large_size_text">
+app.run()
+</pre>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1906,5 +2049,4 @@ save_object.add_storage(HBaseCrashStore)
     <div>
         <img class="third_width_right" src="resources/socorro.fts.png">
     </div>
-
 </div>
