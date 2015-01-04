@@ -318,6 +318,10 @@ pre code tt span {
 	color:white;
 }
 
+.pink {
+	color:pink;
+}
+
 .black_key {
 	color:white;
         background:black;
@@ -344,11 +348,13 @@ pre code tt span {
 }
 
 .fetch_object {
-    color:cyan
+    color:black;
+    background:gray;
 }
 
 .save_object {
-    color:orange
+    color:black;
+    background:pink;
 }
 
 .nothing{

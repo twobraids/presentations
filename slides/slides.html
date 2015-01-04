@@ -1873,26 +1873,41 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
     </div>
     <div>
- <pre>from socorro.external.fs import FSCrashStorage
-fetch_object = FSCrashStorage(config)
-</pre>
- <pre>from socorro.ext.meta.crashstorage import MultiCrashStore
-save_object = MultiCrashStore(config)
-</pre>
- <pre>from socorro.ext.rabbitmq.crashstorage import RabbitMQCrashStore
-save_object.add_storage(RabbitMQCrashStore(config))
-</pre>
- <pre>from socorro.ext.hbase.crashstorage import HBaseCrashStore
-save_object.add_storage(HBaseCrashStore)
-</pre>
- <pre>app = FetchTransformSaveApp(
-    fetch_object,
-    transform_object,
-    save_object,
-    threading_model
+<pre class="white">from socorro.external.fs import (
+     FSCrashStorage
 )
 </pre>
+<pre class="white">fetch_object = FSCrashStorage(config)
+</pre>
+    </div>
 </div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre class="white">from socorro.external.fs import (
+     <span class="yellow">FSCrashStorage</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">fetch_object</span> = <span class="grayout">FSCrashStorage(config)</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre class="grayout">from socorro.external.fs import (
+     <span class="grayout">FSCrashStorage</span>
+)
+</pre>
+<pre class="white"><span class="fetch_object">fetch_object</span> = <span class="yellow">FSCrashStorage</span>(config)
+</pre>
+    </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1900,9 +1915,48 @@ save_object.add_storage(HBaseCrashStore)
         <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
     </div>
     <div>
-<pre class="white">from socorro.external.fs import <span class="yellow">FSCrashStorage</span>
-<span class="fetch_object">fetch_object = <span class="yellow">FSCrashStorage</span>(config)
+<pre class="white">from socorro.crashstoragebase import (
+     MultiCrashStore
+)
 </pre>
+<pre class="white">save_object = MultiCrashStore(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre>from socorro.crashstoragebase import (
+     <span class="pink">MultiCrashStore</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore(config)</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre>from socorro.crashstoragebase import (
+     <span class="grayout">MultiCrashStore</span>
+)
+</pre>
+<pre class="white"><span class="save_object">save_object</span> = <span class="pink">MultiCrashStore</span>(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
  <pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStore
 save_object = MultiCrashStore(config)
 </pre>
