@@ -1869,19 +1869,12 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <h2 class="text_centered">
-        Augmenting<br>the resource based<br>implementations<br>
-        are several useful<br><span class="blue">meta CrashStorage classes</span>
-    </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Tutti
-    </h2>
     <div>
- <pre>import socorro.ext.http.crashstorage as HTTPCrashStore
-fetch_object = HTTPCrashStore(config)
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+ <pre>from socorro.external.fs import FSCrashStorage
+fetch_object = FSCrashStorage(config)
 </pre>
  <pre>from socorro.ext.meta.crashstorage import MultiCrashStore
 save_object = MultiCrashStore(config)
@@ -1903,12 +1896,12 @@ save_object.add_storage(HBaseCrashStore)
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <h2>
-        Tutti
-    </h2>
     <div>
-<pre class="white">import socorro.ext.http.crashstorage as <span class="blue">HTTPCrashStore</span>
-<span class="fetch_object">fetch_object</span> = <span class="blue">HTTPCrashStore</span>(config)
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="white">from socorro.external.fs import <span class="yellow">FSCrashStorage</span>
+<span class="fetch_object">fetch_object = <span class="yellow">FSCrashStorage</span>(config)
 </pre>
  <pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStore
 save_object = MultiCrashStore(config)
@@ -1930,12 +1923,12 @@ save_object.add_storage(HBaseCrashStore)
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-    <h2>
-        Tutti
-    </h2>
     <div>
-<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
-<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="grayout">from socorro.external.fs import <span class="grayout">FSCrashStorage</span>
+<span class="grayout">fetch_object = <span class="grayout">FSCrashStorage</span>(config)
 </pre>
  <pre class="white">from socorro.ext.meta.crashstorage import <span class="white">MultiCrashStore</span>
 <span class="save_object">save_object</span> = <span class="white">MultiCrashStore</span>(config)
