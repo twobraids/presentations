@@ -1576,6 +1576,62 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+class <span class="white">MultiCrashStore</span>(CrashStorage):
+
+    def save_processed(self, processed_crash):</pre>
+<pre>        for a_store in self.store_collection.itervalues():</pre>
+<pre>            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+<pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        Meta CrashStorage Classes
+    </h2>
+    <div class="terminal two-indent grayout"><pre>
+
+class <span class="white">MultiCrashStorage</span>(CrashStorage):
+
+    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
+<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
+<pre class="white">            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div class="slide-layout-title">
     <h2 class="text_centered">
         the Well Tempered API
@@ -1811,62 +1867,6 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         Augmenting<br>the resource based<br>implementations<br>
         are several useful<br><span class="blue">meta CrashStorage classes</span>
     </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Meta CrashStorage Classes
-    </h2>
-    <div class="terminal two-indent"><pre>
-
-class <span class="white">MultiCrashStore</span>(CrashStorage):
-
-    def save_processed(self, processed_crash):</pre>
-<pre>        for a_store in self.store_collection.itervalues():</pre>
-<pre>            a_store.save_processed(processed_crash)</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Meta CrashStorage Classes
-    </h2>
-    <div class="terminal two-indent grayout"><pre>
-
-class <span class="white">MultiCrashStorage</span>(CrashStorage):
-
-    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
-<pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
-<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Meta CrashStorage Classes
-    </h2>
-    <div class="terminal two-indent grayout"><pre>
-
-class <span class="white">MultiCrashStorage</span>(CrashStorage):
-
-    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
-<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
-<pre class="grayout">            a_store.save_processed(processed_crash)</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Meta CrashStorage Classes
-    </h2>
-    <div class="terminal two-indent grayout"><pre>
-
-class <span class="white">MultiCrashStorage</span>(CrashStorage):
-
-    def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
-<pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
-<pre class="white">            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
-    </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
