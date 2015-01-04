@@ -1291,11 +1291,11 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span class="cyan">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+<pre class="grayout">    def <span class="fetch_object">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="cyan">save_processed</span>(self, processed_crash):
+<pre class="grayout">    def <span class="fetch_object">save_processed</span>(self, processed_crash):
         pass
 </pre>
 
@@ -1322,23 +1322,23 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span class="cyan">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+<pre class="grayout">    def <span class="fetch_object">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="cyan">save_processed</span>(self, processed_crash):
+<pre class="grayout">    def <span class="fetch_object">save_processed</span>(self, processed_crash):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="orange">get_raw_crash</span>(self, crash_id):
+<pre class="grayout">    def <span class="save_object">get_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="orange">get_raw_dump</span>(self, crash_id, name=None):
+<pre class="grayout">    def <span class="save_object">get_raw_dump</span>(self, crash_id, name=None):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="orange">get_processed</span>(self, crash_id):
+<pre class="grayout">    def <span class="save_object">get_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
 </div>
@@ -1354,13 +1354,13 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="cyan">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">get_*</tt>
     </div>
     <div class="larger_size_text">
         Transform: <tt>Transform.</tt><tt>transform</tt>
     </div>
     <div class="larger_size_text">
-        Save: <tt>CrashStorage.</tt><tt class="orange">save_*</tt>
+        Save: <tt>CrashStorage.</tt><tt class="save_object">save_*</tt>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1374,7 +1374,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="cyan">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">get_*</tt>
     </div>
     <div class="larger_size_text grayout">
         Transform: <tt>Transform.</tt><tt>transform</tt>
@@ -1400,7 +1400,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         Transform: <tt>Transform.</tt><tt>transform</tt>
     </div>
     <div class="larger_size_text">
-        Save: <tt>CrashStorage.</tt><tt class="orange">save_*</tt>
+        Save: <tt>CrashStorage.</tt><tt class="save_object">save_*</tt>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1638,6 +1638,104 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="white">from socorro.external.fs import (
+     FSCrashStorage
+)
+</pre>
+<pre class="white">fetch_object = FSCrashStorage(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre class="white">from socorro.external.fs import (
+     <span class="yellow">FSCrashStorage</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">fetch_object</span> = <span class="grayout">FSCrashStorage(config)</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre class="grayout">from socorro.external.fs import (
+     <span class="grayout">FSCrashStorage</span>
+)
+</pre>
+<pre class="white"><span class="fetch_object">fetch_object</span> = <span class="yellow">FSCrashStorage</span>(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="white">from socorro.crashstoragebase import (
+     MultiCrashStore
+)
+</pre>
+<pre class="white">save_object = MultiCrashStore(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre>from socorro.crashstoragebase import (
+     <span class="multistore_object">MultiCrashStore</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore(config)</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre>from socorro.crashstoragebase import (
+     <span class="grayout">MultiCrashStore</span>
+)
+</pre>
+<pre class="white"><span class="save_object">save_object</span> = <span class="multistore_object">MultiCrashStore</span>(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="white">from socorro.crashstoragebase import (
+     MultiCrashStore
+)
+</pre>
+<pre class="white">save_object = MultiCrashStore(config)
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div class="slide-layout-title">
     <h2 class="text_centered">
         the Well Tempered API
@@ -1866,114 +1964,6 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <li class="white">HTTP - <span class="blue">a protocol</span></li>
         <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
     </ul>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div>
-<pre class="white">from socorro.external.fs import (
-     FSCrashStorage
-)
-</pre>
-<pre class="white">fetch_object = FSCrashStorage(config)
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div class="white">
-<pre class="white">from socorro.external.fs import (
-     <span class="yellow">FSCrashStorage</span>
-)
-</pre>
-<pre class="grayout"><span class="grayout">fetch_object</span> = <span class="grayout">FSCrashStorage(config)</span>
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div class="grayout">
-<pre class="grayout">from socorro.external.fs import (
-     <span class="grayout">FSCrashStorage</span>
-)
-</pre>
-<pre class="white"><span class="fetch_object">fetch_object</span> = <span class="yellow">FSCrashStorage</span>(config)
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div>
-<pre class="white">from socorro.crashstoragebase import (
-     MultiCrashStore
-)
-</pre>
-<pre class="white">save_object = MultiCrashStore(config)
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div class="white">
-<pre>from socorro.crashstoragebase import (
-     <span class="pink">MultiCrashStore</span>
-)
-</pre>
-<pre class="grayout"><span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore(config)</span>
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div class="grayout">
-<pre>from socorro.crashstoragebase import (
-     <span class="grayout">MultiCrashStore</span>
-)
-</pre>
-<pre class="white"><span class="save_object">save_object</span> = <span class="pink">MultiCrashStore</span>(config)
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div>
- <pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStore
-save_object = MultiCrashStore(config)
-</pre>
- <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import RabbitMQCrashStore
-save_object.add_storage(RabbitMQCrashStore(config))
-</pre>
- <pre class="grayout">from socorro.ext.hbase.crashstorage import HBaseCrashStore
-save_object.add_storage(HBaseCrashStore)
-</pre>
- <pre class="grayout">app = FetchTransformSaveApp(
-    fetch_object,
-    transform_object,
-    save_object,
-    threading_model
-)
-</pre>
-     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>

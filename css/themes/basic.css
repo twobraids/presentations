@@ -349,12 +349,16 @@ pre code tt span {
 
 .fetch_object {
     color:black;
-    background:gray;
+    background:pink;
 }
 
 .save_object {
     color:black;
-    background:pink;
+    background:gray;
+}
+
+.multistore_object {
+    color:fuchsia;
 }
 
 .nothing{
