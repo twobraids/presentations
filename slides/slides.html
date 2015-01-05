@@ -1647,7 +1647,12 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         for x in class_as_string.split('.')
         if x.strip()
     ]
-    module = __import__('.'.join(parts[:-1]), globals(), locals(), [])
+    module = __import__(
+        '.'.join(parts[:-1]),
+        globals(),
+        locals(),
+        []
+    )
     obj = module
     for name in parts[1:]:
         obj = getattr(obj, name)
