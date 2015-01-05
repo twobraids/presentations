@@ -21,7 +21,7 @@
       <tspan x="617.182" y="343.727">Postgres</tspan>
     </text>
   </g>
-  <g><!-- HBase -->
+  <g><!-- AmazonS3 -->
     <rect style="fill: #ffffff" x="650" y="134.909" width="132.364" height="66.1818"/>
     <ellipse style="fill: #ffffff" cx="716.182" cy="201.091" rx="66.1818" ry="18.9091"/>
     <ellipse style="fill: #ffffff" cx="716.182" cy="134.909" rx="66.1818" ry="18.9091"/>
@@ -34,7 +34,7 @@
     <path style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" d="M 650 184.545 C 650,194.988 690.074,203.455 716.182,203.455 C 742.29,203.455 782.364,194.988 782.364,184.545"/>
     <path style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" d="M 650 201.091 C 650,211.534 690.074,220 716.182,220 C 742.29,220 782.364,211.534 782.364,201.091"/>
     <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="716.182" y="236.727">
-      <tspan x="716.182" y="236.727">HBase</tspan>
+      <tspan x="716.182" y="236.727">AmazonS3</tspan>
     </text>
   </g>
   <g><!--local FS -->
@@ -117,7 +117,7 @@
       <tspan x="831.482" y="139.827">RabbitMQ</tspan>
     </text>
   </g>
-  <g><!-- arrow crashmovers to HBase -->
+  <g><!-- arrow crashmovers to AmazonS3 -->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="559" y1="88.5" x2="640.319" y2="129.63"/>
     <polygon style="fill: #000000" points="647.012,133.015 635.832,132.963 640.319,129.63 640.345,124.04 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="647.012,133.015 635.832,132.963 640.319,129.63 640.345,124.04 "/>
@@ -162,7 +162,7 @@
       <tspan x="416" y="55.5">CrashMovers</tspan>
     </text>
   </g>
-  <g><!--arrow between processors and HBase-->
+  <g><!--arrow between processors and AmazonS3-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="771.083" y1="221.484" x2="799.026" y2="248.706"/>
     <polygon style="fill: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="765.71,216.25 776.362,219.647 771.083,221.484 769.384,226.81 "/>
@@ -181,7 +181,7 @@
     <polygon style="fill: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.135,282.634 369.982,277.339 367.632,282.411 370.279,287.335 "/>
   </g>
-  <g><!--arrow between middleware and HBase-->
+  <g><!--arrow between middleware and AmazonS3-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.993" y1="189.51" x2="367.172" y2="279.732"/>
     <polygon style="fill: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="360.03,282.018 368.029,274.207 367.172,279.732 371.078,283.731 "/>
@@ -200,7 +200,7 @@
      <tspan x="263" y="197">Crontabber</tspan>
     </text>
   </g>
-  <g><!--arrow between crontabber and HBase-->
+  <g><!--arrow between crontabber and AmazonS3-->
     <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="649" y1="173.05" x2="366.709" y2="194.27"/>
     <polygon style="fill: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
     <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="359.23,194.832 368.827,189.097 366.709,194.27 369.576,199.069 "/>
@@ -321,19 +321,19 @@
 
     <path id="client_to_collector" d="M120,205 v -150 l 163, -20 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10 M270 25" fill="none" />
     <path id="fs_to_rmq" d="M270 25 h 150 l 380 10 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
-    <path id="fs_to_hbase" d="M270 25 h 150 l 260 110 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
-    <path id="stuck_at_hbase" d="M680 145" fill="none" />
+    <path id="fs_to_AmazonS3" d="M270 25 h 150 l 260 110 v10 v-10 v10 v-10 v 10 v-10 v10 v-10 v10" fill="none" />
+    <path id="stuck_at_AmazonS3" d="M680 145" fill="none" />
     <path id="rmq_to_processor" d="M800 45   C 870,95 900,135 835,235" fill="none" />
     <path id="rmq_to_processor2" d="M 800 45 h30 C 967.3,95 865.3,135 835,235 M 835,235" fill="none"/>
-    <path id="hbase_to_processor" d="M680 145  l 145 90  M835 235" fill="none" />
+    <path id="AmazonS3_to_processor" d="M680 145  l 145 90  M835 235" fill="none" />
     <path id="processor_to_pg" d="M835 235 l -260 10" fill="none" />
     <path id="processor_to_pg2" d="M835 235 l -240 10" fill="none" />
     <path id="vertical_processor_bouncy" d="M835 235 v 5 v -10 v 10 v -10 v 10 v -10  v 5 " />
     <path id="horizontal_processor_bouncy" d="M835 235 h 5 h -10 h 10 h -10 h 10 h -10  h 5 " />
-    <path id="processor_to_hbase" d="M835 235 L700 145 " fill="none" />
+    <path id="processor_to_AmazonS3" d="M835 235 L700 145 " fill="none" />
     <path id="processor_to_es" d="M835 235 l -280 120 h-80"  fill="none" />
     <path id="processor_to_es2" d="M835 235 l -280 120 h-60"  fill="none" />
-    <!-- HBASE stationary raw_crash -->
+    <!-- AmazonS3 stationary raw_crash -->
     <image x="0" y="0" width="70.4" height="70.4" opacity="1" xlink:href="./ff-logo-100.ghost.png">
       <!-- TIMEPOINT 00 -->
       <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
@@ -341,7 +341,7 @@
       </animateMotion>
       <!-- TIMEPOINT 19 -->
       <!-- <animateMotion begin="19s" dur="0.1s" repeatCount="1" fill="freeze" additive="replace">
-        <mpath xlink:href="#stuck_at_hbase"/>
+        <mpath xlink:href="#stuck_at_AmazonS3"/>
       </animateMotion>-->
     </image>
 
@@ -430,11 +430,11 @@
       </animateMotion>-->
       <!-- TIMEPOINT 12 -->
       <!--<animateMotion begin="12s" dur="6s" repeatCount="1"  fill="freeze" additive="replace">
-        <mpath xlink:href="#fs_to_hbase"/>
+        <mpath xlink:href="#fs_to_AmazonS3"/>
       </animateMotion> -->
       <!-- TIMEPOINT 27 -->
       <!-- <animateMotion begin="27s" dur="3s" repeatCount="1" fill="freeze" additive="replace">
-        <mpath xlink:href="#hbase_to_processor"/>
+        <mpath xlink:href="#AmazonS3_to_processor"/>
       </animateMotion> -->
       <!-- TIMEPOINT 30 -->
       <!-- <animateTransform begin="30s" attributeName="transform" attributeType="XML" type="rotate" from="0 34 34" to="360 34 34" dur="2s" repeatCount="3"/>
@@ -465,7 +465,7 @@
         </animateMotion> -->
     </image>
 
-    <!--HBase destined processed crash -->
+    <!--AmazonS3 destined processed crash -->
     <image x="0" y="0" width="70.4" height="70.4" opacity="0" xlink:href="./ff-logo-100.pale.png">
       <!-- TIMEPOINT 00 -->
         <animateMotion begin="0s" dur="0.1s" repeatCount="1" fill="freeze">
@@ -479,7 +479,7 @@
         </animateMotion> -->
       <!-- TIMEPOINT 36 -->
       <!--  <animateMotion begin="36s" dur="3s" repeatCount="1" fill="freeze">
-          <mpath xlink:href="#processor_to_hbase"/>
+          <mpath xlink:href="#processor_to_AmazonS3"/>
         </animateMotion>-->
     </image>
 
