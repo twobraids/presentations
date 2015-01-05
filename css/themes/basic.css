@@ -268,6 +268,13 @@ pre code tt span {
 	width:33%;
 }
 
+.third_width_center {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:33%;
+}
+
 .half_width {
 	display:block;
 	margin-left:auto;
