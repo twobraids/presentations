@@ -1639,6 +1639,24 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+
+    <div>
+<pre class="white">def dynamic_load(class_as_string):
+    parts = [
+        x.strip()
+        for x in class_as_string.split('.')
+        if x.strip()
+    ]
+    module = __import__('.'.join(parts[:-1]), globals(), locals(), [])
+    obj = module
+    for name in parts[1:]:
+        obj = getattr(obj, name)
+    return obj
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <div>
         <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
     </div>
@@ -1727,11 +1745,81 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
     </div>
     <div>
-<pre class="white">from socorro.crashstoragebase import (
-     MultiCrashStore
+<pre class="white">from socorro.external.rabbitmq import (
+     RMQCrashStorage
 )
 </pre>
-<pre class="white">save_object = MultiCrashStore(config)
+<pre class="white">fetch_object.add_store(RMQCrashStorage(config))
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre class="white">from socorro.external.rabbitmq import (
+     <span class="orange">RMQCrashStorage</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">fetch_object</span>.add_store(<span class="grayout">RMQCrashStorage(config))</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre class="grayout">from socorro.external.rabbitmq import (
+     <span class="grayout">RMQCrashStorage</span>
+)
+</pre>
+<pre class="white"><span class="fetch_object">fetch_object</span>.add_store(<span class="orange">RMQCrashStorage</span>(config))
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div>
+<pre class="white">from socorro.external.hbase import (
+     HBCrashStorage
+)
+</pre>
+<pre class="white">fetch_object.add_store(HBCrashStorage(config))
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="white">
+<pre class="white">from socorro.external.hbase import (
+     <span class="red">HBCrashStorage</span>
+)
+</pre>
+<pre class="grayout"><span class="grayout">fetch_object</span>.add_store(<span class="grayout">HBCrashStorage(config))</span>
+</pre>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div>
+        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
+    </div>
+    <div class="grayout">
+<pre class="grayout">from socorro.external.hbase import (
+     <span class="grayout">HBCrashStorage</span>
+)
+</pre>
+<pre class="white"><span class="fetch_object">fetch_object</span>.add_store(<span class="red">HBCrashStorage</span>(config))
 </pre>
     </div>
 </div>
