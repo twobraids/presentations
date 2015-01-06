@@ -1196,7 +1196,7 @@
         Firefox Crash Reporting
     </h2>
     <h2 class="text_centered orange">
-        Socorro
+        <span class="large_size_text">Socorro</span>
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1490,8 +1490,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="grayout">File System - <span class="grayout">a local store</span></li>
         <li class="white">Elastic Search - <span class="green">search & analytics</span></li>
         <li class="grayout">PostgreSQL </li>
-        <li class="grayout">HTTP</li>
         <li class="grayout">Amazon S3</li>
+        <li class="grayout">HTTP</li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1505,8 +1505,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="grayout">File System - <span class="grayout">a local store</span></li>
         <li class="grayout">Elastic Search - <span class="grayout">search & analytics</span></li>
         <li class="white">PostgreSQL - <span class="cyan">an RDBMS</span></li>
+        <li class="grayout">Amazon S3</li>
         <li class="grayout">HTTP</li>
-        <li class="grayout">Amazon S3</li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1520,8 +1520,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="grayout">File System - <span class="grayout">a local store</span></li>
         <li class="grayout">Elastic Search - <span class="grayout">search & analytics</span></li>
         <li class="grayout">PostgreSQL - <span class="grayout">an RDBMS</span></li>
-        <li class="white">HTTP - <span class="blue">a protocol</span></li>
-        <li class="grayout">Amazon S3</li>
+        <li class="white">Amazon S3 - <span class="blue">cloud storage</span></li>
+        <li class="grayout">HTTP</li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1535,8 +1535,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="grayout">File System - <span class="grayout">a local store</span></li>
         <li class="grayout">Elastic Search - <span class="grayout">search & analytics</span></li>
         <li class="grayout">PostgreSQL - <span class="grayout">an RDBMS</span></li>
-        <li class="grayout">HTTP - <span class="grayout">a protocol</span></li>
-        <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
+        <li class="grayout">Amazon S3 - <span class="grayout">cloud storage</span></li>
+        <li class="white">HTTP - <span class="violet">a protocol</span></li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1550,8 +1550,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="white">File System - <span class="yellow">a local store</span></li>
         <li class="white">Elastic Search - <span class="green">search & analytics</span></li>
         <li class="white">PostgreSQL - <span class="cyan">an RDBMS</span></li>
-        <li class="white">HTTP - <span class="blue">a protocol</span></li>
-        <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
+        <li class="white">Amazon S3 - <span class="blue">cloud storage</span></li>
+        <li class="white">HTTP - <span class="violet">a protocol</span></li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1565,8 +1565,8 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         <li class="white">File System - <span class="yellow">a local store</span></li>
         <li class="white">Elastic Search - <span class="green">search & analytics</span></li>
         <li class="white">PostgreSQL - <span class="cyan">an RDBMS</span></li>
-        <li class="white">HTTP - <span class="blue">a protocol</span></li>
-        <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
+        <li class="white">Amazon S3 - <span class="blue">cloud storage</span></li>
+        <li class="white">HTTP - <span class="violet">a protocol</span></li>
     </ul>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1765,7 +1765,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     </div>
 <pre class="white"><span class="save_object">save_object</span>.add_store(
     dynamic_load(
-        <span class="red">"socorro.external.hbase.crashstorage.HBCrashStorage"</span>
+        <span class="blue">"socorro.external.boto.crashstorage.S3CrashStorage"</span>
     )
 )
 </pre>
@@ -1997,442 +1997,6 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <h2 class="text_centered green">
         Movement 7<br>Prestissimo
     </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2  class="text_centered">
-        Socorro's<br>Chromatic Scale:
-    </h2>
-    <ul class="text_centered space-above larger_size_text">
-        <li class="white">HBase - <span class="red">an NoSQL thingy</span></li>
-        <li class="white">RabbitMQ - <span class="orange">a queue</span></li>
-        <li class="white">File System - <span class="yellow">a local store</span></li>
-        <li class="white">Elastic Search - <span class="green">search & analytics</span></li>
-        <li class="white">PostgreSQL - <span class="cyan">an RDBMS</span></li>
-        <li class="white">HTTP - <span class="blue">a protocol</span></li>
-        <li class="white">Amazon S3 - <span class="violet">cloud storage</span></li>
-    </ul>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <div>
-<pre class="grayout">from socorro.external.fs import <span class="grayout">FSCrashStorage</span>
-<span class="grayout">fetch_object = <span class="grayout">FSCrashStorage</span>(config)
-</pre>
- <pre class="white">from socorro.ext.meta.crashstorage import <span class="white">MultiCrashStore</span>
-<span class="save_object">save_object</span> = <span class="white">MultiCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
-</pre>
- <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
-</pre>
- <pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-     </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Tutti
-    </h2>
-    <div>
-<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
-<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
-<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
-</pre>
- <pre class="white">from socorro.ext.rabbitmq.crashstorage import <span class="orange">RabbitMQCrashStore</span>
-<span class="save_object">save_object</span>.add_storage(<span class="orange">RabbitMQCrashStore</span>(config))
-</pre>
- <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
-</pre>
- <pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-     </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Tutti
-    </h2>
-    <div>
-<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
-<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
-<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
-</pre>
- <pre class="white">from socorro.ext.hbase.crashstorage import <span class="red">HBaseCrashStore</span>
-<span class="save_object">save_object</span>.add_storage(<span class="red">HBaseCrashStore</span>)
-</pre>
- <pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-     </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Tutti
-    </h2>
-    <div>
-<pre class="grayout">import socorro.ext.http.crashstorage as <span class="grayout">HTTPCrashStore</span>
-<span class="grayout">fetch_object</span> = <span class="grayout">HTTPCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.meta.crashstorage import <span class="grayout">MultiCrashStore</span>
-<span class="grayout">save_object</span> = <span class="grayout">MultiCrashStore</span>(config)
-</pre>
- <pre class="grayout">from socorro.ext.rabbitmq.crashstorage import <span class="grayout">RabbitMQCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">RabbitMQCrashStore</span>(config))
-</pre>
- <pre class="grayout">from socorro.ext.hbase.crashstorage import <span class="grayout">HBaseCrashStore</span>
-<span class="grayout">save_object</span>.add_storage(<span class="grayout">HBaseCrashStore</span>)
-</pre>
- <pre class="white">app = FetchTransformSaveApp(
-    <span class="fetch_object">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="save_object">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-     </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.fts.png">
-    </div>
-    <h2>
-        Tutti
-    </h2>
-    <div class="space-above white">
-        <pre class="one-indent large_size_text">
-app.run()
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <div>
-        <img class="third_width_left" src="resources/socorro.crashmover.configman.png">
-    </div>
-    <h2>
-        Tutti
-    </h2>
-    <div class="space-above white">
-        <pre class="one-indent large_size_text">
-app.run()
-</pre>
-    </div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="nothing">from os import environ
-</pre>
-<pre class="nothing"><span class="nothing">fetch_crashstore_module</span> = <span class="nothing">__import__</span>(<span class="nothing">environ['fetch_module']</span>)
-<span class="nothing">fetch_object</span> = <span class="nothing">fetch_crashstore_module.CrashStorage</span>(config)
-</pre>
-<pre class="nothing">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="nothing">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="nothing">for <span class="nothing">a_save_module</span> in <span class="nothing">environ['save_modules'].split(',')</span>:
-    <span class="nothing">save_object</span>.add_storage(<span class="nothing">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="nothing">app = FetchTransformSaveApp(
-    <span class="nothing">fetch_object</span>,
-    <span class="nothing">transform_object</span>,
-    <span class="nothing">save_object</span>,
-    <span class="nothing">threading_model</span>
-)
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="white">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object</span> = <span class="grayout">fetch_crashstore_module.CrashStorage</span>(config)
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="fetch_object">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="white"><span class="grayout">fetch_crashstore_module</span> = <span class="white">__import__</span>(<span class="fetch_object">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="white"><span class="fetch_object">fetch_crashstore_module</span> = <span class="white">__import__</span>(<span class="fetch_object">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="white"><span class="grayout">fetch_crashstore_module = __import__(environ['fetch_module'])</span>
-<span class="fetch_object">fetch_object</span> = <span class="fetch_object">fetch_crashstore_module</span>.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="white">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object = MultiCrashStorage(config)</span>
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="white"><span class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage</span>
-<span class="save_object">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout">for <span class="grayout">a_save_module</span> in <span class="grayout">environ['save_modules'].split(',')</span>:
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="white">for <span class="save_object">a_save_module</span> in <span class="save_object">environ['save_modules']</span>.split(','):
-    <span class="grayout">save_object.add_storage(a_save_module.CrashStorage(config))</span>
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="white"><span class="grayout">for a_save_module in (__import__(m) for m in environ['save_modules'].split(',')):</span>
-    <span class="save_object">save_object</span>.add_storage(<span class="save_object">a_save_module.CrashStorage</span>(config))
-</pre>
-<pre class="grayout">app = FetchTransformSaveApp(
-    <span class="grayout">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="grayout">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        Dynamic Loading
-    </h2>
-    <div class="terminal">
-<pre class="grayout">from os import environ
-</pre>
-<pre class="grayout"><span class="grayout">fetch_crashstore_module</span> = <span class="grayout">__import__</span>(<span class="grayout">environ['fetch_module']</span>)
-<span class="grayout">fetch_object = fetch_crashstore_module.CrashStorage(config)</span>
-</pre>
-<pre class="grayout">from socorro.ext.meta.crashstorage import MultiCrashStorage
-<span class="grayout">save_object</span> = MultiCrashStorage(config)
-</pre>
-<pre class="grayout"><span class="grayout">for a_save_module in modules_from_environment('save_modules'):</span>
-    <span class="grayout">save_object</span>.add_storage(<span class="grayout">a_save_module.CrashStorage</span>(config))
-</pre>
- <pre class="white">app = FetchTransformSaveApp(
-    <span class="fetch_object">fetch_object</span>,
-    <span class="grayout">transform_object</span>,
-    <span class="save_object">save_object</span>,
-    <span class="grayout">threading_model</span>
-)
-</pre>
-</div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
