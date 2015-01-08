@@ -1583,6 +1583,18 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <h2 class="text_centered">
+        Implementing the <br>CrashStoarge API<br>for each resource...
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        <span class="yellow">decouples</span><br>the resources<br>from our program
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
     <div class="terminal two-indent"><pre>
 
 class <span class="white">MultiCrashStore</span>(CrashStorage):
@@ -1626,6 +1638,37 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        How do we decouple<br>the resources from<br>the source code?
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    from socorro.external.fs.crashstorage import FSCrashStorage
+    from socorro.external.rabbitmq.crashstorage import RMQCrashStorage
+    from socorro.external.boto.crashstorage import S3CrashStorage
+    </div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        How do we decouple<br>the resources from<br>the source code?
+    </h2>
+    <div class="terminal two-indent"><pre>
+
+    from socorro.external.fs.crashstorage import FSCrashStorage
+    from socorro.external.rabbitmq.crashstorage import RMQCrashStorage
+    from socorro.external.boto.crashstorage import S3CrashStorage
+    </div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2 class="text_centered">
+        How do we decouple<br>the resources from<br>the source code?
+    </h2>
+    <div class="text_centered"><pre>
+
+    <tt class="large_size_text">fetch_module = __import__(sys.argv[1])</tt>
+    </div>
+</div><hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 <pre class="white">def dynamic_load(class_as_string):
     parts = [
