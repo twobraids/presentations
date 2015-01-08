@@ -1229,14 +1229,6 @@
 <pre>
 class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre>    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
-        pass
-</pre>
-
-<pre>    def <span>save_processed</span>(self, processed_crash):
-        pass
-</pre>
-
 <pre>    def <span>get_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
@@ -1248,6 +1240,15 @@ class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre>    def <span>get_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
+
+<pre>    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre>    def <span>save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
 </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1260,14 +1261,6 @@ class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
-        pass
-</pre>
-
-<pre class="grayout">    def <span>save_processed</span>(self, processed_crash):
-        pass
-</pre>
-
 <pre class="grayout">    def <span>get_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
@@ -1279,6 +1272,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">    def <span>get_processed</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
+
+<pre class="grayout">    def <span>save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+        pass
+</pre>
+
+<pre class="grayout">    def <span>save_processed</span>(self, processed_crash):
+        pass
+</pre>
+
 </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1291,14 +1293,38 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span class="fetch_object">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+<pre class="grayout">    def <span class="fetch_object">get_raw_crash</span>(self, crash_id):
+        raise NotImplementedError("...")
+</pre>
+
+<pre class="grayout">    def <span class="fetch_object">get_raw_dump</span>(self, crash_id, name=None):
+        raise NotImplementedError("...")
+</pre>
+
+<pre class="grayout">    def <span class="fetch_object">get_processed</span>(self, crash_id):
+        raise NotImplementedError(...)
+</pre>
+
+<pre class="grayout">    def <span class="grayout">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="fetch_object">save_processed</span>(self, processed_crash):
+<pre class="grayout">    def <span class="grayout">save_processed</span>(self, processed_crash):
         pass
 </pre>
 
+</div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <h2>
+        CrashStorage Base<br>
+    </h2>
+    <div>
+    <div class="terminal two-indent">
+<pre class="grayout">
+class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
+</pre>
 <pre class="grayout">    def <span class="grayout">get_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
@@ -1310,37 +1336,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">    def <span class="grayout">get_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
-</div>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-    <h2>
-        CrashStorage Base<br>
-    </h2>
-    <div>
-    <div class="terminal two-indent">
-<pre class="grayout">
-class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
-</pre>
-<pre class="grayout">    def <span class="fetch_object">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
+
+<pre class="grayout">    def <span class="save_object">save_raw_crash</span>(self, raw_crash, dumps, crash_id):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="fetch_object">save_processed</span>(self, processed_crash):
+<pre class="grayout">    def <span class="save_object">save_processed</span>(self, processed_crash):
         pass
 </pre>
 
-<pre class="grayout">    def <span class="save_object">get_raw_crash</span>(self, crash_id):
-        raise NotImplementedError("...")
-</pre>
-
-<pre class="grayout">    def <span class="save_object">get_raw_dump</span>(self, crash_id, name=None):
-        raise NotImplementedError("...")
-</pre>
-
-<pre class="grayout">    def <span class="save_object">get_processed</span>(self, crash_id):
-        raise NotImplementedError(...)
-</pre>
 </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1610,7 +1614,7 @@ class <span class="white">MultiCrashStore</span>(CrashStorage):
 
 class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
-    def <span class="orange">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
+    def <span class="save_object">save_processed</span>(self, <span class="yellow">processed_crash</span>):</pre>
 <pre class="grayout">        for a_store in self.store_collection.itervalues():</pre>
 <pre class="grayout">            a_store.save_processed(processed_crash)</pre>
     </div>
@@ -1634,7 +1638,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 
     def <span>save_processed</span>(self, <span>processed_crash</span>):</pre>
 <pre class="white">        for <span class="blue">a_store</span> in self.<span class="green">store_collection</span>.itervalues():</pre>
-<pre class="white">            <span class="blue">a_store</span>.<span class="orange">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
+<pre class="white">            <span class="blue">a_store</span>.<span class="save_object">save_processed</span>(<span class="yellow">processed_crash</span>)</pre>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1673,14 +1677,23 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
+    <div class="space-below">
     <h2 class="text_centered">
         How do we decouple<br>the resources from<br>the source code?
     </h2>
-    <div class="text_centered"><pre>
-
-    <tt class="large_size_text">fetch_module = __import__(sys.argv[1])</tt>
     </div>
-</div><hr><!-- ------------------------------------------------------------------------------------------- -->
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div class="space-below">
+        <h2 class="text_centered">
+            How do we decouple<br>the resources from<br>the source code?
+        </h2>
+    </div>
+    <div class="text_centered">
+        <tt class="large_size_text">fetch_module = __import__(sys.argv[1])</tt>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
 <pre class="white">def dynamic_load(class_as_string):
     parts = [
@@ -1726,7 +1739,8 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
 <pre class="white"><span class="white">fetch_object</span> = <span class="white">dynamic_load</span>(
-    <span class="white">"socorro.external.fs.crashstorage.FSCrashStorage"</span>
+    argv[1]
+    <span class="white"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
 )
 </pre>
 </div>
@@ -1736,7 +1750,8 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
 <pre class="grayout"><span class="grayout">fetch_object</span> = <span class="grayout">dynamic_load</span>(
-    <span class="yellow">"socorro.external.fs.crashstorage.FSCrashStorage"</span>
+    argv[1]
+    <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
 )
     </div>
 </div>
@@ -1746,7 +1761,8 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
 <pre class="white"><span class="grayout">fetch_object</span> = <span class="white">dynamic_load</span>(
-    <span class="yellow">"socorro.external.fs.crashstorage.FSCrashStorage"</span>
+    argv[1]
+    <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
 )
     </div>
 </div>
@@ -1756,7 +1772,8 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
 <pre class="white"><span class="fetch_object">fetch_object</span> = <span class="white">dynamic_load</span>(
-    <span class="yellow">"socorro.external.fs.crashstorage.FSCrashStorage"</span>
+    argv[1]
+    <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
 )
     </div>
 </div>
