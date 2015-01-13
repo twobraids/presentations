@@ -2121,66 +2121,97 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
     <h2 class="text_centered">
-        How do you shut down a thread in Python?
+        How do you shut down a thread?
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
     <h2 class="text_centered">
-        How do you shut down a thread in Python?
+        How do you shut down a thread?
     </h2>
-    <h2 class="text_centered">
-        <br><span class="orange">you can't kill it</span>
-    </h2>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div >
-    <h2 class="text_centered">
-        How do you shut down a thread in Python?
-    </h2>
-    <h2 class="text_centered">
-        <br>it cooperates by checking status
+    <h2 class="text_centered space-above">
+        <span class="orange">you can't kill it</span>
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
-    <h2 class="text_centered grayout">
-        How do you shut down a thread in Python?
-    </h2>
-    <h2 class="text_centered grayout">
-        <br>it cooperates by checking status
-    </h2>
     <h2 class="text_centered">
-        how does a <span class="green">green thread</span> switch contexts?
+        How do you shut down a thread?
+    </h2>
+    <h2 class="text_centered space-above">
+        it cooperates by checking status
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
     <h2 class="text_centered grayout">
-        How do you shut down a thread in Python?
+        How do you shut down a thread?
     </h2>
+    <h2 class="text_centered grayout space-above">
+        it cooperates by checking status
+    </h2>
+    <h2 class="text_centered space-above">
+        how does a <span class="green">green thread</span><br>switch contexts?
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
     <h2 class="text_centered grayout">
-        <br>it cooperates by checking status
+        How do you shut down a thread?
     </h2>
-    <h2 class="text_centered">
-        how does a <span class="green">green thread</span> switch contexts?
+    <h2 class="text_centered grayout space-above">
+        it cooperates by checking status
     </h2>
-    <h2 class="text_centered">
+    <h2 class="text_centered space-above">
+        how does a <span class="green">green thread</span><br>switch contexts?
+    </h2>
+    <h2 class="text_centered space-above">
         it cooperates by yielding
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
     <h2 class="text_centered grayout">
-        How do you shut down a thread in Python?
+        How do you shut down a thread?
     </h2>
-    <h2 class="text_centered grayout">
-        <br>it <span class="yellow">cooperates</span> by checking status
+    <h2 class="text_centered grayout space-above">
+        it <span class="yellow">cooperates</span> by checking status
     </h2>
-    <h2 class="text_centered grayout">
-        how does a <span class="grayout">green thread</span> switch contexts?
+    <h2 class="text_centered grayout space-above">
+        how does a <span class="grayout">green thread</span><br>switch contexts?
     </h2>
-    <h2 class="text_centered grayout">
+    <h2 class="text_centered grayout space-above">
         it <span class="yellow">cooperates</span> by yielding
     </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white larger_size_text two-indent">def cooperate_for_threads():
+    if threads_should_quit:
+        raise KeyboardException
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white larger_size_text two-indent">def cooperate_for_gevent():
+    gevent.sleep(0)
+    if threads_should_quit:
+        raise KeyboardException
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):
+    thing = fetch()
+    cooperate()
+    transformed_thing = transform(thing, cooperate)
+    cooperate()
+    save(transformed_thing)
+    cooperate()
+</pre>
 </div>
