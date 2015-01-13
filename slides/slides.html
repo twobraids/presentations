@@ -1588,7 +1588,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered">
-        Implementing the <br>CrashStoarge API<br>for each resource...
+        Implementing the <br>CrashStorage API<br>for each resource...
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2228,12 +2228,12 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     save,
     cooperate
 ):</span>
-<span class="">    thing = </span><span class="">fetch()</span>
-<span class="">    cooperate()</span>
-<span class="">    transformed_thing = </span><span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span>
-<span class="">    cooperate()</span>
-<span class="">    save(transformed_thing)
-<span class="">    cooperate()</span>
+<span>    thing = <span>fetch()</span></span>
+<span>    cooperate()</span>
+<span>    transformed_thing = </span><span>transform(<span>thing</span>, <span>cooperate</span>)</span>
+<span>    cooperate()</span>
+<span>    save(transformed_thing)</span>
+<span>    cooperate()</span>
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2244,92 +2244,92 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     save,
     cooperate
 ):</span>
-<span class="">    thing = </span><span class="fetch_object">fetch()</span>
+<span class="white">    thing = <span class="fetch_object">fetch</span>()</span>
 <span class="grayout">    cooperate()</span>
-<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)</span>
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = <span>fetch()</span></span>
+<span>    cooperate()</span>
+<span class="grayout">    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)</span>
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = <span>fetch()</span></span>
+<span class="grayout">    cooperate()</span>
+<span>    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)</span>
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = <span>fetch()</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
+<span>    cooperate()</span>
+<span class="grayout">    save(transformed_thing)</span>
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = <span>fetch()</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="white">    <span class="save_object">save</span>(<span class="white">transformed_thing</span>)</span>
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = <span>fetch()</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span>transform(<span>thing</span>, <span>cooperate</span>)</span></span>
 <span class="grayout">    cooperate()</span>
 <span class="grayout">    save(transformed_thing)
-<span class="grayout">    cooperate()</span>
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
-    fetch,
-    transform,
-    save,
-    cooperate
-):</span>
-<span class="grayout">    thing = </span><span class="">fetch()</span>
-<span class="">    cooperate()</span>
-<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    save(transformed_thing)
-<span class="grayout">    cooperate()</span>
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
-    fetch,
-    transform,
-    save,
-    cooperate
-):</span>
-<span class="grayout">    thing = </span><span class="">fetch()</span>
-<span class="grayout">    cooperate()</span>
-<span class="">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    save(transformed_thing)
-<span class="grayout">    cooperate()</span>
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
-    fetch,
-    transform,
-    save,
-    cooperate
-):</span>
-<span class="grayout">    thing = </span><span class="">fetch()</span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
-<span class="">    cooperate()</span>
-<span class="grayout">    save(transformed_thing)
-<span class="grayout">    cooperate()</span>
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
-    fetch,
-    transform,
-    save,
-    cooperate
-):</span>
-<span class="grayout">    thing = </span><span class="">fetch()</span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
-<span class="grayout">    cooperate()</span>
-<span class="">    save(transformed_thing)
-<span class="grayout">    cooperate()</span>
-</pre>
-</div>
-<hr><!-- ------------------------------------------------------------------------------------------- -->
-<div>
-<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
-    fetch,
-    transform,
-    save,
-    cooperate
-):</span>
-<span class="grayout">    thing = </span><span class="">fetch()</span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
-<span class="grayout">    cooperate()</span>
-<span class="grayout">    save(transformed_thing)
-<span class="">    cooperate()</span>
+<span class="white">    cooperate()</span>
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2347,4 +2347,67 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     save(transformed_thing)
     cooperate()
 </pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Multi-Thread
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Multi-Process
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Cooperative Multi-Task
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div >
+    <h2 class="text_centered">
+        Abstract <span class="green">ALL</span> the things
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2 class="text_centered">
+        the Well Tempered API
+    </h2>
+    <h2 class="text_centered green">
+        Movement 8<br>Allegro
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2 class="text_centered">
+        the Well Tempered API
+    </h2>
+    <h2 class="text_centered green">
+        Movement 9<br>Coda
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2 class="text_centered">
+        the Well Tempered API
+    </h2>
+    <h2 class="text_centered green">
+        Bach Fugue in G Minor
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div class="slide-layout-title">
+    <h2 class="text_centered">
+        the Well Tempered API
+    </h2>
+    <h2 class="text_centered green">
+        Bach Fugue in G Minor
+    </h2>
+    <h2 class="text_centered white">
+        annotated for programmers
+    </h2>
 </div>
