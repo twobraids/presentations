@@ -1715,13 +1715,13 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="grayout">def <span class="white">dynamic_load(class_as_string)</span>:
+<pre class="grayout"><span class="white">def dynamic_load(<span class="highlight_orange">class_as_string</span>)</span>:
     parts = [
         x.strip()
         for x in class_as_string.split('.')
         if x.strip()
     ]
-    module = <span class="white">__import__</span>(
+    module = <span class="green">__import__</span>(
         '.'.join(parts[:-1]),
         globals(),
         locals(),
@@ -1738,8 +1738,9 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <div>
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
-<pre class="white"><span class="white">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
-    <span class="white"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
+<pre class="white">
+    <span class="hidden"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
+    <span class="white">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1747,27 +1748,30 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <div>
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
-<pre class="grayout"><span class="grayout">fetch_object</span> = <span class="grayout">dynamic_load</span>(argv[1])
+<pre class="grayout">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    </div>
+    <span class="grayout">fetch_object</span> = <span class="grayout">dynamic_load</span>(argv[1])
+</pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <div>
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
-<pre class="white"><span class="grayout">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+<pre class="white">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    </div>
+    <span class="grayout">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+</pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <div>
         <img class="third_width_center" src="resources/socorro.crashmover.configman.png">
     </div>
-<pre class="white"><span class="fetch_object">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+<pre class="white">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    </div>
+    <span class="fetch_object">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+</pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1813,8 +1817,9 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </pre>
 <pre class="white"><span class="save_object">save_object</span> = <span class="multistore_object">MultiCrashStore</span>()
 </pre>
-<pre class="white"><span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
+<pre class="white">
 # <span class="orange">"socorro.external.rabbitmq.crashstorage.RMQCrashStorage"</span>
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1826,11 +1831,13 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </pre>
 <pre class="white"><span class="save_object">save_object</span> = <span class="multistore_object">MultiCrashStore</span>()
 </pre>
-<pre class="white"><span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
+<pre class="white">
 # <span class="orange">"socorro.external.rabbitmq.crashstorage.RMQCrashStorage"</span>
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
 </pre>
-<pre class="white"><span class="save_object">save_object</span>.add_store(dynamic_load(argv[3]))
+<pre class="white">
 # <span class="blue">"socorro.external.boto.crashstorage.S3CrashStorage"</span>
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[3]))
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2186,7 +2193,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="white large_size_text two-indent">def cooperate_for_threads():
+<pre class="white larger_size_text two-indent">def cooperate_for_threads():
     if threads_should_quit:
         raise KeyboardException
 </pre>
@@ -2199,18 +2206,130 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="white  two-indent">def fetch_transform_save(
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
     fetch,
     transform,
     save,
     cooperate
-):
+):</span>
     thing = fetch()
     cooperate()
     transformed_thing = transform(thing, cooperate)
     cooperate()
     save(transformed_thing)
     cooperate()
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="">    thing = </span><span class="">fetch()</span>
+<span class="">    cooperate()</span>
+<span class="">    transformed_thing = </span><span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span>
+<span class="">    cooperate()</span>
+<span class="">    save(transformed_thing)
+<span class="">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="">    thing = </span><span class="fetch_object">fetch()</span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = </span><span class="">fetch()</span>
+<span class="">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = </span><span class="">fetch()</span>
+<span class="grayout">    cooperate()</span>
+<span class="">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = </span><span class="">fetch()</span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = </span><span class="">fetch()</span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="">    save(transformed_thing)
+<span class="grayout">    cooperate()</span>
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent"><span class="hidden">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):</span>
+<span class="grayout">    thing = </span><span class="">fetch()</span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    transformed_thing = <span class="">transform(<span class="">thing</span>, <span class="">cooperate</span>)</span></span>
+<span class="grayout">    cooperate()</span>
+<span class="grayout">    save(transformed_thing)
+<span class="">    cooperate()</span>
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
