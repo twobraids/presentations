@@ -2126,7 +2126,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
-    <h2 class="text_centered">
+    <h2 class="text_centered grayout">
         How do you shut down a thread?
     </h2>
     <h2 class="text_centered space-above">
@@ -2135,7 +2135,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div >
-    <h2 class="text_centered">
+    <h2 class="text_centered grayout">
         How do you shut down a thread?
     </h2>
     <h2 class="text_centered space-above">
@@ -2162,8 +2162,8 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <h2 class="text_centered grayout space-above">
         it cooperates by checking status
     </h2>
-    <h2 class="text_centered space-above">
-        how does a <span class="green">green thread</span><br>switch contexts?
+    <h2 class="text_centered space-above grayout">
+        how does a <span class="grayout">green thread</span><br>switch contexts?
     </h2>
     <h2 class="text_centered space-above">
         it cooperates by yielding
@@ -2186,17 +2186,31 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="white larger_size_text two-indent">def cooperate_for_threads():
+<pre class="white large_size_text two-indent">def cooperate_for_threads():
     if threads_should_quit:
         raise KeyboardException
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="white larger_size_text two-indent">def cooperate_for_gevent():
+<pre class="white large_size_text two-indent">def cooperate_for_gevent():
     gevent.sleep(0)
-    if threads_should_quit:
-        raise KeyboardException
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white  two-indent">def fetch_transform_save(
+    fetch,
+    transform,
+    save,
+    cooperate
+):
+    thing = fetch()
+    cooperate()
+    transformed_thing = transform(thing, cooperate)
+    cooperate()
+    save(transformed_thing)
+    cooperate()
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
