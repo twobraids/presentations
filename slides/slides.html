@@ -179,9 +179,6 @@
         <h2 class="text_centered cyan">
             Yamaha WX-5 MIDI Wind Controller
         </h2>
-        <h2 class="text_centered">
-            imitating a<br><span class="blue">Bassoon</span>
-        </h2>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -199,7 +196,7 @@
     </div>
     <div class="block_centered">
         <h2 class="text_centered">
-            90 sec until the talk begins
+            One minute until the talk begins
         </h2>
     </div>
 </div>
@@ -1690,7 +1687,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         </h2>
     </div>
     <div class="text_centered">
-        <tt class="large_size_text">fetch_module = __import__(sys.argv[1])</tt>
+        <tt class="large_size_text">a_module = __import__(sys.argv[1])</tt>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1730,7 +1727,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     obj = module
     for name in parts[1:]:
         obj = getattr(obj, name)
-    return obj()
+    <span class="white">return obj()</span>
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
