@@ -2160,7 +2160,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         it cooperates by checking status
     </h2>
     <h2 class="text_centered space-above">
-        how does a <span class="green">green thread</span><br>switch contexts?
+        how does a <span class="green">greenlet</span><br>switch contexts?
     </h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2172,7 +2172,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         it cooperates by checking status
     </h2>
     <h2 class="text_centered space-above grayout">
-        how does a <span class="grayout">green thread</span><br>switch contexts?
+        how does a <span class="grayout">greenlet</span><br>switch contexts?
     </h2>
     <h2 class="text_centered space-above">
         it cooperates by yielding
@@ -2187,7 +2187,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
         it <span class="yellow">cooperates</span> by checking status
     </h2>
     <h2 class="text_centered grayout space-above">
-        how does a <span class="grayout">green thread</span><br>switch contexts?
+        how does a <span class="grayout">greenlet</span><br>switch contexts?
     </h2>
     <h2 class="text_centered grayout space-above">
         it <span class="yellow">cooperates</span> by yielding
@@ -2197,7 +2197,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 <div>
 <pre class="white larger_size_text two-indent">def cooperate_for_threads():
     if threads_should_quit:
-        raise KeyboardException
+        raise KeyboardInterrupt
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
