@@ -1231,15 +1231,15 @@
 <pre>
 class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre>    def <span>get_raw_crash</span>(self, crash_id):
+<pre>    def <span>fetch_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
-<pre>    def <span>get_raw_dump</span>(self, crash_id, name=None):
+<pre>    def <span>fetch_raw_dump</span>(self, crash_id, name=None):
         raise NotImplementedError("...")
 </pre>
 
-<pre>    def <span>get_processed</span>(self, crash_id):
+<pre>    def <span>fetch_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
 
@@ -1263,15 +1263,15 @@ class <span>CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span>get_raw_crash</span>(self, crash_id):
+<pre class="grayout">    def <span>fetch_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span>get_raw_dump</span>(self, crash_id, name=None):
+<pre class="grayout">    def <span>fetch_raw_dump</span>(self, crash_id, name=None):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span>get_processed</span>(self, crash_id):
+<pre class="grayout">    def <span>fetch_processed</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
@@ -1295,15 +1295,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span class="fetch_object">get_raw_crash</span>(self, crash_id):
+<pre class="grayout">    def <span class="fetch_object">fetch_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="fetch_object">get_raw_dump</span>(self, crash_id, name=None):
+<pre class="grayout">    def <span class="fetch_object">fetch_raw_dump</span>(self, crash_id, name=None):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="fetch_object">get_processed</span>(self, crash_id):
+<pre class="grayout">    def <span class="fetch_object">fetch_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
 
@@ -1327,15 +1327,15 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 <pre class="grayout">
 class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
 </pre>
-<pre class="grayout">    def <span class="grayout">get_raw_crash</span>(self, crash_id):
+<pre class="grayout">    def <span class="grayout">fetch_raw_crash</span>(self, crash_id):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="grayout">get_raw_dump</span>(self, crash_id, name=None):
+<pre class="grayout">    def <span class="grayout">fetch_raw_dump</span>(self, crash_id, name=None):
         raise NotImplementedError("...")
 </pre>
 
-<pre class="grayout">    def <span class="grayout">get_processed</span>(self, crash_id):
+<pre class="grayout">    def <span class="grayout">fetch_processed</span>(self, crash_id):
         raise NotImplementedError(...)
 </pre>
 
@@ -1360,7 +1360,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">fetch_*</tt>
     </div>
     <div class="larger_size_text">
         Transform: <tt>Transform.</tt><tt>transform</tt>
@@ -1380,7 +1380,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         </h2>
     </div>
     <div class="larger_size_text">
-        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="fetch_object">fetch_*</tt>
     </div>
     <div class="larger_size_text grayout">
         Transform: <tt>Transform.</tt><tt>transform</tt>
@@ -1400,7 +1400,7 @@ class <span class="green">CrashStorageBase</span>(<span>RequiredConfig</span>):
         </h2>
     </div>
     <div class="larger_size_text grayout">
-        Fetch: <tt>CrashStorage.</tt><tt class="grayout">get_*</tt>
+        Fetch: <tt>CrashStorage.</tt><tt class="grayout">fetch_*</tt>
     </div>
     <div class="larger_size_text grayout">
         Transform: <tt>Transform.</tt><tt>transform</tt>
