@@ -310,6 +310,10 @@ pre code tt span {
 	color:red;
 }
 
+.red-back {
+	background:red
+}
+
 .yellow {
 	color:yellow;
 }
@@ -328,6 +332,10 @@ pre code tt span {
 
 .orange {
 	color:orange;
+}
+
+.orange-back {
+	background:orange;
 }
 
 .black {
