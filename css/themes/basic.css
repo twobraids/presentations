@@ -123,6 +123,11 @@ pre code tt span {
     width:8%
 }
 
+.twenty_column {
+    width:5%;
+    color:black;
+}
+
 .twenty-four-column {
     width:4%
 }
@@ -177,6 +182,10 @@ pre code tt span {
 
 .lightgray {
 	color: #999999;
+}
+
+.lightgray-back {
+	background: #999999;
 }
 
 
@@ -305,6 +314,10 @@ pre code tt span {
 	color:yellow;
 }
 
+.yellow-back {
+	background:yellow;
+}
+
 .violet {
 	color:violet;
 }
@@ -325,8 +338,16 @@ pre code tt span {
 	color:white;
 }
 
+.white-back {
+	background:white;
+}
+
 .pink {
 	color:pink;
+}
+
+.pink-back {
+	background:pink;
 }
 
 .black_key {
@@ -371,6 +392,12 @@ pre code tt span {
 .nothing{
 }
 
+.lego-grid {
+    font-size: 75%;
+    background: black;
+    border=1px solid white;
+}
+
 table,td
 {
 border:4px solid black;
@@ -394,6 +421,11 @@ th
 {
 height:50px;
 }
+tr {
+height: 2em;
+}
+
+
 
 
 @media screen and (max-device-width: 480px) {
