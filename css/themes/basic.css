@@ -215,6 +215,15 @@ pre code tt span {
 	background: #999999;
 }
 
+.darkgray {
+	color:DimGray;
+}
+
+.darkgray-back {
+	background: DimGray;
+	color:#999999;
+}
+
 
 .lego_text {
 	font-size: 125%;
@@ -488,6 +497,11 @@ pre code tt span {
 
 .multistore_object {
     color:fuchsia;
+}
+
+.multistore-back {
+    background:fuchsia;
+    color: white;
 }
 
 .nothing{
