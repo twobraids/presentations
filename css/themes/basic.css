@@ -119,8 +119,34 @@ pre code tt span {
 	display: none;
 }
 
+.eight_column {
+    width:12.5%;
+    color:black;
+}
+
 .twelve_column {
-    width:8%
+    width:8%;
+    color:black;
+}
+
+.fourteen_column {
+    width:7%;
+    color:black;
+}
+
+.sixteen_column {
+    width:5.5%;
+    color:black;
+}
+
+.eightteen_column {
+    width:5.5%;
+    color:black;
+}
+
+.ten_column {
+    width:10%;
+    color:black;
 }
 
 .twenty_column {
@@ -129,7 +155,8 @@ pre code tt span {
 }
 
 .twenty-four-column {
-    width:4%
+    width:4%;
+    color:black;
 }
 
 .space-below {
@@ -188,6 +215,14 @@ pre code tt span {
 	background: #999999;
 }
 
+
+.lego_text {
+	font-size: 125%;
+}
+
+.lego-row {
+	height: 3em;
+}
 
 .larger_size_text {
 	font-size: 150%;
@@ -291,6 +326,13 @@ pre code tt span {
 	width:50%;
 }
 
+.half_width_right {
+	display:block;
+	float:right;
+	margin-left:auto;
+	width:50%;
+}
+
 .three_quarter_width {
 	display:block;
 	margin-left:auto;
@@ -302,8 +344,27 @@ pre code tt span {
 	color:cyan;
 }
 
+.cyan-back {
+	background:cyan;
+	color:black;
+}
+
 .green {
 	color:#00FF00;
+}
+
+.green-back {
+	background:#00FF00;
+	color:black;
+}
+
+.dark-green {
+	color:DarkGreen;
+}
+
+.dark-green-back {
+	background:DarkGreen;
+	color:white;
 }
 
 .red {
@@ -311,7 +372,8 @@ pre code tt span {
 }
 
 .red-back {
-	background:red
+	background:red;
+	color:white;
 }
 
 .yellow {
@@ -326,8 +388,27 @@ pre code tt span {
 	color:violet;
 }
 
+.violet-back {
+	background:violet;
+	color:black;
+}
+
 .blue {
 	color:#8888FF;
+}
+
+.blue-back {
+	background:#8888FF;
+	color:black;
+}
+
+.dark-blue {
+	color:DarkBlue;
+}
+
+.dark-blue-back {
+	background:DarkBlue;
+	color:white;
 }
 
 .orange {
@@ -336,6 +417,16 @@ pre code tt span {
 
 .orange-back {
 	background:orange;
+	color:black;
+}
+
+.indigo {
+	color:indigo;
+}
+
+.indigo-back {
+	background:indigo;
+	color:white;
 }
 
 .black {
@@ -348,6 +439,7 @@ pre code tt span {
 
 .white-back {
 	background:white;
+	color:black;
 }
 
 .pink {
@@ -356,6 +448,7 @@ pre code tt span {
 
 .pink-back {
 	background:pink;
+	color:black;
 }
 
 .black_key {
@@ -403,7 +496,7 @@ pre code tt span {
 .lego-grid {
     font-size: 50%;
     background: black;
-    border=1px solid white;
+    border=2px solid white;
 }
 
 table,td
