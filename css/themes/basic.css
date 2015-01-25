@@ -119,6 +119,11 @@ pre code tt span {
 	display: none;
 }
 
+.four_column {
+    width:25%;
+    color:black;
+}
+
 .eight_column {
     width:12.5%;
     color:black;
@@ -213,6 +218,7 @@ pre code tt span {
 
 .lightgray-back {
 	background: #999999;
+	color:black;
 }
 
 .darkgray {
@@ -347,6 +353,27 @@ pre code tt span {
 	margin-left:auto;
 	margin-right:auto;
 	width:75%;
+}
+
+
+.lego-framework {
+	background: Sienna;
+	color: black;
+}
+
+.lego-multithread {
+	background: olive;
+	color: white;
+}
+
+.lego-multiprocess {
+	background: maroon;
+	color: white;
+}
+
+.lego-coop-multitask {
+	background: indigo;
+	color: white;
 }
 
 .cyan {
