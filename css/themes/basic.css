@@ -299,6 +299,13 @@ pre code tt span {
 	float;
 }
 
+.full-width {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
 .third_width {
 	display:block;
 	margin-left:auto;
