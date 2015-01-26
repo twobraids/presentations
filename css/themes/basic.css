@@ -313,6 +313,14 @@ pre code tt span {
 	width:33%;
 }
 
+.flames {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+	height:100%;
+}
+
 .quarter_width_right {
 	display:block;
 	float:right;
