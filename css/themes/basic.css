@@ -418,6 +418,15 @@ pre code tt span {
 	color:white;
 }
 
+.dark-red {
+	color:darkred;
+}
+
+.darkred-back {
+	background:darkred;
+	color:white;
+}
+
 .red {
 	color:red;
 }
