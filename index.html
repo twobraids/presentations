@@ -37,6 +37,22 @@
 <!-- Avoid any FUOC by adding presentation-loading, which the framework
      will remove later once the first slide is ready -->
 <body class="presentation-loading">
+        <script  type="text/javascript">
+             function do_key(character) {
+                 var evt = new KeyboardEvent(
+                     'KeyboardEvent',
+                    {
+                        key: character.charAt(0),
+                        char: character.charCodeAt(0),
+                        shiftKey: false,
+                        metaKey: false,
+                        altKey: false                        
+                   }
+                );
+                window.dispatchEvent(evt);
+                alert(character.charCodeAt(0));
+            }
+        </script>
 
 	<div>
 		<!-- The container to hold the slides -->

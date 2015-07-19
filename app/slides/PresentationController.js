@@ -192,6 +192,26 @@ define(function() {
 					stopEvent(e);
 					ret = false;
 					break;
+                                case 65:
+					stopEvent(e);
+                                        var time = [5000, 5000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 3000, 3000]
+                                        delay = time[0];
+                                        for (i in time) {
+                                           delay += time[i]
+                                           setTimeout(function() {
+                                               slideView.next().then(success);
+                                           }, delay);
+                                        }
+
+					ret = false;
+					break;
+
+                                case 66:
+					slideView.go(1).then(success);
+					stopEvent(e);
+					ret = false;
+					break;
+
 			}
 			
 			return ret;
