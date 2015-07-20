@@ -198,7 +198,8 @@ define(function() {
                                            3000,  // to slide #2
                                            3000,  // add time message
                                            30000, // bassoons 
-                                           30000, // place holder
+                                           15000, // HTML & CSS
+                                           15000, // no Keynote, no Powerpoint
                                            35000, // 400 year ... 1990
                                            30000, // place holder
                                            30000, // Vivaldi
