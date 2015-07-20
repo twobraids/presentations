@@ -62,7 +62,7 @@ pre code tt span {
 }
 
 .slide h1 {
-	font-size: 5m;
+	font-size: 5em;
 	margin-top: 0;
 }
 
@@ -117,6 +117,9 @@ pre code tt span {
 
 .touch .slide-no-touch {
 	display: none;
+}
+.cursive {
+    font-family: Dancing Script;
 }
 
 .four_column {
@@ -245,6 +248,10 @@ pre code tt span {
 
 .large_size_text {
 	font-size: 200%;
+}
+
+.cursive_huge_size_text {
+	font-size: 3em;
 }
 
 .huge_size_text {
