@@ -194,7 +194,21 @@ define(function() {
 					break;
                                 case 65:
 					stopEvent(e);
-                                        var time = [3000, 5000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 34000, 36000, 3000, 3000]
+                                        var time = [
+                                           3000,  // to slide #2
+                                           3000,  // add time message
+                                           30000, // bassoons 
+                                           30000, // place holder
+                                           35000, // 400 year ... 1990
+                                           30000, // place holder
+                                           30000, // Vivaldi
+                                           30000, // WX-5
+                                           30000, // speed this up
+                                           35000, // peformance art
+                                           36000, // Opus
+                                           3000,  // dot
+                                           3000   // beta
+                                        ]
                                         delay = time[0];
                                         for (i in time) {
                                            delay += time[i]
