@@ -195,20 +195,20 @@ define(function() {
                                 case 65:
 					stopEvent(e);
                                         var time = [
-                                           3000,  // to slide #2
-                                           3000,  // add time message
-                                           30000, // bassoons 
-                                           15000, // HTML & CSS
-                                           10000, // no Keynote, no Powerpoint
-                                           35000, // 400 year ... 1990
-                                           30000, // place holder
-                                           30000, // Vivaldi
-                                           30000, // WX-5
-                                           35000, // speed this up
+                                            3000, // 5 - to slide #2
+                                            3000, // add time message
+                                           24000, // 4.5 - bassoons
+                                           22000, // HTML & CSS
+                                           11000, // 4 - no Keynote, no Powerpoint 
+                                           30000, // 3.5 - 400 year ... 1990
+                                           31000, // 3 - place holder
+                                           31000, // 2.5 -Vivaldi
+                                           31000, // 2 - WX-5
+                                           36000, // speed this up
                                            35000, // peformance art
-                                           39000, // Opus
-                                           3000,  // dot
-                                           3000   // beta
+                                           38000, // Opus
+                                            3000, // dot
+                                            3000  // beta
                                         ]
                                         delay = time[0];
                                         for (i in time) {
