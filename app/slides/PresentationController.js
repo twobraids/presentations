@@ -204,9 +204,9 @@ define(function() {
                                            30000, // place holder
                                            30000, // Vivaldi
                                            30000, // WX-5
-                                           32000, // speed this up
+                                           35000, // speed this up
                                            35000, // peformance art
-                                           40000, // Opus
+                                           39000, // Opus
                                            3000,  // dot
                                            3000   // beta
                                         ]
