@@ -199,14 +199,14 @@ define(function() {
                                            3000,  // add time message
                                            30000, // bassoons 
                                            15000, // HTML & CSS
-                                           15000, // no Keynote, no Powerpoint
+                                           10000, // no Keynote, no Powerpoint
                                            35000, // 400 year ... 1990
                                            30000, // place holder
                                            30000, // Vivaldi
                                            30000, // WX-5
-                                           30000, // speed this up
+                                           32000, // speed this up
                                            35000, // peformance art
-                                           36000, // Opus
+                                           40000, // Opus
                                            3000,  // dot
                                            3000   // beta
                                         ]
