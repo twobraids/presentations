@@ -3,29 +3,29 @@
 	Class: PresentationController
 */
 define(function() {
-	
+
 	var doc = window.document,
 		html = doc.getElementsByTagName('html')[0],
 		body = window.document.body,
 		// Detect touch support
 		supportsTouch = 'ontouchstart' in body,
 		undef;
-	
+
 	/*
 		Function: setHash
 		Sets the location hash to the supplied slide number.  This will
 		clobber any existing hash.
-		
+
 		Parameters:
 			slide - The slide number to which to set the hash
 	*/
 	function setHash(slide) {
 		window.location.hash = '#' + slide;
 	}
-	
+
 	/*
 		Function: getHash
-		
+
 		Returns:
 		the current location hash without the leading '#'
 	*/
@@ -33,11 +33,11 @@ define(function() {
 		var h = window.location.hash;
 		return h.length > 1 && h[0] === '#' ? (Math.max(0, 1*h.substring(1))) : 0;
 	}
-	
+
 	/*
 		Function: stopEvent
 		Prevents the default action and stops propagation of the supplied DOM event.
-		
+
 		Parameters:
 			e - the event to stop
 	*/
@@ -45,13 +45,13 @@ define(function() {
 		e.preventDefault();
 		e.stopPropagation();
 	}
-	
+
 	/*
 		Function: addClass
 		Adds the supplied class to the supplied DOM node--will not add a duplicate
 		class name if the supplied class is already present.  Simple-minded, doesn't
 		handle arrays, multiple class names as input, doesn't check node type, etc.
-		
+
 		Parameters:
 			node - DOM node to which to add clss
 			clss - class name to add
@@ -59,7 +59,7 @@ define(function() {
 	function addClass(node, clss) {
 		var cn = node.className,
 			cns = " " + cn + " ";
-		
+
 		if(cn) {
 			if(cn !== clss && cns.indexOf(clss) < 0) {
 				node.className += " " + clss;
@@ -68,14 +68,14 @@ define(function() {
 			node.className = clss;
 		}
 	}
-	
+
 	// Add touch support hint, a la Modernizr
 	addClass(html, supportsTouch ? "touch" : "no-touch");
-	
+
 	/*
 		Function: initTouchEvents
 		Sets up touch events for navigating slides
-		
+
 		Parameters:
 			slideView - the <SlideView> on which to handle touch events
 	*/
@@ -89,7 +89,7 @@ define(function() {
 			body.ontouchmove = function(e) {
 				moved = true;
 			};
-			
+
 			body.ontouchend = function(e) {
 				var ret = true;
 				try {
@@ -104,9 +104,9 @@ define(function() {
 								stopEvent(e);
 								next = dx <= 0;
 							}
-							
+
 							ret = false;
-							
+
 						} else {
 							// stopEvent(e);
 							// next = e.changedTouches[0].pageX > (window.innerWidth/2);
@@ -121,24 +121,24 @@ define(function() {
 					}
 
 					return ret;
-					
+
 				} finally {
 					moved = false;
 					body.ontouchend = null;
 					body.ontouchmove = null;
 				}
 			};
-			
+
 			return ret;
 		};
-		
+
 	}
-	
+
 	/*
 		Function: success
 		Callback to be invoked on successful <SlideView> transtions, currently just
 		updates the location hash by calling <setHash>
-		
+
 		Parameters:
 			result - result provided by <SlideView>
 	*/
@@ -149,10 +149,10 @@ define(function() {
 	/*
 		Function: PresentationController
 		Creates a new PresentationController that will control a <SlideView>
-		
+
 		Parameters:
 			slideView - the <SlideView> to control
-			
+
 		Returns:
 		a new PresentationController
 	*/
@@ -197,13 +197,14 @@ define(function() {
                                         var time = [
                                             3000, // 5 - to slide #2
                                             3000, // add time message
-                                           24000, // 4.5 - bassoons
+                                           12000, // 4.5 - bassoons
+                                           12000, // 4.5 - not one of them
                                            22000, // HTML & CSS
-                                           11000, // 4 - no Keynote, no Powerpoint 
+                                           11000, // 4 - no Keynote, no Powerpoint
                                            30000, // 3.5 - 400 year ... 1990
                                            31000, // 3 - place holder
-                                           31000, // 2.5 -Vivaldi
-                                           31000, // 2 - WX-5
+                                           31000, // 2.5 -Hold on
+                                           31000, // 2 - video game
                                            36000, // speed this up
                                            35000, // peformance art
                                            38000, // Opus
@@ -222,16 +223,38 @@ define(function() {
 					break;
 
                                 case 66:
-					slideView.go(1).then(success);
+					slideView.go(1).then(success);b
 					stopEvent(e);
+					var time = [
+					       1, // 5 - to indepentent
+					    3000, // add time message
+					   11000, // Well Tempered
+					   11000, // Written
+					   10000, // HTML & CSS
+					   11000, // framework
+					   11000, // sound
+					   11000, // LEGO
+					   11000, // Yamaha
+					   11000, // Sample
+					   11000, // copy
+					   35000, // blank
+					]
+					delay = time[0];
+					for (i in time) {
+					   delay += time[i]
+					   setTimeout(function() {
+					       slideView.next().then(success);
+					   }, delay);
+					}
+
 					ret = false;
 					break;
 
 			}
-			
+
 			return ret;
 		};
-		
+
 		if(supportsTouch) {
 			initTouchEvents(slideView);
 		}
@@ -239,9 +262,9 @@ define(function() {
 		return slideView.go(getHash()).then(function(result) {
 			success(result);
 		});
-		
+
 	}
 
 	return PresentationController;
-	
+
 });

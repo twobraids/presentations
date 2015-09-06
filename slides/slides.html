@@ -25,7 +25,7 @@
         <h2 class="text_centered">
             <span class="green">Prelude</span><br>
             <span class="yellow">Vivaldi, Concerto in G</span>
-         </h2>
+        </h2>
     </div>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -38,7 +38,8 @@
     <div class="block_centered space-below">
         <h2 class="text_centered">
             <span class="green">Prelude</span><br>
-            <span class="yellow">Vivaldi, Concerto in G</span>
+            <span class="yellow">Vivaldi, Concerto in G</span><br>
+            <span class="hidden">hidden placeholder</span>
          </h2>
     </div>
     <div class="block_centered">
@@ -54,18 +55,31 @@
             the Well Tempered API<br>
         </h2>
     </div>
-    <!--
-    <div class="block_centered space-below">
-        <h2 class="text_centered">
-            <span class="green">Prelude</span><br>
-            <span class="yellow">Vivaldi, Concerto in G</span>
-         </h2>
-    </div>
-    -->
     <div class="block_centered">
         <h2 class="text_centered">
-            <span class="red">bassoons</span> were<br>invented in the 1600s<br>
-            displacing both<br>the <span class="violet">dulcian</span> and the <span class="blue">rackett</span>
+            <span class="yellow">Bassoons</span> were<br>invented in the 1600s.<br>
+            <span class="white hidden">this instrument is</span><br>
+            <span class="green hidden">considerably newer</span>
+        </h2>
+    </div>
+    <div class="block_centered">
+        <h2 class="text_centered quartersize_text dark-red">
+            <span class="quartersize_text">the talk starts in 4½ minutes</span>
+        </h2>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div class="block_centered space-below">
+        <h2 class=" text_centered">
+            the Well Tempered API<br>
+        </h2>
+    </div>
+    <div class="block_centered">
+        <h2 class="text_centered">
+            <span class="yellow">Bassoons</span> were<br>invented in the 1600s.<br>
+            <span class="white">This instrument is</span><br>
+            <span class="green">considerably newer</span>
         </h2>
     </div>
     <div class="block_centered">
@@ -125,7 +139,8 @@
         <h2 class="text_centered">
             I can play 400 year old music,<br>
             <span class="orange">but I can't open a</span><br>
-            Word Document from 1990
+            Word Document from 1990<br>
+            <span class="hidden">hidden placeholder</span>
         </h2>
     </div>
     <div class="block_centered">
@@ -145,6 +160,7 @@
         <h2 class="text_centered">
             <span class="green">Prelude</span><br>
             <span class="yellow">Vivaldi, Concerto in G</span><br>
+            <span class="hidden">hidden placeholder</span>
          </h2>
     </div>
     <div class="block_centered">
@@ -160,20 +176,12 @@
             the Well Tempered API<br>
         </h2>
     </div>
-    <!--
-    <div class="block_centered space-below">
-        <h2 class="text_centered">
-            <span class="green">Prelude</span><br>
-            <span class="yellow">Vivaldi, Concerto in G</span>
-         </h2>
-    </div>
-    -->
     <div class="block_centered">
         <h2 class="text_centered">
-          Wait a minute,<br>
-          is this <span class="violet">some sort</span> of<br>
-           <span class="blue">Baroque Hero</span> video game?<br>
-        <br>
+          <span >Hold on,<br>
+          is this some sort of<br>
+          ⬇ <span class="violet">side scroller</span> <span class="blue">Baroque Hero</span>? ⬇<br>
+            <span class="hidden">hidden placeholder</span>
         </h2>
     </div>
     <div class="block_centered">
@@ -194,6 +202,7 @@
         <span class="white">Is </span><span class="green">Baroque Music </span><span class="white">really just</span><br>
         <span class="white">400 year old</span><br>
         <span class="cyan">video game software</span>?!?<br>
+            <span class="hidden">hidden placeholder</span>
         </h2>
     </div>
     <div class="block_centered">
@@ -824,7 +833,7 @@
             </tr>
         </table>
 </div>
-a<hr><!-- ------------------------------------------------------------------------------------------- -->
+<hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <h2 class="text_centered yellow">
     major scale
@@ -1801,8 +1810,27 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
     <div class="space-below">
-        <h2 class="text_centered">
-            How do we decouple<br>the resources from<br>the source code?
+        <h2 class="text_centered orange">
+            Dependency Injection
+        </h2>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div class="space-below">
+        <h2 class="text_centered orange">
+            Dependency Injection
+        </h2>
+    </div>
+    <h2 class="text_centered">
+        Run Time Binding
+    </h2>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+    <div class="space-below">
+        <h2 class="text_centered orange">
+            Dependency Injection
         </h2>
     </div>
     <div class="text_centered">
@@ -1811,7 +1839,18 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="white">def dynamic_load(class_as_string):
+    <div class="space-below">
+        <h2 class="text_centered orange">
+            Dependency Injection
+        </h2>
+    </div>
+    <div class="text_centered">
+        <tt class="three_quarter_size_text yellow">socorro.external.fs.crashstorage.FSCrashStorage</tt>
+    </div>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="white">def dynamic_load(class_as_string, *args, **kwargs):
     parts = [
         x.strip()
         for x in class_as_string.split('.')
@@ -1826,18 +1865,18 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     obj = module
     for name in parts[1:]:
         obj = getattr(obj, name)
-    return obj()
+    return obj(*args, **kwargs)
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
-<pre class="grayout"><span class="white">def dynamic_load(<span class="highlight_orange">class_as_string</span>)</span>:
+<pre class="grayout">def dynamic_load(<span class="white">class_as_string</span>, *args, **kwargs):
     parts = [
         x.strip()
         for x in class_as_string.split('.')
         if x.strip()
     ]
-    <span class="white">module = </span><span class="green">__import__</span>(
+    module = __import__(
         '.'.join(parts[:-1]),
         globals(),
         locals(),
@@ -1845,8 +1884,88 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     )
     obj = module
     for name in parts[1:]:
-        <span class="white">obj = getattr(obj, name)</span>
-    <span class="white">return obj()</span>
+        obj = getattr(obj, name)
+    return obj(*args, **kwargs)
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="grayout">def dynamic_load(class_as_string, *args, **kwargs):
+    <span class="white">parts = [
+        x.strip()
+        for x in class_as_string.split('.')
+        if x.strip()
+    ]</span>
+    module = __import__(
+        '.'.join(parts[:-1]),
+        globals(),
+        locals(),
+        []
+    )
+    obj = module
+    for name in parts[1:]:
+        obj = getattr(obj, name)
+    return obj(*args, **kwargs)
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="grayout">def dynamic_load(class_as_string, *args, **kwargs):
+    parts = [
+        x.strip()
+        for x in class_as_string.split('.')
+        if x.strip()
+    ]
+    <span class="white">module = __import__(
+        '.'.join(parts[:-1]),
+        globals(),
+        locals(),
+        []
+    )</span>
+    obj = module
+    for name in parts[1:]:
+        obj = getattr(obj, name)
+    return obj(*args, **kwargs)
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="grayout">def dynamic_load(class_as_string, *args, **kwargs):
+    parts = [
+        x.strip()
+        for x in class_as_string.split('.')
+        if x.strip()
+    ]
+    module = __import__(
+        '.'.join(parts[:-1]),
+        globals(),
+        locals(),
+        []
+    )
+    <span class="white">obj = module
+    for name in parts[1:]:
+        obj = getattr(obj, name)</span>
+    return obj(*args, **kwargs)
+</pre>
+</div>
+<hr><!-- ------------------------------------------------------------------------------------------- -->
+<div>
+<pre class="grayout">def dynamic_load(class_as_string, <span class="white">*args, **kwargs</span>):
+    parts = [
+        x.strip()
+        for x in class_as_string.split('.')
+        if x.strip()
+    ]
+    module = __import__(
+        '.'.join(parts[:-1]),
+        globals(),
+        locals(),
+        []
+    )
+    obj = module
+    for name in parts[1:]:
+        obj = getattr(obj, name)
+    <span class="white">return obj(*args, **kwargs)</span>
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1883,7 +2002,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <img class="third_width_center" src="resources/PyTN.04.jpg">
 <pre class="white">
     <span class="hidden"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    <span class="white">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+    <span class="white">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1], config)
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1920,7 +2039,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <img class="third_width_center" src="resources/PyTN.04.jpg">
 <pre class="grayout">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    <span class="grayout">fetch_object</span> = <span class="grayout">dynamic_load</span>(argv[1])
+    <span class="grayout">fetch_object</span> = <span class="grayout">dynamic_load</span>(argv[1], config)
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1957,7 +2076,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <img class="third_width_center" src="resources/PyTN.04.jpg">
 <pre class="white">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    <span class="grayout">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+    <span class="grayout">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1], config)
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -1994,7 +2113,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
     <img class="third_width_center" src="resources/PyTN.05.jpg">
 <pre class="white">
     <span class="yellow"># "socorro.external.fs.crashstorage.FSCrashStorage"</span>
-    <span class="fetch_object">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1])
+    <span class="fetch_object">fetch_object</span> = <span class="white">dynamic_load</span>(argv[1], config)
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2151,7 +2270,7 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </pre>
 <pre class="white">
 # <span class="orange">"socorro.external.rabbitmq.crashstorage.RMQCrashStorage"</span>
-<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2], config))
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
@@ -2193,11 +2312,11 @@ class <span class="white">MultiCrashStorage</span>(CrashStorage):
 </pre>
 <pre class="white">
 # <span class="orange">"socorro.external.rabbitmq.crashstorage.RMQCrashStorage"</span>
-<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2]))
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[2], config))
 </pre>
 <pre class="white">
 # <span class="blue">"socorro.external.boto.crashstorage.S3CrashStorage"</span>
-<span class="save_object">save_object</span>.add_store(dynamic_load(argv[3]))
+<span class="save_object">save_object</span>.add_store(dynamic_load(argv[3], config))
 </pre>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
