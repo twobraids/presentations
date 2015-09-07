@@ -223,12 +223,12 @@ define(function() {
 					break;
 
                                 case 66:
-					slideView.go(1).then(success);b
 					stopEvent(e);
 					var time = [
 					       1, // 5 - to indepentent
 					    3000, // add time message
 					   11000, // Well Tempered
+					   11000, // Written
 					   11000, // Written
 					   10000, // HTML & CSS
 					   11000, // framework
