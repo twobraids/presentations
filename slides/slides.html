@@ -9,8 +9,10 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div>
 	<h1 style="text-align:left; margin-left:5%">Configuration</h1>
-	</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -55,7 +57,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2 style="color:#00FF00"><br><br>What is "configuration"?</h2>
+	<h2><br><br>What is "<span class="green">configuration</span>"?</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
@@ -65,20 +67,18 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
+	<h2><span class="halfsize_text">How do you get<br><span class="green">configuration</span><br>into your program?</span></h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
-	<h2 style="color:orange">command line arguments</h2>
+	<h2><span class="quartersize_text">command line arguments</span></h2>
 	<div style="position: absolute;left:40%;top:200px;color:orange;font-size:200%">getopt</div>
 	<div style="position: absolute;left:60%;top:400px;color:orange;font-size:150%">optparse</div>
 	<div style="position: absolute;left:45%;top:600px;color:orange;font-size:175%">argparse</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
-	<h2 style="color:#00FF00">config files</h2>
+	<h2><span class="quartersize_text">config files</span></h2>
 	<div style="position: absolute;left:40%;top:200px;color:orange;font-size:200%">getopt</div>
 	<div style="position: absolute;left:60%;top:400px;color:orange;font-size:150%">optparse</div>
 	<div style="position: absolute;left:45%;top:600px;color:orange;font-size:175%">argparse</div>
@@ -88,8 +88,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
-	<h2 style="color:cyan">json files</h2>
+	<h2><span class="quartersize_text">json files</span></h2>
 	<div style="position: absolute;left:40%;top:200px;color:orange;font-size:200%">getopt</div>
 	<div style="position: absolute;left:60%;top:400px;color:orange;font-size:150%">optparse</div>
 	<div style="position: absolute;left:45%;top:600px;color:orange;font-size:175%">argparse</div>
@@ -102,8 +101,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
-	<h2 style="color:red">python modules</h2>
+	<h2><span class="quartersize_text">libraries & modules</span></h2>
 	<div style="position: absolute;left:40%;top:200px;color:orange;font-size:200%">getopt</div>
 	<div style="position: absolute;left:60%;top:400px;color:orange;font-size:150%">optparse</div>
 	<div style="position: absolute;left:45%;top:600px;color:orange;font-size:175%">argparse</div>
@@ -118,8 +116,7 @@
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_width text_centered">
-	<h2>Getting Config into a Program</h2>
-	<h2 style="color:yellow">too many to enumerate</h2>
+	<h2><span class="quartersize_text">too many to enumerate</span></h2>
 	<div style="position: absolute;left:40%;top:200px;color:orange;font-size:200%">getopt</div>
 	<div style="position: absolute;left:60%;top:400px;color:orange;font-size:150%">optparse</div>
 	<div style="position: absolute;left:45%;top:600px;color:orange;font-size:175%">argparse</div>
@@ -131,9 +128,12 @@
 	<div style="position: absolute;left:61%;top:650px;color:cyan;font-size:120%">ultrajson</div>
 	<div style="position: absolute;left:47%;top:310px;color:red;font-size:220%">local.py</div>
 	<div style="position: absolute;left:37%;top:590px;color:red;font-size:90%">modules</div>
-	<div style="position: absolute;left:44%;top:250px;color:yellow;font-size:180%">XML</div>
+	<div style="position: absolute;left:28%;top:180px;color:darkred;font-size:180%">XML</div>
 	<div style="position: absolute;left:39%;top:468px;color:yellow;font-size:200%">YAML</div>
+	<div style="position: absolute;left:68%;top:180px;color:darkblue;font-size:200%">SOAP</div>
 	<div style="position: absolute;left:58%;top:440px;color:yellow;font-size:110%">os.environ</div>
+	<div style="position: absolute;left:20%;top:620px;color:lightblue;font-size:140%">Windows Registry</div>
+	<div style="position: absolute;left:25%;top:300px;color:pink;font-size:140%">Relatonal Databases</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="text_centered">
@@ -289,7 +289,7 @@ config = configuration(defaults)
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="half_width">
 <pre class="three_quarter_size_text grayout">
-defaults = {
+<span class="cyan">defaults</span> = {
     "hostname": "localhost",
     "port": 5432,
     "dbname": "my_db",
@@ -300,18 +300,18 @@ defaults = {
 <pre class="three_quarter_size_text">
 from configman import configuration
 
-config = configuration(defaults)
+config = configuration(<span class="cyan">defaults</span>)
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 <pre class="three_quarter_size_text">
-$ python o1.py --help
+$ python c.py --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="halfsize_text">
+<pre class="quartersize_text">
 usage:  [-h] [--password PASSWORD] [--user USER] [--hostname HOSTNAME]
         [--port PORT] [--dbname DBNAME] [--admin.print_conf ADMIN.PRINT_CONF]
         [--admin.dump_conf ADMIN.DUMP_CONF] [--admin.strict]
@@ -319,13 +319,13 @@ usage:  [-h] [--password PASSWORD] [--user USER] [--hostname HOSTNAME]
 
 optional arguments:
   -h, --help            show this help message and exit
-</pre><pre class="halfsize_text">
+</pre><pre class="quartersize_text">
   --hostname HOSTNAME   hostname
   --port PORT           port
   --dbname DBNAME       dbname
   --user USER           user
   --password PASSWORD   password
-</pre><pre class="halfsize_text">
+</pre><pre class="quartersize_text">
   --admin.print_conf ADMIN.PRINT_CONF
                         write current config to stdout (json, py, ini, conf)
   --admin.dump_conf ADMIN.DUMP_CONF
@@ -339,7 +339,7 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="halfsize_text grayout">
+<pre class="quartersize_text grayout">
 usage:  [-h] [--password PASSWORD] [--user USER] [--hostname HOSTNAME]
         [--port PORT] [--dbname DBNAME] [--admin.print_conf ADMIN.PRINT_CONF]
         [--admin.dump_conf ADMIN.DUMP_CONF] [--admin.strict]
@@ -347,13 +347,13 @@ usage:  [-h] [--password PASSWORD] [--user USER] [--hostname HOSTNAME]
 
 optional arguments:
   -h, --help            show this help message and exit
-</pre><pre class="halfsize_text">
+</pre><pre class="quartersize_text">
   --hostname HOSTNAME   hostname
   --port PORT           port
   --dbname DBNAME       dbname
   --user USER           user
   --password PASSWORD   password
-</pre><pre class="halfsize_text grayout">
+</pre><pre class="quartersize_text grayout">
   --admin.print_conf ADMIN.PRINT_CONF
                         write current config to stdout (json, py, ini, conf)
   --admin.dump_conf ADMIN.DUMP_CONF
@@ -378,7 +378,7 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
+<tt>$ python c.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -386,7 +386,7 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
+<tt>$ python c.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><br>
 </div>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-twobraids-ethel-fred-wilma-01.jpg">
 </div>
@@ -395,7 +395,7 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt style="color:#00FF00"> --admin.dump_conf=o1.ini</tt><br>
+<tt>$ python c.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt style="color:#00FF00"> --admin.dump_conf=c.ini</tt><br>
 </div>
 	<img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-twobraids-ethel-fred-wilma-01.jpg">
 </div>
@@ -404,8 +404,8 @@ optional arguments:
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt style="color:#00FF00"> --admin.dump_conf=o1.ini</tt><br>
-<tt>$ cat o1.ini</tt>
+<tt>$ python c.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt style="color:#00FF00"> --admin.dump_conf=c.ini</tt><br>
+<tt>$ cat c.ini</tt>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -432,7 +432,8 @@ password=secrets
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt style="color:yellow">export hostname=twobraids.com</tt><br>
 <tt>$ </tt><tt style="color:yellow">export user=ethel</tt><br>
-<tt>$ python o1.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt> --admin.print_conf=json | json_pp</tt><br>
+<tt>$ python c.py </tt><tt style="color:orange">--dbname=fred --user=wilma</tt><tt class="green"> --admin.dump_conf=c.json</tt><br>
+<tt>$ json_pp &lt; c.json</tt><br>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -450,7 +451,7 @@ password=secrets
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 <div class="three_quarter_size_text"><br>
-<tt>$ python o1.py  </tt><tt style="color:#00FF00">--admin.conf=o1.ini</tt>
+<tt>$ python c.py  </tt><tt style="color:#00FF00">--admin.conf=c.json</tt>
 </div>
 <div>
 <img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-o1-ini.jpg">
@@ -458,7 +459,7 @@ password=secrets
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
 <div class="three_quarter_size_text"><br>
-<tt>$ python o1.py </tt><tt style="color:#00FF00">--admin.conf=o1.ini </tt><tt style="color:orange">--user=sally --password=Tr0ub4dor</tt>
+<tt>$ python c.py </tt><tt style="color:#00FF00">--admin.conf=c.ini </tt><tt style="color:orange">--user=sally --password=Tr0ub4dor</tt>
 </div>
 <img style="display:block; margin-left: auto; margin-right: auto; width:100%" src="resources/configman-o1-ini-sally.jpg">
 </div>
@@ -618,7 +619,7 @@ config = configuration(
 	<h1 style="text-align:center;color:#00FF00"><br><br>Nested Namespaces</h1>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 default = {
 	"storage": {
@@ -632,7 +633,7 @@ default = {
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 <span class="darkestgray">default = {</span>
 	"<span class="violet">storage</span>": {
@@ -647,12 +648,12 @@ default = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre  class="three_quarter_size_text" style="color:#FFFFFF">
-$ python o2.py --help
+<pre  class="halfsize_text" style="color:#FFFFFF">
+$ python c.py --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 usage: ...
 
@@ -673,11 +674,11 @@ optional arguments:
 <div>
 <div class="three_quarter_size_text">
 <tt>$ </tt><tt  style="color:yellow">export storage__user=ethel</tt><br>
-<tt>$ python o2.py </tt><tt  style="color:orange">--storage.dbname=fred </tt><tt>--admin.dump_conf=o2.ini</tt>
+<tt>$ python c.py </tt><tt  style="color:orange">--storage.dbname=fred </tt><tt class="green">--admin.dump_conf=c.ini</tt>
 </div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 [storage]
 
@@ -702,7 +703,7 @@ optional arguments:
 	<h1 style="text-align:center;color:orange"><br><br>Dependency Injection</h1>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 class Postgres(<span class="darkestgray">RequiredConfig</span>):
     required_config = {
@@ -715,7 +716,7 @@ class Postgres(<span class="darkestgray">RequiredConfig</span>):
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 default = {
         "storage": {
@@ -730,8 +731,8 @@ default = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-<pre class="three_quarter_size_text"">
-$ python o3.py --help
+<pre class="three_quarter_size_text">
+$ python c.py --help
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -759,7 +760,7 @@ optional arguments:
 	<img style="display:block; margin-left: auto; margin-right: auto; width:85%" src="resources/lego.moose2.jpg">
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
+<div class="half_width halfsize_text">
 <pre>
 
 class MooseBase(<span class="darkestgray">RequiredConfig</span>):
@@ -773,7 +774,7 @@ class MooseBase(<span class="darkestgray">RequiredConfig</span>):
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="three_quarter_size_text">
-	<tt>$ python o3.py </tt><tt style="color:orange">--storage.storage_class=MooseBase</tt><tt> --help</tt>
+	<tt>$ python c.py </tt><tt style="color:orange">--storage.storage_class=MooseBase</tt><tt> --help</tt>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -799,184 +800,9 @@ optional arguments:
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
-<tt>
-<br>
-class&nbsp;BothBase(<span class="darkestgray">RequiredConfig</span>):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"primary":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;Postgres,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"secondary":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;MooseBase,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-</tt>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
-<tt>
-<br>
-class&nbsp;BothBase(<span class="darkestgray">RequiredConfig</span>):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;Postgres,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"storage_class":&nbsp;MooseBase,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-</tt>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="half_width three_quarter_size_text">
-<tt>
-<br>
-class&nbsp;BothBase(<span class="darkestgray">RequiredConfig</span>):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;required_config&nbsp;=&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">primary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;Postgres,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight">secondary</span>":&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="highlight_orange">storage_class</span>":&nbsp;MooseBase,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-</tt>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_size_text">
-	<tt>$ python o5.py </tt><tt style="color:orange">--storage.storage_class=BothBase</tt><tt> --help</tt>
-</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
-<pre>
-optional arguments:
-  --storage.storage_class STORAGE.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.storage_class STORAGE.PRIMARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.password STORAGE.PRIMARY.PASSWORD
-  --storage.primary.user STORAGE.PRIMARY.USER
-  --storage.primary.hostname STORAGE.PRIMARY.HOSTNAME
-  --storage.primary.port STORAGE.PRIMARY.PORT
-  --storage.primary.name STORAGE.PRIMARY.NAME
-</pre>
-<pre>
-  --storage.secondary.storage_class STORAGE.SECONDARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.secondary.url STORAGE.SECONDARY.URL
-  --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
-  --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
-  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
-<pre>
-optional arguments:
-  --storage.storage_class STORAGE.STORAGE_CLASS
-</pre>
-<pre class="highlight">
-  --storage.primary.storage_class STORAGE.PRIMARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.password STORAGE.PRIMARY.PASSWORD
-  --storage.primary.user STORAGE.PRIMARY.USER
-  --storage.primary.hostname STORAGE.PRIMARY.HOSTNAME
-  --storage.primary.port STORAGE.PRIMARY.PORT
-  --storage.primary.name STORAGE.PRIMARY.NAME
-</pre>
-<pre>
-  --storage.secondary.storage_class STORAGE.SECONDARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.secondary.url STORAGE.SECONDARY.URL
-  --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
-  --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
-  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
-<pre>
-optional arguments:
-  --storage.storage_class STORAGE.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.storage_class STORAGE.PRIMARY.STORAGE_CLASS
-</pre>
-<pre class="highlight">
-  --storage.primary.password STORAGE.PRIMARY.PASSWORD
-  --storage.primary.user STORAGE.PRIMARY.USER
-  --storage.primary.hostname STORAGE.PRIMARY.HOSTNAME
-  --storage.primary.port STORAGE.PRIMARY.PORT
-  --storage.primary.name STORAGE.PRIMARY.NAME
-</pre>
-<pre>
-  --storage.secondary.storage_class STORAGE.SECONDARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.secondary.url STORAGE.SECONDARY.URL
-  --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
-  --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
-  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
-<pre>
-optional arguments:
-  --storage.storage_class STORAGE.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.storage_class STORAGE.PRIMARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.password STORAGE.PRIMARY.PASSWORD
-  --storage.primary.user STORAGE.PRIMARY.USER
-  --storage.primary.hostname STORAGE.PRIMARY.HOSTNAME
-  --storage.primary.port STORAGE.PRIMARY.PORT
-  --storage.primary.name STORAGE.PRIMARY.NAME
-</pre>
-<pre  class="highlight">
-  --storage.secondary.storage_class STORAGE.SECONDARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.secondary.url STORAGE.SECONDARY.URL
-  --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
-  --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
-  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
-</pre>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div class="three_quarter_width halfsize_text">
-<pre>
-optional arguments:
-  --storage.storage_class STORAGE.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.storage_class STORAGE.PRIMARY.STORAGE_CLASS
-</pre>
-<pre>
-  --storage.primary.password STORAGE.PRIMARY.PASSWORD
-  --storage.primary.user STORAGE.PRIMARY.USER
-  --storage.primary.hostname STORAGE.PRIMARY.HOSTNAME
-  --storage.primary.port STORAGE.PRIMARY.PORT
-  --storage.primary.name STORAGE.PRIMARY.NAME
-</pre>
-<pre>
-  --storage.secondary.storage_class STORAGE.SECONDARY.STORAGE_CLASS
-</pre>
-<pre class="highlight">
-  --storage.secondary.url STORAGE.SECONDARY.URL
-  --storage.secondary.hostname STORAGE.SECONDARY.HOSTNAME
-  --storage.secondary.auth_key STORAGE.SECONDARY.AUTH_KEY
-  --storage.secondary.swamp_number STORAGE.SECONDARY.SWAMP_NUMBER
-</pre>
+<div>
+	<h1 class="orange" style="text-align:center"><br>Dependency Injection</h1>
+	<h2 class="red" style="text-align:center"><br>is recursive</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
@@ -1000,8 +826,8 @@ optional arguments:
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1 style="text-align:center"><br><br>Lovely</h1>
-	<h2 style="text-align:center;color:orange"><br>What use is it?</h2>
+	<h1 style="text-align:center"><br>Lovely</h1>
+	<h2 class="blue" style="text-align:center"><br>What use is it?</h2>
 </div>
 <hr><!-- ------------------------------------------------------------------------------------------- -->
 <div>
@@ -1020,7 +846,7 @@ optional arguments:
     <h2 class="text_centered">
 	Firefox Crash Reporting
     </h2>
-    <h2 class="text_centered orange">
+    <h2 class="text_centered green">
 	<span class="large_size_text">Socorro</span>
     </h2>
 </div>
