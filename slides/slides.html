@@ -471,33 +471,17 @@ password=secrets
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1 style="text-align:center">Configman</h1>
+	<h2 class="text_centered">Definition Sources</h2>
 	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
 	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
 	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1 style="text-align:center">Configman</h1>
-	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
-	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
-	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration requirements</div>
-	<h2 class="text_centered"><br>Definition Sources</h2>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<h1 style="text-align:center">Configman</h1>
+	<h2 class="text_centered">Value/Overlay Sources</h2>
 	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
 	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
 	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
-</div>
-<hr><!---------------------------------------------------------------------------------------------->
-<div>
-	<h1 style="text-align:center">Configman</h1>
-	<div class="larger_size_text" style="text-align:center"><br>Anything for which</div>
-	<div class="larger_size_text" style="text-align:center;color:yellow"><br><tt>isinstance(a_thing, collections.Mapping) == True</tt></div>
-	<div class="larger_size_text" style="text-align:center"><br>can be used as a source of<br>configuration value overlays</div>
-	<h2 class="text_centered"><br>Value/Overlay Sources</h2>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div class="half_width halfsize_text two-indent">
@@ -748,17 +732,77 @@ usage: ...
 
 optional arguments:
   --storage.storage_class STORAGE.STORAGE_CLASS
-                        storage_class
+			storage_class
   --storage.password STORAGE.PASSWORD
-                        password
+			password
   --storage.user STORAGE.USER
-                        user
+			user
   --storage.hostname STORAGE.HOSTNAME
-                        hostname
+			hostname
   --storage.port STORAGE.PORT
-                        port
+			port
   --storage.name STORAGE.NAME
-                        name
+			name
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text">
+<pre>
+<span class="grayout">usage: ...
+
+optional arguments:</span>
+  --storage.storage_class STORAGE.STORAGE_CLASS
+			storage_class
+<span class="grayout">  --storage.password STORAGE.PASSWORD
+			password
+  --storage.user STORAGE.USER
+			user
+  --storage.hostname STORAGE.HOSTNAME
+			hostname
+  --storage.port STORAGE.PORT
+			port
+  --storage.name STORAGE.NAME
+			name</span>
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text">
+<pre>
+<span class="grayout">usage: ...
+
+optional arguments:
+  --</span><span class="violet">storage</span>.<span class="grayout">storage_class STORAGE.STORAGE_CLASS
+			storage_class
+  --</span><span class="violet">storage</span>.<span class="grayout">password STORAGE.PASSWORD
+			password
+  --</span><span class="violet">storage</span>.<span class="grayout">user STORAGE.USER
+			user
+  --</span><span class="violet">storage</span>.<span class="grayout">hostname STORAGE.HOSTNAME
+			hostname
+  --</span><span class="violet">storage</span>.<span class="grayout">port STORAGE.PORT
+			port
+  --</span><span class="violet">storage</span>.<span class="grayout">name STORAGE.NAME
+			name</span>
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text">
+<pre>
+<span class="grayout">usage: ...
+
+optional arguments:
+  --storage.storage_class STORAGE.STORAGE_CLASS
+			storage_class
+  --storage.</span>password <span class="grayout">STORAGE.PASSWORD
+			password
+  --storage.</span>user<span class="grayout"> STORAGE.USER
+			user
+  --storage.</span>hostname<span class="grayout"> STORAGE.HOSTNAME
+			hostname
+  --storage.</span>port<span class="grayout"> STORAGE.PORT
+			port
+  --storage.</span>name<span class="grayout"> STORAGE.NAME
+			name</span>
 </pre>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
@@ -797,11 +841,41 @@ usage: ...
 
 optional arguments:
   --storage.storage_class STORAGE.STORAGE_CLASS
-                        storage_class
+			storage_class
   --storage.url STORAGE.URL
   --storage.hostname STORAGE.HOSTNAME
   --storage.auth_key STORAGE.AUTH_KEY
   --storage.swamp_number STORAGE.SWAMP_NUMBER
+
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text">
+<pre>
+<span class="grayout">usage: ...
+
+optional arguments:</span>
+  --storage.storage_class STORAGE.STORAGE_CLASS
+			storage_class
+<span class="grayout">  --storage.url STORAGE.URL
+  --storage.hostname STORAGE.HOSTNAME
+  --storage.auth_key STORAGE.AUTH_KEY
+  --storage.swamp_number STORAGE.SWAMP_NUMBER</span>
+
+</pre>
+</div>
+<hr><!---------------------------------------------------------------------------------------------->
+<div class="half_width halfsize_text">
+<pre>
+<span class="grayout">usage: ...
+
+optional arguments:
+  --storage.storage_class STORAGE.STORAGE_CLASS
+			storage_class
+  --storage.</span>url<span class="grayout"> STORAGE.URL
+  --storage.</span>hostname<span class="grayout"> STORAGE.HOSTNAME
+  --storage.</span>auth_key<span class="grayout"> STORAGE.AUTH_KEY
+  --storage.</span>swamp_number<span class="grayout"> STORAGE.SWAMP_NUMBER</span>
 
 </pre>
 </div>
@@ -1336,19 +1410,19 @@ defaults = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h1 style="text-align:center">Configman</h1>
-	<div class="larger_size_text" style="text-align:center;"><br><br>Questions & Comments</div>
+	<h2 class="text_centered">Configuration is <span class="green">TRUTH</span></h2>
+	<div class="larger_size_text" style="text-align:center;"><br><br>Questions, Comments, Indignation?</div>
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 style="text-align:center"><br>This Presentation</h2>
+	<h2 class="text_centered">Configuration is <span class="green">TRUTH</span></h2>
 	<h2>&nbsp;</h2>
-	<div style="text-align:center">
+	<div class="text_centered">
 		<ul>
-			<li>entirely in Firefox</li>
-			<li>HTML 5</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
+			<li>presented in in Firefox</li>
+			<li>HTML 5, CSS & Javascript</li>
+			<li><strike>Powerpoint</strike></li>
+			<li><strike>Keynote</strike></li>
 		</ul>
 	</div>
 	<div class="text_centered larger_size_text yellow"><br>
@@ -1357,9 +1431,9 @@ defaults = {
 </div>
 <hr><!---------------------------------------------------------------------------------------------->
 <div>
-	<h2 class="text_centered"><br>K Lars Lohn<br></h2>
+	<h1 class="text_centered">K Lars Lohn<br></h1>
 	<h2>&nbsp;</h2>
-	<div class="text_centered">
+	<div class="text_centered larger_size_text">
 		<ul>
 			<li>lars@mozilla.com</li>
 			<li>twitter: 2braids</li>
