@@ -518,29 +518,24 @@ pre code tt span {
 	color:black;
 }
 
-.black_key {
-	color:white;
-        background:black;
+.measure01 {
+	color:#fdc800;
 }
 
-.white_key {
-	color:black;
-        background:white;
+.measure04 {
+	color:#eeff00;
 }
 
-.orange_white_key {
-	color:black;
-        background:orange;
+.measure08 {
+	color:#75ff00;
 }
 
-.green_white_key {
-	color:white;
-        background:green;
+.measure16 {
+	color:#72fffc;
 }
 
-.orange_black_key {
-	color:orange;
-        background:black;
+.measure32 {
+	color:#ee72ff;
 }
 
 .fetch_object {

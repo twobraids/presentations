@@ -3,7 +3,7 @@
 	Class: SlideView
 */
 define([], function() {
-	
+
 	// OOCSS States for slides and slide container
 	var slideBeforeState = 'slide slide-before',
 		slideAfterState = 'slide slide-after',
@@ -12,61 +12,61 @@ define([], function() {
 		slideContainerLoadingState = slideContainerIdentity + ' slide-view-loading',
 		slideContainerTransitioningState = slideContainerIdentity + ' slide-transitioning',
 		undef;
-	
+
 	/*
 		Constructor: SlideView
 		Creates a new SlideView
-		
+
 		Parameters:
 			slideContainer - DomNode into which slides will be added
 			slideModel - model that supplies slides via a get(slideNumber) function, such as <PresentationModel>
-			
+
 		Returns:
 		a new SlideView
 	*/
 	return function SlideView(slideContainer, slideModel) {
-		
+
 		var current = -1,
 			slides = [],
 			container;
-		
+
 		/*
 			Function: next
 			Goes to the next slide, if one exists.
-			
+
 			Returns:
 			a promise that will be resolved when the new slide has been displayed
 		*/
 		function next() {
 			return go(current+1);
 		}
-		
+
 		/*
 			Function: prev
 			Goes to the previous slide, if one exists.
-			
+
 			Returns:
 			a promise that will be resolved when the new slide has been displayed
 		*/
 		function prev() {
 			return go(current-1);
 		}
-		
+
 		/*
 			Function: reset
 			Goes to the first slide
-			
+
 			Returns:
 			a promise that will be resolved when the new slide has been displayed
 		*/
 		function reset() {
 			return go(0);
 		}
-		
+
 		/*
 			Function: go
 			Goes to the supplied slide number (zero-based index)
-			
+
 			Parameters:
 				slide - number of the slide to go to
 
@@ -78,14 +78,14 @@ define([], function() {
 			if(slide == current) {
 				return p;
 			} else if(slide < 0) {
-				
+
 			}
-			
+
 			function reject(num) {
 				console.log("No such slide", num);
 				console.error(num);
 			}
-			
+
 			if(!slides[slide]) {
 				// container.className = slideContainerTransitioningState;
 				p.then(
@@ -102,10 +102,10 @@ define([], function() {
 					reject
 				);
 			}
-			
+
 			return p;
 		}
-		
+
 		function addSlide(slide, slideContent) {
 			var holder = document.createElement('div');
 			holder.className = (slide < current) ? slideBeforeState : slideAfterState;
@@ -118,17 +118,17 @@ define([], function() {
 			} else {
 				slides[slide] = container.appendChild(holder);
 			}
-			
+
 			// Defer so DOM has a chance to add the new slide before we transition it
 			setTimeout(function() {
 				transitionToSlide(slide);
 			}, 0);
 		}
-		
+
 		function transitionToSlide(slide) {
 			var dx = slide - current,
 				prev = current;
-				
+
 			current = slide;
 			slides[current].className = slideCurrentState;
 
@@ -148,11 +148,13 @@ define([], function() {
 						}
 					}
 				}
-				
+
 			}
-			
+
 			// TODO: Need to listen for transitionend here for browsers that support it.
 			container.className = slideContainerIdentity;
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
 		}
 
 		// Create a controlled container to hold slides
@@ -160,7 +162,7 @@ define([], function() {
 		container.className = slideContainerLoadingState;
 		slideContainer.innerHTML = '';
 		slideContainer.appendChild(container);
-		
+
 		return {
 			next: next,
 			prev: prev,

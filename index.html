@@ -32,6 +32,23 @@
 	</style>
 
 	<script data-curl-run="app/run.js" src="bower_components/curl/src/curl.js"></script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "asciimath2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    asciimath2jax: {
+        delimiters: [['`','`'], ['$','$']]
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+	<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
 </head>
 
 <!-- Avoid any FUOC by adding presentation-loading, which the framework
